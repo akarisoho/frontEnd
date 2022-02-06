@@ -1,2 +1,2 @@
-git started.
-*깃 시작하기
+# git started.
+* 깃 시작하기
