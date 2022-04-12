@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본주사위</title>
+    <style>
+        /* reset CSS */
+        *{ margin: 0;}
+
+        #mom1{ width: 300px; height: 300px; background-color: #ff0;
+            border-radius: 30px; position: relative;
+        }
+        #mom1_son01{ width: 80px; height: 80px; background: #000;
+            border-radius: 40px; position: absolute; top:110px; left:110px ;
+        }
+
+        #mom2{ width: 300px; height: 300px; background-color: skyblue;
+            border-radius: 30px; position: relative;}
+
+        #mom2_son01{ width: 80px; height: 80px; background: #000;
+                border-radius: 40px;
+                position: absolute; top: 15px; left: 15px;}
+        #mom2_son02{ width: 80px; height: 80px; background: #00f;
+                border-radius: 40px;
+                position: absolute; right: 15px; bottom:15px;}
+
+    /* border-radius : n n n n ; => 왼쪽상단 우측상단 우측하단 좌측하단 순서 값
+                     : n n n ; =>  왼쪽상단 우측상단 우측하단 순서로 값을 갖고
+                                  좌측하단은 두번째 값으로 들어감
+                     : n n ; => 왼쪽상단 우측상단 순서로 값을 갖고 
+                            우측하단은 첫번째 값, 좌측하단은 두번째 값
+                     : n ; => 네군데 모서리 모두 같은 값 */
+    </style>
+</head>
+<!-- 1. body에 태그 구조 설계 + id 또는 class 이름지정
+     2. css에 너비, 높이, 배경색 => 구조설계된 공간이 다 보이는지
+     3. (둥근 모양 잡고) 포지셔닝(postion속성, float속성 등) -->
+<body>
+    <div id="mom1">
+        <div id="mom1_son01"></div>
+    </div>
+<!-- #mom2>#mom2_son0$*2 -->
+    <div id="mom2">
+        <div id="mom2_son01"></div>
+        <div id="mom2_son02"></div>
+    </div>
+    <!-- mom2, mom3, mom4, mom5, mom6 와 그의 자식요소들을 만들어보세요 -->
+</body>
+</html>

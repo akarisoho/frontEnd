@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        var total = 0;
+        var i = 0;
+    
+        while (i <= 10) {
+            total += i;
+            i++;
+        }
+    
+        document.write(total);
+    </script> -->
+    <!-- <script>
+        var sum = 0;
+        var i = 1;
+        while ( i <= 100) {
+            if (i % 2 == 1) {
+                i++;   //건너뛰기 전에 i값을 증가시켜야 합니다. 그렇지 않으면 '무한루프'에 빠짐
+                continue;
+            }
+            document.write(i);
+
+            sum += i;
+            
+            if( i != 100 ){
+                document.write(' + ');
+            }else {
+                document.write(' = ' + sum);
+            } 
+            i++;  //값을 증가시키지 않으면 '무한루프'에 빠짐
+        }
+    </script> -->
+    <!-- <script>
+        var start = 15;
+        var end = 25;
+        var total = 0;
+
+        while (start <= end) {
+            if(start % 2 == 1){
+                start++;
+                continue;
+            }
+            total += start;
+            document.write(start);
+            // while문이 반복되면서 start의 값을 도큐먼트에 출력
+
+            // if 문에서 start의 값이 end값과 다른 경우에 "+"를 출력하도록 조건문을 작성
+            if (start != end) {
+                document.write(" + ");
+            }
+            start++;
+            //  무한루프 주의!
+        }
+        document.write(" = " + total);
+    </script> -->
+    <script>
+        var start = 25;
+        var end = 15;
+        var total = 0;
+    
+        do {
+           total += start;
+           start--;
+        } while (start >= end);
+    
+        document.write(total);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

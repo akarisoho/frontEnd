@@ -1,0 +1,43 @@
+*{ margin: 0; padding:0;}
+ul{ list-style: none;}
+
+
+#wrap{ margin: 0 auto;}
+/* mobile */
+@media screen and (min-width:320px) {
+#wrap{ width: 360px;}
+#wrap > header{ height: 60px; background-color: yellow; }
+#wrap > nav{ height: 240px; background-color: blue;}
+#wrap > nav > ul > li {width: 180px; height: 40px; border:1px solid white; box-sizing: border-box; float: left;}
+#wrap > section{ height: 300px; background-color: gray;}
+#wrap > article{ height: 200px;}
+#wrap > footer{ height: 100px; background-color: wheat; }
+}
+/* tablet */
+@media screen and (min-width:768px) {
+#wrap{ width: 768px; }
+#wrap > header{ }
+#wrap > nav{ height: 80px; }
+#wrap > nav > ul > li {width: 128px; }
+#wrap > section{ height: 400px; }
+#wrap > article{ width: 384px; float: left; }
+#wrap > footer{ clear: both;}
+}
+/* pc */
+@media screen and (min-width:1200px){    
+    #wrap{ width: 1200px;}
+    #wrap > header{ height: 100px;  }
+    #wrap > nav{ height: 40px; }
+    #wrap > nav > ul > li {width: 100px; height: 40px; }
+    #wrap > section{ height: 600px;}
+    #wrap > article{ width: 600px;}
+    #wrap > footer{ }
+}
+
+/* 조건문 작성시 유의사항 
+ - 조건문에 min-width를 작성했다면, 
+    화면 너비가 좁은 moilbe > tablet > pc 순으로 쿼리를 나열해야한다.
+ - 조건문에 max-width를 작성했다면,
+    화면 너비가 넓은 pc > tablet > mobile 순으로 쿼리를 나열 해야 한다.
+    => pc반응형 웹 조건으로는 적합하지 않음
+*/

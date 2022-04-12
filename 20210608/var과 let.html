@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var과 let.html</title>
+    <script>
+        // let x = "global";
+        
+        // if (x == "global") {
+            //     let x = "block-scoped";
+            //     console.log("if문안의 x : " + x);
+            // }
+            
+            // console.log("if문 바깥쪽의 x : " + x);
+            
+            var y = "global";
+            
+            if (y == "global") {
+                var y = "block-scoped";
+                console.log("if문안의 y : " + y);
+            }
+            console.log("if문 바깥쪽의 y : " + y);
+
+            // const z => z라는 변수를 선언하는데, 값을 중첩할 수 없음 
+            // const는 상수, 변하지 않는 data를 담을때 사용
+
+            const z = 123;
+            // z = 50;  const로 정의된 함수는 값의 재정의 되지 않음
+            document.write(z);
+            </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

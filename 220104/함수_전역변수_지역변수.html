@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수_전역변수_지역변수.html</title>
+  <script>
+    /* 지역변수로 선언했을 때 함수 바깥쪽에서 변수사용 오류
+    //함수 선언
+    function add(num1, num2) {
+      // 함수 스코프 시작
+      var sum = num1 + num2;
+      // var sum은 함수의 지역변수
+      // 함수 스코프 끝
+    }
+
+    //함수호출
+    add(10,7);
+    console.log(sum); 
+    // add()안에서 선언된 지역변수인 sum을 사용할 수 없기 때문에 오류가 생김
+*/
+    /*   // 해결책 1. sum을 전역변수(global변수로 sum을 선언)사용
+    var sum = 0;
+    //함수 선언
+    function add(num1, num2) {
+      // 함수 스코프 시작
+      sum = num1 + num2;
+      // global변수로 선언된 sum을 함수 안에서 사용
+      // 함수 스코프 끝
+    }
+
+    //함수호출
+    add(10,7);
+    console.log(sum); 
+    // 오류 생기지 않음
+    */
+
+    // 해결책 2. retrun키워드 사용
+     function add(num1, num2) {
+       var sum = num1 + num2;
+       return sum;  // sum에 담긴 값을 함수스코프 바깥쪽으로 반환
+     }
+     console.log(add(10,3));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

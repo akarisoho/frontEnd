@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수_confirm.html</title>
+    <script>
+        /*********************************
+        var confirmQna = confirm('javaScript는 브라우저에서 동작하는 언어이다.');
+        // 확인을 누르면 true, 취소를 누르면 false;
+
+        //변수 명을 그대로 넣어주면 "조건문이 true일때"
+        if (confirmQna) {
+            document.write("예,맞습니다.");
+        }else{
+            document.write("틀렸습니다.");
+        }
+        */
+       var evt = confirm("구글로 이동하시겠습니까? \n 취소하면 네이버로 이동합니다.");
+
+       if (evt == true) {
+           location.href = "http://www.google.com";
+       }else{
+            location.href = "http://www.naver.com";
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

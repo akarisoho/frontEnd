@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>flexDirection</title>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: #99f;
+        }
+
+        .row{ flex-direction: row;}
+        .row-reverse{ flex-direction: row-reverse; }
+        .column{ flex-direction: column; }
+        .column-reverse{ flex-direction: column-reverse; }
+
+        .flex-container>div {background-color: #f1f1f1; padding:50px; margin:10px;
+                        text-align: center; font-size: 30px; }
+    </style>
+</head>
+
+<body>
+    <h1>flex-direction: row</h1>
+    <div class="flex-container row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h1>flex-direction: row-reverse</h1>
+    <div class="flex-container row-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h1>flex-direction: column</h1>
+    <div class="flex-container column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h1>flex-direction: column-reverse</h1>
+    <div class="flex-container column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operators</title>
+    <script>
+        var num = 2;
+        console.log(num);
+        // num = num + 1;
+        num += 1;
+        console.log(num);
+
+        var num2 = 8;
+        console.log(num2);
+         // num2 = num2 - 2;
+        num2 -= 2;
+        console.log(num2);
+
+        var num3 = 2;
+        console.log(num3);
+         // num3 = num3 * num3;
+        num3 *= num3;   // 위의 mum3의 값인 2에 자기 자신의 값인 2를 곱해서 num3에 재할당
+        console.log(num3);  //현재 num3에 담긴 값 4
+         // num3 = num3 * num3;
+        num3 *= num3;  //num3의 값인 4에 다시 자기 자신인 4를 곱해서 num3에 재할당
+        console.log(num3);  //현재 num3에 담긴 값 16
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 기초.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    
+    <script src="js/sampleQuery1.js"></script><!-- jQuery1 -->
+    
+    <script src="js/sampleQuery2.js"></script><!-- jQuery2 -->
+    
+    <!-- myjQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script> <!-- libraries 종류 -->
+    <script src="js/myjQuery.js"></script>
+    <script>
+    // jQuery()  ==  $()
+    // $(selector).메서드();
+
+    // jQuery 준비구문 => document가 다 준비가 되었을 때, jQuery구문을 실행해라
+    $(document).ready(function(){
+        //슬라드쇼  쿼리
+        // ..
+        //메뉴쿼리
+        // ..
+        $("ul>li").first().click(function(){
+            $(this).fadeOut().next().fadeIn();  //메서드를 연결해서 작성하는 것, "메서드 체이닝"
+        }); //.click(); end
+    }); //.ready(); end
+    </script>
+    <!-- //myjQuery -->
+</head>
+
+<body>
+    <ul>
+        <li><img src="" alt=""></li>
+        <li><img src="" alt=""></li>
+        <li><img src="" alt=""></li>
+        <li><img src="" alt=""></li>
+        <li><img src="" alt=""></li>
+    </ul>
+    <!-- myjQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script> <!-- libraries 종류 -->
+    <script src="js/myjQuery.js"></script>
+    <script>
+        //body에 jQuery 작성 할 때는 준비 구문이 필요 없음
+        //슬라드쇼  쿼리
+        // ..
+        //메뉴쿼리
+        // ..
+        $("ul>li").first().click(function(){
+            $(this).fadeOut().next().fadeIn();
+        }); //.click(); end
+    </script>
+    <!-- //myjQuery -->
+</body>
+
+</html>

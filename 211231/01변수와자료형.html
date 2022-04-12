@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01변수와 자료형.html</title>
+    <script>
+        // 기초 구문 = 결과값 확인 방법 3가지
+        // alert("출력할 결과 값");    // 알고리즘 순서(로직)상에서 확인
+        // document.write("출력할 결과 값");  //초기에 기본코드 확인용
+        // console.log("어느문서 몇 번째 줄에서 어떤 값이 나오나");
+
+        // 변수의 선언
+        var i;  
+        console.log(i);
+
+        i = 10;
+        console.log(i);
+
+        i = null;
+        console.log(i);
+
+        var j;  //undefined
+
+        var bool = i == j;  // 단순하게 값만을 비교 => 동등 연산자
+        console.log(bool);  //true
+        
+        bool = i === j; // 자료형을 비교 => 엄격한 동등 연산자
+        console.log(bool);  //false
+
+        //String type
+        var str = "abc";
+
+        //Number type
+        var num = 100;
+        console.log(num, typeof(num)); 
+        // console.log(num + typeof(num)); 
+
+        var num2 = '100'; // 문자형
+        console.log(num2, typeof(num2));
+
+        var sum = num + num2;   
+        //자동형변환이 되어서 number type이 String type과 연산이 되면 String type으로 자동형변환이 되어 문자 연결이 된다.
+        console.log(sum, typeof(sum));
+
+        var total = num + Number(num2);
+        console.log(total, typeof(total));
+
+
+        // javaScript에서만 사용할 수 있는 특별한 자료형
+        var infinity = 1 / 0;
+        console.log(infinity);  //양의 무한대 수
+
+        var negativeInfinity = -1 / 0; 
+        console.log(negativeInfinity);  //음의 무한대 수
+
+        var nAn = Number("12,5");
+        console.log(nAn);   //NaN , Not a Number 의 약자
+        var num3 = Number("12.5");
+        console.log(num3, typeof(num3));
+
+        // Java, C언어는 숫자를 담을 때, Int(정수) // float, double (실수)
+        var bigInt = 1234567891234567891234n;
+        console.log(bigInt);
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout02.html</title>
+    <style>
+        /* reset CSS */
+        *{ margin: 0; padding: 0;}
+        #mom{ width: 960px; height: 920px; background: #ccc; padding:10px;}
+        #son01{ width: 960px; height: 100px; background: #ff0;
+                 margin-bottom: 10px;}
+        #son02{ width: 290px;height: 700px; background: #f00; float: left;}
+        #son03{ width: 360px; height: 700px; background: #0f0; float: left;
+                margin: 0 10px 10px;}
+        #son04{ width: 290px; height: 700px; background: #00f; float: left;}
+        #son05{ width: 960px; height: 100px; background: #0ff; clear: both;}
+
+    </style>
+</head>
+<!-- 1. 이미지를 보고 div개수와 부모-자식관계 파악
+     2. body에 태그(공간)구조 설계 + id값 지정
+     3. CSS에 width, height, bgcolor로 body에 작성된 요소가 모두 표현되는지 확인
+     4. float을 이용해 포지셔닝
+     5. margin이나 padding을 이용해 여백 지정 -->
+<body>
+    <div id="mom">
+        <div id="son01"></div>
+        <div id="son02"></div>
+        <div id="son03"></div>
+        <div id="son04"></div>
+        <div id="son05"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+*{ margin: 0; padding:0;}
+ul{ list-style: none;}
+
+#wrap{ width: 1200px; margin: 0 auto;}
+#wrap > header{ height: 100px; background-color: yellow; }
+#wrap > nav{ height: 40px; background-color: blue;}
+#wrap > nav > ul > li {width: 100px; height: 40px; border:1px solid white; box-sizing: border-box; float: left;}
+#wrap > section{ height: 600px; background-color: gray;}
+#wrap > article{ width: 600px; height: 200px;float: left; border:1px dashed red; box-sizing: border-box;}
+#wrap > footer{ height: 100px; background-color: wheat; clear: both;}

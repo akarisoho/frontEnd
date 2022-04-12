@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for문복습.html</title>
+  <script>
+    // 1부터 100까지의 합
+    // for문으로 1부터 100까지 합을 구하는 구문쓰시는데, document의 최종 누계만
+    // var total; => 초기값을 세팅해 주지 않으면 연산시 오류가 발생할 수 있음
+    var total = 0; // total에 담을 값이 숫자라면 0을 초기값으로 세팅해야함
+    //  cf. 만일 문자가 담겨야 하는 변수를 미리 선언한다고 하면 var total = ""; 로 초기세팅
+    var j = 1;   // 전역변수(Global var)
+    for (var i = 30; i <= 60; i++) {  //var i은 지역변수(local var)
+      total += i;
+      console.log(`${j}회전시 total의 값 : ${total}`);
+      j++;
+    }
+    document.write(total);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04조건문-switch.html</title>
+    <script>
+        var day = "금";
+
+        document.write(`${day}에는 `);
+        switch (day) {
+            case "월요일":
+            case "목요일":
+                document.write(`스터디그룹에 참여합니다.`);
+                //case의 값인 "월요일"과 key값이 맞다면 `스터디그룹에 참여합니다.`를 출력
+                break;  // switch문을 빠져나감
+
+            case "화요일":
+            case "금요일":
+            case "일요일":
+                document.write(`넷플릭스를 봅니다.`);
+                //case의 값인 "화요일"과 key값이 맞다면 `넷플릭스를 봅니다.`를 출력
+                break; // switch문을 빠져나감
+
+            case "수요일":
+            case "토요일":
+                document.write(`휴식을 취합니다.`);
+                //case의 값인 "수요일"과 key값이 맞다면 `휴식을 취합니다.`를 출력
+                break; // switch문을 빠져나감
+
+            default:
+                //case와 key값이 일치하지 않을 때 출력
+                document.write(`일치하는(맞는) case가 없습니다.`);
+                break;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 
+        switch 문은 여러가지 경우 case를 만들어서 key값과 비교 
+        > 비교한 값과 맞는 case가 있으면 
+        해당 case의 결과 값을 골라서 보여주고 switch 문을 빠져나감
+    -->
+</body>
+
+</html>

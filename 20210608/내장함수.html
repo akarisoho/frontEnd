@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수.html</title>
+    <script>
+        //내장함수(=코어함수) 호출상태s  
+        // alert("메세지");
+        // prompt("입력하세요",'');
+        var a = confirm("확인 또는 취소"); 
+        document.write(a);  //확인을 누르면 true를 반환, 취소를 누르면 false를 반환
+
+        if (a) {
+            location.href="http://www.google.com";
+        }else{
+            location.href="http://www.naver.com";
+        }
+    </script>
+</head>
+<body>
+    <!-- 내장함수는 호출만해서 사용한다. 기능 정의는 브라우저에 미리 정의됨 -->
+</body>
+</html>

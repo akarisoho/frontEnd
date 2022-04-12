@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션+트랜스폼</title>
+    <style>
+        div{ width: 200px; height: 200px; box-sizing: border-box;}
+        .box{ border: 3px solid #333; position: absolute; z-index: -999;}
+
+        #box01{ background: rgba(255,255,0,0.5); transform: translate(0,0);
+                transition: transform 0.35s ease-in-out;}
+        #box01:hover{ transform: translate(100px,100px);}
+
+        #box02{ background: rgba(0,0,255,0.5); transform: skew(0,0);
+                transition: transform 0.35s} 
+        #box02:hover{ transform: skew(15deg,30deg);}
+
+        #box03{ background: rgba(255, 0, 255, 0.5); transform: scale(0.3,1.2);
+                transition: transform 0.35s;}
+        #box03:hover{ transform: scale(1.2,0.3);}
+
+        #box04{ background: rgba(0,255,255,0.5); transform: rotate(45deg);
+        transition: transform 0.35s; transform-origin: right center;}
+        #box04 p{ transform: rotate(-45deg);}
+        #box04:hover{ transform: rotate(360deg);}
+    </style>
+</head>
+<!-- transition => 변화 과정을 자연스럽게 보이도록 
+    transition에서 변화시킬 수 있는 속성
+    : width, height, top, left, right, bottom, margin, padding, border, opacity, transform, color, background 등..
+    transition : property1 duration1 (delay) (timing-function), property2 duration2;
+
+    transform => 2D, 3D로 오브젝트를 변환 시킴
+* 위치 변환 transform:translate(x,y) | translateX(x) | translateY(y);
+                x,y의 값을 px, %, em으로 작성
+
+* 기울기 변환 transform:skew(x-angle,y-angle) | skewX(x-angle) | skewY(y-angle);
+                //angle = 각도 = 'deg' 단위 사용
+
+* 크기 변환 transform:scale(x,y) | scaleX(x) | scaleY(y)
+                // scale의 값은 %, em배수단위나 
+                // 특정한 단위없이 소수점 1자리까지 표현 => 1.0 == 100% == 1em
+
+* 회전      transform : rotate(angle);   => 단위는 'deg' 사용
+                //회전 중심 축 이동 => transform-origin 프로퍼티를 사용
+
+-->
+<body>
+    <h1>위치변환 : translate</h1>
+    <div class="box"></div>
+    <div id="box01"></div>
+
+    <h1>기울기변환 : skew</h1>
+    <div class="box"></div>
+    <div id="box02"></div>
+
+    <h1>크기변환 : scale</h1>
+    <div class="box"></div>
+    <div id="box03"></div>
+
+    <h1>회전 : rotate</h1>
+    <div class="box"></div>
+    <div id="box04">
+        <p>rotate</p>
+    </div>
+</body>
+</html>

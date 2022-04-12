@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리선택자01.html</title>
+    <!-- jQuery Library 연결하기 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // 태그(요소,element)선택자로 글자색을 red로 변경
+            // css에서는 => li{ color:red; }
+            $("li").css("color","red");
+
+            //아이디선택자로 글자색을 #00f로 변경
+            // css에서는 => #point{ color:#00f; }
+            $("#point").css("color","#00f"); 
+
+            //클래스선택자로 글자 크기를 24px, 글자 굵기 bold로 변경
+            // css에서는 => .bigfont{ font-size : 24px; }
+            $(".bigfont").css({
+                "font-size":"24px",
+                "font-weight" : "bold"
+            });
+
+            // 자손선택자를 이용해서 배경색을 rgba(255,255,0,0.3)으로 변경
+            // css에서는 => ol > li { background-color:rgba(255,255,0,0.3);}
+            $("ol > li").css("background-color","rgba(255,255,0,0.3)");
+
+            // 후손선택자를 이용해서 ol의 후손인 li의 글자색을 #333으로 변경
+            // css에서는 => ol li{ color:#333;}
+            $("ol li").css("color","#333");
+
+            // .css() => 선택한 요소의 하나이상의 스타일 속성을 설정/변경
+            // 단일 css 설정 => .css("color","#333"); 
+            // 복수 css 설정 => .css({"color":"#333","background-color":"yellow"}); 
+        });
+    </script>
+</head>
+<body>
+    <!-- ul>li{sampleText0$}*4 -->
+    <ul>
+        <li class="bigfont">ul-List01</li>
+        <li id="point">ul-List02</li>
+        <li>ul-List03</li>
+        <li>ul-List04</li>
+    </ul>
+    <!-- ol>li{ol-List0$}*3 -->
+    <ol>
+        <li class="bigfont">ol-List01</li>
+        <li>ol-List02</li>
+        <li>ol-List03</li>
+    </ol>
+</body>
+</html>

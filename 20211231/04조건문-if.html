@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04조건문-if.html</title>
+    <script>
+        // if문 : 조건문이 참일 경우 중괄호 안에 있는 구문을 실행, 거짓이라면 실행하지 않음
+        /* 
+        if (조건문) {
+            // 실행코드
+        }
+        */
+        var gender = prompt("성별을 입력하세요.", "남자 또는 여자로 입력하세요.");  // 창에 데이터입력 필드가 뜸
+        /*
+               if (gender == "남자") {
+            // gender의 값이 "남자"이므로 우변의 비교하는 값인 "남자"와 같으므로 아래 구문실행
+            // gender의 값이 "여자"이므로 우변의 비교하는 값인 "남자"와 다르므로 아래 구문 실행 x
+                   document.write(`${gender}이시군요! 멋집니다!`);
+               } else{
+                // 위 조건문의 결과가 false라서 위에 실행 구문이 실행이 안된다면 아래 구문이 실행
+                document.write(`${gender}이시군요! 예뻐요!`);
+               }
+        */
+        /*
+            // 입력창에 "여"라고 입력을 받을 경우
+               if (gender == "남자") {
+                   document.write(`${gender}이시군요! 멋집니다!`);
+               } else if(gender == "여자"){
+                document.write(`${gender}이시군요! 예뻐요!`);
+               }else{
+                   document.write("'남자' 또는 '여자'로만 입력해 주세요.");
+               }
+        */
+        if (gender == "남자" || gender == "남") {
+            document.write(`${gender}이시군요! 멋집니다!`);
+        } else if (gender == "여자" || gender == "여" || gender == "녀") {
+            document.write(`${gender}이시군요! 예뻐요!`);
+        } else {
+            document.write("'남자' 또는 '여자', '남','여'로만 입력해 주세요.");
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- 제어문에는 조건문과 반복문이 있음
+    제어문은 true일 때 실행하는 구문과 false일 때 실행하는 구문
+    조건문에는 if, else, else if, switch 있음
+    -->
+</body>
+
+</html>

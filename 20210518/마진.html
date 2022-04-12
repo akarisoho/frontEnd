@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진.html</title>
+    <style>
+        body > div{ width: 100px; height: 100px; border:2px solid red;
+         margin: 50px 50px 100px;}
+    /* 마진 통합 현상 => 형제 요소들 간 위쪽과 아래쪽에 마진이 있을 경우에 큰 숫자로 통합되어 여백 생기는 현상
+     해결 => 위쪽에는 마진값을 사용하지 말자! */
+
+        body > div > div{ width: 50px; height: 50px; background: #0f0;}
+
+ /* margin 값을 한 개 지정 : 사방으로 같은 값(25px)의 마진이 들어감 */
+        #box1_01{ margin: 25px;} 
+
+/* margin 값을 두 개 지정 : 상하가 같은 값(25px), 좌우가 같은 값(10px) */
+        #box2_02{ margin: 25px 10px;} 
+
+/* margin 값을 세 개 지정 : 상(10px), 좌우가 같은값(25px), 하(5px)  */
+        #box3_03{ margin: 10px 25px 5px;} 
+
+/* margin 값을 네 개 지정 : 상(5px), 우(10px), 하(15px), 좌(20px) */
+        #box4_04{ margin: 5px 10px 15px 20px;} 
+    </style>
+</head>
+<!-- margin => 요소와 요소사이의 간격을 지정할 때 사용, 주로 형제요소관계 -->
+<body>
+    <!-- (#box$>#box$_0$)*4 -->
+    <div id="box1">
+        <div id="box1_01"></div>
+    </div>
+    <div id="box2">
+        <div id="box2_02"></div>
+    </div>
+    <div id="box3">
+        <div id="box3_03"></div>
+    </div>
+    <div id="box4">
+        <div id="box4_04"></div>
+    </div>
+</body>
+</html>

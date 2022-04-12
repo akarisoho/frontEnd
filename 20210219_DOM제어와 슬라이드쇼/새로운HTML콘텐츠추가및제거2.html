@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>새로운HTML콘텐츠추가및제거2.html</title>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(document).ready(function() {
+            //.prepend() => 선택한 요소의 내부 앞에 삽입
+            //           => 선택한 요소의 첫번째 자식 요소로 삽입
+            $(".innerBtn").click(function(){
+                $("p#second").prepend("<strong>삽입완료!</strong>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- p#second 외부 앞 -->
+    <p id="second">
+        <!-- p#second 내부 앞 -->
+        p요소의 콘텐츠
+        <!-- p#second 내부 뒤 -->
+    </p>
+    <!-- p#second 외부 뒤 -->
+    <button class="innerBtn">쿼리실행</button>
+</body>
+
+</html>

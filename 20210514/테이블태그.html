@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블태그</title>
+    <!--<link rel="stylesheet" href="외부.css"> 외부스타일시트 External Style Sheet-->
+    <style>
+        /* 내부스타일시트 internal Style Sheet */
+        /* css 작성 기본구조
+         => selector { property1 : value ; property2 : value1 vale2; }  */
+         
+    /* ▽ 태그선택자를 사용해서 콤마로 구분해서 다중 요소(태그)를 선택  */
+        table,th,td { 
+        /* border-width: 1px; => 테두리 두께 지정 : 단위(px,%,em);
+        border-style: solid; => 테두리 스타일 지정 : 실선 ;
+        border-color:#000;  => 테두리 색 지정 : (16진수)Hexcode를 3자리로 표기 ;*/
+            border:1px solid #000;
+        /* 위 3가지 border속성을 한번꺼번에 작성할 때 사용
+            각 자리 값은 공백으로 구분하고 
+            순서는 '두께 스타일 색' 또는 '색 스타일 두께' 
+          */
+         border-collapse: collapse; /* 겹치는 선이 없이 하나의 선으로 표현 */
+         }
+    </style>
+</head>
+<body>
+    <!-- table태그 => 표 정의
+    하나이상의 tr, th, td로 구성되며
+    table태그를 tr태그로 행(줄,row)을 나누고
+    th, td태그로 열(칸,column)을 나눠줍니다. -->
+    <!-- 칸과 칸 사이 여백: cellspacing => 박스레이아웃에서는 margin 
+         칸안에서 콘텐츠(글씨) 사이 여백 : cellpadding 
+         => 박스레이아웃에서는 padding 
+        92p.~ 99p. html5 == 시맨틱웹 -->
+    <!-- <table border="1" cellspacing="0" cellpadding="0"> 
+        ex.인라인 스타일 <table style="width:10px; height:20px"></table>  -->
+    <table>
+        <tr>
+            <th>1행의1번째칸</th>
+            <th colspan="2">1행의2번째칸</th>
+            <th rowspan="3">1행의 3번째 칸</th>
+        </tr>
+        <tr>
+            <td>2행의1번째칸</td>
+            <td rowspan="2">2행의2번째칸</td>
+            <td>2행의3번째칸</td>
+        </tr>
+        <tr>
+            <!-- td{3행의$번째칸}*3 -->
+            <td>3행의1번째칸</td>
+            <td>3행의2번째칸</td>
+        </tr>
+    </table>
+</body>
+</html>

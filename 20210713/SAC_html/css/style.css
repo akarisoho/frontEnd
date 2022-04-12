@@ -1,0 +1,97 @@
+*{ margin: 0; padding: 0;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+/* img{ max-width: 100%;} */
+
+#wrap{ width:90%; max-width: 1100px; min-width: 960px; margin: 0 auto; }
+
+#header{ /*height: 120px;*/ padding:15px 0 10px; /* padding-left:2.083%;*/ box-sizing: border-box; }
+#header > h1{ /* width: 26.596%;*/}/* 250/940(padding-left에 20px을 적용한 경우, header의 너비에서 패딩값을 뺀 나머지 영역의 너비 940px)*100 */
+#header > h1 img{ height: 90px;}
+
+#gnb li{ float: left; width: 25%; height: 44px; }
+#gnb li:last-child{ margin-bottom: 10px;}
+#gnb li > a{ display: block; width: 100%; height: 100%; text-align: center; line-height: 44px; letter-spacing: 10px; text-indent: 10px; font-weight: bold;
+     border-radius: 20px 20px 0 0 ;
+    /* transition:background-color 0.3s ease-in-out,color 0.3s ease-in;*/}
+#gnb li > a:hover{ background-color:rgb(252, 0, 25); color:#000}
+
+.slide{ height: 500px; background: cornflowerblue; clear: both; position: relative; overflow: hidden;}
+.slide ul, .slide li{ height: inherit;}
+.slide li{position: absolute; top:0; left: 50%; transform: translateX(-50%);}
+.slide img{ max-height: 100%;}
+
+a.article{ float:left; width: 22.917%; height: 280px; margin: 10px 1.042%; position: relative; background-size: cover; color:#333;}
+
+/* a.article:nth-child(4){background-image: url(../img/01.png);} */
+a.article:nth-of-type(1){background-image: url(../img/01.png);}
+a.article:nth-of-type(2){background-image: url(../img/02.png); 
+    background-position: center;}
+a.article:nth-of-type(3){background-image: url(../img/03.png); 
+    background-position: bottom;}
+a.article:nth-of-type(4){background-image: url(../img/04.png);}
+a.article:nth-of-type(5){background-image: url(../img/05.png); background-position: center;}
+a.article:nth-of-type(6){background-image: url(../img/06.png); background-position: center;}
+a.article:nth-of-type(7){background-image: url(../img/07.png); background-position: bottom;}
+a.article:nth-of-type(8){background-image: url(../img/08.png);
+    background-position:center -50px;}
+
+a.article > span.text{ display: block; width: 100%; background: rgba(255,255,255,0.7); position: absolute; bottom:0; opacity: 0; font-size: 14px; padding:0.75em; box-sizing: border-box;}
+/* 1. 페이지가 로드 된 직후에는 span.text가 투명도를 0을 가진다.*/
+
+a.article:hover > span.text{ opacity: 1; transition: opacity 0.5s ease-in;}
+/* 2. a.article에 마우스를 올리면 span.text의 투명도가 1.0을 가진다.*/
+/* 3. transition효과를 적용해 자연스러운 투명도 조절을 해보세요.*/
+
+a.article > span.text > strong{ font-size: 1.5em; display: block; width:100%;
+     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  }
+/* 한 줄 말줄임 => 글 줄임 삼총사가 적용될 요소는 block특성을 가지고 있어야 합니다.
+    white-space:nowrap => 넘친 글을 감싸서 줄바꿈X
+    overflow:hidden => 줄바꿈하지 않은 글자(넘친글자)를 가려줌
+        ※ inline 요소는 width값의 설정이 불가하고 콘텐츠만큼이 자신의 영역
+    text-overflow : ellipsis => 마지막 글자 대신 ...을 삽입
+*/
+
+#footer{ height: 115px; background: rgb(179,179,166); clear: both;
+     background-image: url(../img/logo_w.png); background-size: auto 60px;
+     background-repeat: no-repeat; background-position: 25px; font-size: 11px; 
+     position: relative; }
+#footer .main_footer{ padding:25px 5% 0 0; width: 70%; position: absolute; right: 0; }
+#footer .main_footer address{font-style: normal;}
+#footer .main_footer address span{ margin: 0 1.5%;}
+#footer .main_footer p{ padding-top: 7px;}
+
+/* pc의 웹브라우저는 hover기능이 있지만, mobile이나 tablet은 hover기능X 
+  => 페이지가 로드 되었을 때 부터 span.text가 보여지도록 해야 한다. */
+/* m */
+@media screen and (max-width:479px){
+    #wrap{ min-width: 320px; max-width: 460px; }
+    #header{ padding-left: 0;}
+    /* #gnb{ height: 120px;} */
+    #gnb li{ width: 100%;}
+    #gnb li > a{ border-radius: 0;}
+    #gnb li:first-child > a{ border-radius: 20px 20px 0 0;}
+    .slide{ display: none;}
+    a.article{ width: 100%; height: 230px; margin: 0 0 10px;}
+    a.article > span.text{opacity: 1; font-size: 3.5vw;}
+    #footer{ background-image: none;}
+    #footer .main_footer{ width: 95%; padding: 5px 2.5%;}
+}
+/* t1 */
+@media screen and (min-width:480px) and (max-width:960px) {
+    #wrap{ max-width: 768px; min-width: 480px;}
+    #header{ padding-left: 3.333%;}
+    #gnb li:nth-child(3) > a{ letter-spacing: 0; text-indent: 0;}
+    .slide{ height: 400px;}
+    a.article{ width: 30%; height: 230px; margin: 10px 1.667%;}
+    a.article > span.text{ opacity: 1; font-size: 2.0vw;}
+    #footer{ background-image: none;}
+    #footer .main_footer{ width: 90%; padding: 25px 5% 0;}
+}
+/* t2 */
+@media screen and (min-width:700px) and (max-width:960px){
+    a.article > span.text{ font-size: 1.8vw;}
+    #footer { background-image: url(../img/logo_w.png);}
+    #footer .main_footer{ width: 60%;}
+    #footer{ background-size: auto 60px;}
+}

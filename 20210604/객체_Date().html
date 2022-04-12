@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체_Date().html</title>
+    <script>
+        var today = new Date();  //인스턴스 생성
+        // document.write(today.getFullYear());  //년도
+        // document.write(today.getDate());    // 일
+        // document.write(today.getMonth()+1);  // 월은 +1해야한다.
+        // '오늘은 2021년 6월 4일 입니다.' 화면에 쓰기
+        document.write("오늘은 " + today.getFullYear() + "년 " + (today.getMonth()+1) + "월 " + today.getDate()+"일 입니다.");
+    </script>
+</head>
+<!-- 객체 => Object -->
+<body>
+    
+</body>
+</html>

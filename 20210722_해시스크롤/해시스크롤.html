@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해시스크롤</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* custom scroll start */
+        /* width */
+    ::-webkit-scrollbar {
+    width: 30px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+    /* box-shadow: 0 0 5px grey inset;  */
+    background-color:pink;
+    /* border-radius: 10px; */
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #99f; 
+    border-radius: 20px;
+    }
+
+    /* Handle on hover */
+    ::scrollbar-thumb:hover {
+    background: rgba(200, 200, 0, 0.8); 
+    }
+        /* custom scroll end */
+        #top_btn{ position: fixed; right: 30px; bottom:30px; background-color: red; padding: 10px; border-radius: 50px; width: 24px; height: 24px; text-align: center;}
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        section {
+            height: 1000px;
+            padding-top: 50px
+        }
+
+        #section1 {
+            background-color: pink;
+        }
+
+        #section2 {
+            background-color: skyblue;
+        }
+
+        #section3 {
+            background-color: purple;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header #gnb a").click(function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    //a태그가 기본적으로 가진 이벤트(페이지 이동) 삭제
+                    
+                    var hash = this.hash;
+                    //클릭한 hash를 변수 hash에 담기
+                    console.log(hash);
+
+                    // $('html,body').animate({},초,콜백함수);
+                    $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                    },1000,function(){
+                        window.location.hash = hash;
+                    });
+                }
+            }); // #header click event end 
+            //탑버튼 이벤트
+            $("#top_btn").click(function(){
+                $("html,body").animate({
+                    scrollTop: $("html,body").offset().top
+                },500);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="top_btn">▲</div>
+    <header id="header">
+        <h1><a href="#">title</a></h1>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#section1">section1</a></li>
+                <li><a href="#section2">section2</a></li>
+                <li><a href="#section3">section3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="section1">
+        <h2>section1</h2>
+    </section>
+    <section id="section2">
+        <h2>section2</h2>
+    </section>
+    <section id="section3">
+        <h2>section3</h2>
+    </section>
+</body>
+
+</html>

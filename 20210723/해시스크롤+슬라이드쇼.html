@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형_원페이지_프로토타입</title>
+    <link rel="stylesheet" href="css/style.css"><!-- myPage Layout -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <!-- splide CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/scrollEvent.js"></script>
+</head>
+
+<body>
+    <!-- #wrap>header#header+(section#s$)*3+footer#footer -->
+    <div id="wrap">
+        <div id="top_btn"><img src="http://placehold.it/44x44" alt="top button"></div>
+        <header id="header">
+            <div class="center">
+                <!-- (h1>img)+(nav#gnb>a[href=#s$]*3) -->
+                <h1><img src="http://placehold.it/200x40" alt="logo"></h1>
+                <nav id="gnb">
+                    <a href="#s1">section1</a>
+                    <a href="#s2">section2</a>
+                    <a href="#s3">section3</a>
+                    <a href="#s4">section4</a>
+                </nav>
+            </div>
+        </header>
+        <script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                var currentSccrollpos = window.pageYOffset;
+                if (prevScrollpos > currentSccrollpos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-50px";
+                }
+                prevScrollpos = currentSccrollpos;
+            }
+        </script>
+        <!-- <section>태그는 첫번째 자식요소가 반드시 제목태그가 와야함. h2~h6
+             cf. <article>태그도 동일함 -->
+        <section id="s1">
+            <h2>section1 Title</h2>
+            <div class="center">
+                <div id="secondary-slider" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide flip3D">
+                                <div class="back">뒤집힘!</div>
+                                <div class="front">
+                                    <img src="http://placehold.it/400x300" alt="">
+                                    <div class="discript">
+                                        <strong>Title</strong>
+                                        <p>본문내용<br>본문내용<br>본문내용<br>본문내용<br>본문내용<br></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide flip3D">
+                                <div class="back">뒤집힘!</div>
+                                <div class="front">
+                                    <img src="http://placehold.it/400x300" alt="">
+                                    <div class="discript"><strong>Title</strong>
+                                        <p>본문내용</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide flip3D">
+                                <div class="back">뒤집힘!</div>
+                                <div class="front">
+                                    <img src="http://placehold.it/400x300" alt="">
+                                    <div class="discript"><strong>Title</strong>
+                                        <p>본문내용</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide flip3D"><img src="http://placehold.it/400x300" alt="">
+                                <div class="discript"><strong>Title</strong>
+                                    <p>본문내용</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide flip3D"><img src="http://placehold.it/400x300" alt="">
+                                <div class="discript"><strong>Title</strong>
+                                    <p>본문내용</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide flip3D"><img src="http://placehold.it/400x300" alt="">
+                                <div class="discript"><strong>Title</strong>
+                                    <p>본문내용</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//.center -->
+                    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            new Splide('#secondary-slider', {
+                                fixedWidth: 250, //리스트(이미지)의 너비
+                                rewind: true,
+                                gap: 30, //리스트 간의 간격
+                                pagination: false
+                            }).mount();
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+        <section id="s2">
+            <h2>section2 Title</h2>
+            <div class="center">
+                <article class="arti">
+                    <h3></h3>
+                </article>
+                <article class="arti">
+                    <h3></h3>
+                </article>
+                <article class="arti">
+                    <h3></h3>
+                </article>
+            </div>
+        </section>
+        <section id="s3">
+            <h2>section3 Title</h2>
+            <div class="center"></div>
+        </section>
+        <section id="s4">
+            <h2>section4 Title</h2>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>

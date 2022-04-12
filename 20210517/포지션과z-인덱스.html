@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션과z-인덱스.html</title>
+    <!-- 방향프로퍼티로 좌표값을 지정할 때, 
+        상대좌표값인지, 절대좌표값인지를 지정하기 위해 사용하는 것이 position
+         position : relative => 상대좌표, 이 속성이 들어간 요소가 기준
+                  : absolute => 절대좌표, 이 속성이 들어간 요소의 상위 요소들 중 position속성이 있다면 그 상위 요소를 기준으로 한다.
+                  단, 상위요소에 position속성이 없다면 body를 기준으로 절대좌표
+                  : fixed => 뷰포트 기준으로 절대좌표 
+        
+        *방향프로퍼티 : top, left, right, bottom
+                -->
+    <style>
+        div{ width: 300px; height: 300px;}
+        /* z-index => position속성이 있을 때만 Z축 순서를 바꿀 수 있음*/
+        #red{ background-color: red; 
+         position: absolute; top:0; left: 300px;
+         z-index: 10;}
+        #green{ background-color: green; 
+        position: absolute; top: 100px; left: 400px;
+        z-index: 5; }
+        #blue{ background-color: blue; 
+        position: absolute; top: 200px; left: 200px;
+        z-index: 9999; /* 어떤 요소들 보다 맨 앞으로 */
+        }
+
+        /* position:absolute로 포지셔닝 할 때 
+        #red{ background-color: red; 
+         position: absolute; top:0; left: 300px;}
+        #green{ background-color: green; 
+        position: absolute; top: 0; left: 600px; }
+        #blue{ background-color: blue; 
+        position: absolute; top: 0; left: 900px;}*/
+
+        /* position:relative로 포지셔닝(배치)할 때 
+        #red{ background-color: red; position: relative; top:0; left: 300px;}
+        #green{ background-color: green; position: relative;
+                top:-300px ; left: 600px ; }
+        #blue{ background-color: blue; 
+        position: relative; top:-600px; left: 900px;} */
+    </style>
+</head>
+<body>
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+</body>
+</html>

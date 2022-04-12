@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <script>
+        // 사용자 정의 객체 정의(생성)
+        // var obj1 = { 속성1:값, 속성2:값, 속성3:값, ...  }
+
+        // 객체 생성 방법1
+        // var baby = {};   //변수에 빈 객체 담기
+        // baby.age = "2살";
+        // baby.birth = "5월 23일";
+        // baby.gender = "남자";
+
+        // 객체 생성 방법2
+        var baby = {
+            age : "2살",
+            birth : "5월 23일",
+            gender : "남자",
+            getAge : function() {
+                return this.age;  // baby.age 
+                // => baby객체 안에서 baby객체의 age속성값을 가져오므로
+                // this.age라고 작성함
+            } //function의 끝
+        }; //baby객체 선언의 끝
+
+        // 속성 불러오기
+        document.write(baby.birth);
+        document.write("<br>");
+        document.write(baby.age);
+        document.write("<br>");
+        document.write(baby.getAge());  //getAge속성에는 값을 함수를 넣었으므로
+                                    //.getAge() => 메서드의 형태로 사용
+    
+    </script>
+</head>
+<body>
+    <!-- 변수와 함수가 모인 꾸러미 = 객체 
+        => 인스턴스 생성해서 변수, 함수 등을 추가해서 사용가능
+       Date() 객체=> var today = new Date();
+       = 내장객체 종류 =
+        String() =>  var a = new String(); 
+                     =인스턴스를 생성하지 않고=> var a = "";
+        
+        Number() => var b = new Number();
+                    =인스턴스를 생성하지 않고=> var b = 0;
+        
+        Boolean() => var c = new Boolean();
+                    =인스턴스를 생성하지 않고=> var c = true;
+
+        var a = "";  var b = 0;  var c = true;  => 리터럴 값을 준다.
+
+        Array()객체는 => var array = [데이터1,데이터2,데이터3]; 
+        Object()객체는 => var obj = { 속성1:값1,속성2:값2,속성3:값3 }
+
+        Function() => var x = myFunction(4, 3); //함수 호출하면서 변수에 담기  
+                    // 함수 선언
+                    function myFunction(a, b) {
+                        // 실행문
+                        return a * b;
+                        }
+    -->
+</body>
+</html>

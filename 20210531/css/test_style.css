@@ -1,0 +1,28 @@
+/* reset CSS */
+*{ margin: 0; padding:0;}
+body{ font-family: '나눔바른 고딕','나눔스퀘어',sans-serif;}
+h1,h2,h3,h4,h5,h6{ font-family: '나눔손글씨 펜',cursive;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+
+.center{ width: 940px; margin: 0 auto; background: rgba(0,0,0,0.5);}
+
+#box01{ width:940px; height:102px; padding-top: 23px; margin: 0 auto;}
+.box01_01{ width:640px; height:75px; margin-left: 150px; text-align: center; line-height:80px; }
+.box01_01 a{ border-bottom:5px double #333; padding: 10px; color:#333 }
+
+#box02{ width:100%; height:35px; background: #ccc; padding-top: 5px;}
+.box02_01{ width:100px; height:30px; float: left; margin-left: 10px; text-align: center; line-height: 30px;}
+.box02_01 a{  display: block; height: 100%; border-radius: 10px; color: #fff;
+        transition: background 0.75s ease-in-out, color 0.5s ease-in-out; } 
+.box02_01 a:hover{background: #0f0; font-weight: bolder; color:#333;
+        }        
+
+#box03{ width:940px; height:1200px; background: orange; margin: 0 auto;
+        padding:10px; box-sizing: border-box;}
+.box03_01{ width:280px; height:1180px; background: yellow; float: right;}
+.box03_02{ width:630px; height:630px; background: yellowgreen; float: left;
+            margin-bottom: 10px;}
+.box03_03{ width:630px; height:540px; background: yellow; float: left;}
+
+#box04{ width:940px; height:100px; background-color: purple; margin: 0 auto;}

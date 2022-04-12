@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준1</title>
+    <style>
+        /* reset CSS */
+        *{ margin: 0; padding: 0;}
+
+        #box1{ width: 960px; height: 1000px; background: #ccc;
+            margin: 0 auto;}
+
+        /* #box02 */
+        #box02{ width: 300px; height: 200px; background: red; 
+                margin-left: 330px;}
+
+        /* #box03 */
+        #box03{ height: 50px; background: blue;}
+        #box03 .box04{ width: 118px; height: 48px; background-color: #0ff;
+                        float: left; border: 1px solid red;}
+
+        /* #box05  */
+        #box05{ height: 400px; background: yellow; }
+
+        /* #box06 */
+        #box06{ height: 300px; background: green;}
+        #box06 .box07{ width: 480px; height: 300px; 
+            border: 5px dotted yellowgreen; float: left; 
+            box-sizing: border-box; }
+
+        /* #box08 */
+        #box08{ height: 50px; background: purple;}
+    </style>
+</head>
+<body>
+    <!-- #box1>#box02+#box03+#box05+#box06+#box08 -->
+    <div id="box1">
+        <!-- #box02 start -->
+        <div id="box02"></div>
+        <!-- #box02 end -->
+
+        <!-- #box03 start -->
+        <div id="box03">
+            <div class="box04">1</div>
+            <div class="box04">2</div>
+            <div class="box04">3</div>
+            <div class="box04">4</div>
+            <div class="box04">5</div>
+            <div class="box04">6</div>
+            <div class="box04">7</div>
+            <div class="box04">8</div>
+        </div>
+        <!-- #box03 end -->
+
+        <!-- #box05 -->
+        <div id="box05"></div>
+        <!-- //#box05 -->
+
+        <!-- #box06 -->
+        <div id="box06">
+            <div class="box07"></div>
+            <div class="box07"></div>
+        </div>
+        <!-- //#box06 -->
+
+        <!-- #box08 -->
+        <div id="box08"></div>
+        <!-- //#box08 -->
+    </div>
+</body>
+</html>

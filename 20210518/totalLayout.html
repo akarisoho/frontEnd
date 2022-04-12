@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>totalLayout</title>
+    <style>
+        /* reset CSS */
+        *{ margin: 0; padding:0;}
+
+        #mom1{ width: 960px; height: 920px; background-color: #ccc; 
+            padding:10px;}
+
+        #mom1 .son01{ width: 960px; height: 100px; background: #f00;
+                margin-bottom: 10px;}
+        #mom1 .son02{ width: 290px; height: 700px; background: #0f0; 
+                float: left;   margin-bottom: 10px;}
+        #mom1 .son03{ width: 660px; height: 700px; background: #00f; 
+                float: right;}
+        #mom1 .son04{ width: 960px; height: 100px; background: #0ff;
+                /* clear: both; */ float: left;}
+
+         /* layout3 */
+        #mom3{ width: 960px;height: 920px; background: #ccc; padding:10px; }
+        #mom3 .son01{ width: 290px; height: 920px; background: #f00; 
+                    float: left;}
+        #mom3 .son02{ width: 660px; height: 200px; background: #0f0; 
+                    float: right; margin-bottom: 10px;}
+        #mom3 .son03{ width: 660px;height: 500px; background: #00f; 
+                    float: right;margin-bottom: 10px;}
+        #mom3 .son04{ width: 660px; height: 200px; background: #0ff; 
+                    float: right;}
+
+        /* layout2 */
+        #mom2{ width: 960px; height: 920px; background: #ccc; padding:10px;}
+        #mom2 .son01{ width: 960px; height: 100px; background: #ff0;
+                    margin-bottom: 10px;}
+        #mom2 .son02{ width: 290px; height: 700px; background: #f00; 
+                   float: left;}
+        #mom2 .son03{ width: 360px; height: 700px; background: #0f0; 
+                    float: left; margin: 0 10px 10px;}
+        #mom2 .son04{ width: 290px; height: 700px; background: #00f; 
+                    float: left;}
+         #mom2 .son05{ width: 960px; height: 100px; background: #0ff; 
+                    clear: both;}
+    </style>
+</head>
+<body>
+    <!-- layout1 -->
+    <div id="mom1">
+        <div class="son01"></div>
+        <div class="son02"></div>
+        <div class="son03"></div>
+        <div class="son04"></div>
+    </div>
+    <!-- layout3 -->
+    <div id="mom3">
+        <div class="son01"></div>
+        <div class="son02"></div>
+        <div class="son03"></div>
+        <div class="son04"></div>
+    </div>
+    <!-- layout2 -->
+    <div id="mom2">
+        <div class="son01"></div>
+        <div class="son02"></div>
+        <div class="son03"></div>
+        <div class="son04"></div>
+        <div class="son05"></div>
+    </div>
+</body>
+</html>

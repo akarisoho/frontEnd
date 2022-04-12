@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열_Array.html</title>
+    <!-- 순차적으로 여러개의 값을 변수에 담음 -->
+    <script>
+        // var arrayName = [값1, 값2, 값3,..];
+        var arr = ["지갑","노트북","아이패드","에어팟","아이맥","가방"];
+
+        // document.write("내가 받고 싶은 선물은 " + arr + " 입니다. <br>");
+        // document.write("받고싶은 선물의 개수는 " + arr.length + "개 입니다.<br>");
+
+        // document.write("네번째로 받고 싶은 선물은" + arr[3] + "입니다.<br>");
+        
+        var total = "";
+        for (var i = 0; i < arr.length; i++) {
+            total += arr[i];
+            if (i != arr.length-1) {  //i변수는 index넘버로 0~5
+                        //arr.length는 1~6 => 인덱스 넘버로 동일하게 맞추려고 -1
+                total += ", ";
+            }
+            console.log(total);
+        }
+      
+        document.write(total);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

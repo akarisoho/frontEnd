@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>새로운HTML콘텐츠추가및제거.html</title>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            // .innerBtn을 누르면 p택의 요소 안쪽에 새로운 콘텐츠 삽입
+            $(".innerBtn").click(function(){
+                $("p#first").append("<strong>삽입완료!!</strong>");
+                //.append()는 선택자의 맨 마지막 자식요소로 콘텐츠를 삽입합니다.
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- p요소의 외부(바깥쪽) 앞 -->
+    <p id="first">
+        <!-- p요소의 내부(안쪽) 앞 -->
+        p요소의 기존 콘텐츠
+        <!-- p요소의 내부(안쪽) 뒤 -->
+    </p>
+    <!-- p요소의 외부(바깥쪽) 뒤 -->
+    
+    <button class="innerBtn">쿼리실행</button>
+</body>
+
+</html>

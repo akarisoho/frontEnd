@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자01_prompt()로연산하기.html</title>
+    <script>
+        var yesterdayMoney = prompt("어제 용돈 입력","숫자만 입력하세요.");
+        var todayMoney = prompt("오늘 용돈 입력","숫자만 입력하세요.");
+
+        // 입력받은 값 자료형확인하기
+        console.log(typeof(yesterdayMoney)); //입력값 자료형 확인
+        console.log(typeof(todayMoney)); //입력값 자료형 확인
+
+        // 어제용돈은 10000원이고
+        document.write("어제 용돈은 " + yesterdayMoney + "원 이고<br>");
+        // 오늘용돈은 5000원입니다.
+        document.write("오늘 용돈은 " + todayMoney + "원 입니다.<br>");
+
+    // 덧셈 연산이 되기 전에 숫자형으로 변환을 해야 한다.
+        var yesterdayNum = Number(yesterdayMoney);  
+        // yesterdayMoney의 값을 숫자형으로 변환하여 yesterdayNum에 대입
+        console.log(typeof(yesterdayNum)); //변환값 자료형 확인
+        var todayNum = Number(todayMoney);
+        // todayMoney의 값을 숫자형으로 변환하여 todayNum에 대입
+        console.log(typeof(todayNum));  //변환값 자료형 확인
+
+        var add = yesterdayNum + todayNum;
+        // 도큐먼트에 "어제와 오늘의 용돈의 합은 ???원 입니다."
+        document.write("어제와 오늘의 용돈의 합은 " + add + "원 입니다.<br>");
+        document.write("용돈의 합은 " + (yesterdayNum + todayNum) + "원 입니다.<br>");
+
+        // 용돈의 평균을 연산해서 도큐먼트에 출력하기
+        document.write("어제와 오늘의 용돈의 평균은 " + add/2 + "원 입니다.<br>");
+        
+        var aver = add/2;
+        document.write("용돈의 평균은 " + aver + "원 입니다.<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

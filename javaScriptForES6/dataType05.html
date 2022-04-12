@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataType05</title>
+    <script>
+        // boolean type(불|불린형)
+        const boolType = true;
+        const operatorVar = 5 < 1;  //false
+        console.log(`boolType : ${boolType}, type : ${typeof boolType}`);
+        console.log(`operatorVar : ${operatorVar}, type : ${typeof operatorVar}`);
+
+        // null(값이 없는 상태)
+        const empty = null;
+        console.log(`empty : ${empty}, type : ${typeof empty}`);
+
+        // undefined(값이 없는 상태)
+        //const는 값을 재할당할 수 없으므로 선언과 동시에 값을 주어야 함
+        let notDefined;
+        console.log(`notDefined : ${notDefined}, type : ${typeof notDefined}`);
+
+        // special type(특별한 자료형)
+        const infinity = 1 / 0;     //양의 무한대 수
+        console.log(infinity);
+
+        const negativeInfinity = -1 / 0;   //음의 무한대 수
+        console.log(negativeInfinity);
+
+        const num = Number("12.5");      // 문자를 숫자로 형변환 => 숫자로 표현
+        console.log(`num : ${num}, type : ${typeof num}`);
+
+        const nAn = Number("12,5");     // 문자를 숫자로 형변환 => 숫자로 표현할 수 없음
+        console.log(`nAn : ${nAn}, type : ${typeof nAn}`);
+
+        const bigInt = 1234567890123456789012345678901234567890n;
+        console.log(`value : ${bigInt}, type: ${typeof bigInt}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

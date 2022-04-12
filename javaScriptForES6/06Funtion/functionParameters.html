@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 함수 선언
+        function add(value1,value2) {
+            // 로컬 변수 선언과 동시에 변수에 덧셈 연산식 정의
+            var sum = value1 + value2 ;
+            console.log("sum : " + sum);
+        }
+        // 함수 호출, 파라미터의 개수에 맞추어 인자 값 지정
+        add(20,15);
+        console.log("add(20,15) : " + add(20,15));
+    
+        // add()함수 외부에서 지역변수인 sum을 사용할 수 없음
+        document.write(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

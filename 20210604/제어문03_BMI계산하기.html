@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문03_BMI계산하기.html</title>
+    <script>
+        // 수치 입력받기
+        var weight = prompt("몸무게를 입력하세요", "kg");
+        var height = prompt("키를 입력하세요", "cm");
+        // BMI 계산하기
+        var heightMeter = height / 100;  //m 단위로 환산
+        var yourBMI = weight / (heightMeter * heightMeter);
+        // document.write(yourBMI);
+
+        // BMI 결과 값에 따라 출력하기
+        // 18.5이상이고, 25미만이면 '정상체중입니다.'
+        if (18.5 <= yourBMI && yourBMI < 25) {
+            document.write("정상체중입니다.");
+        } else if (25 <= yourBMI && yourBMI < 30) { // 25이상이고, 30미만이면 '과체중입니다.'
+            document.write("과체중입니다.");
+        } else if (30 <= yourBMI) { // 30이상이면 '비만입니다.'
+            document.write("비만입니다.");
+        } else{ // 그 외 수치가 나온다면 '성인 맞으세요?'
+            document.write("성인 맞으세요?");
+        }
+        
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

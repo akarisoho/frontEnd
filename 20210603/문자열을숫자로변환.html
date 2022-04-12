@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열을숫자로변환.html</title>
+    <script>
+        var x1 = false;  //boolean형
+        var x2 = '100';  //String형
+        var x3 = "Text"; //String형
+        var x4 = Math.sqrt(3);  //Number형
+        var x5 = Math.sqrt(-3); //Number형
+
+        console.log("x1: " + typeof(x1));
+        console.log("x2: " + typeof(x2));
+        console.log("x3: " + typeof(x3));
+        console.log("x4: " + typeof(x4));
+        console.log("x5: " + typeof(x5));
+
+        document.write("x1을 숫자형으로 변환 : " + Number(x1) + "<br>");
+        document.write("x2을 숫자형으로 변환 : " + Number(x2) + "<br>");
+        document.write("x3을 숫자형으로 변환 : " + Number(x3) + "<br>"); 
+        //x3을 숫자형으로 변환하면 숫자로 표현 안됨 => Not a Number의 약자인 NaN을 출력
+        document.write("x4을 숫자형으로 변환 : " + Number(x4) + "<br>");
+        document.write("x5을 숫자형으로 변환 : " + Number(x5) + "<br>");
+        //x5는 복소수가 되므로 숫자형으로 표현x
+
+    </script>
+</head>
+<!-- Number() 함수를 사용해서 다른자료형을 숫자형으로 변환,
+    문자열이나 복소수의 값을 강제로 Number형으로 변환하면 NaN을 출력함 -->
+<body>
+    
+</body>
+</html>

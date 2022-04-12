@@ -1,0 +1,55 @@
+*{ margin: 0; padding: 0;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+img{ max-width: 100%;}
+
+#wrap{ width:90%; max-width: 1100px; min-width: 960px; margin: 0 auto; }
+
+#header{ /*height: 120px;*/ padding:15px 0 10px; /* padding-left:2.083%;*/ box-sizing: border-box; }
+#header > h1{ /* width: 26.596%;*/}/* 250/940(padding-left에 20px을 적용한 경우, header의 너비에서 패딩값을 뺀 나머지 영역의 너비 940px)*100 */
+#header > h1 img{ height: 90px;}
+
+#gnb li{ float: left; width: 25%; height: 44px; }
+#gnb li:last-child{ margin-bottom: 10px;}
+#gnb li > a{ display: block; width: 100%; height: 100%; background-color: #000; color:#fff; text-align: center; line-height: 44px; letter-spacing: 10px; text-indent: 10px; font-weight: bold;/* transition:background-color 0.3s ease-in-out,color 0.3s ease-in;*/}
+#gnb li > a:hover{ background-color:rgb(252, 0, 25); color:#000}
+
+.slide{ height: 500px; background: cornflowerblue; clear: both;}
+a.article{ float:left; width: 22.917%; height: 280px; margin: 10px 1.042%;
+    background-color: rgba(255,0,0,0.3); position: relative;
+    background-size: cover;
+}
+/* a.article:nth-child(4){background-image: url(../img/01.png);} */
+a.article:nth-of-type(1){background-image: url(../img/01.png);}
+a.article:nth-of-type(2){background-image: url(../img/02.png); 
+    background-position: center;}
+a.article:nth-of-type(3){background-image: url(../img/03.png); 
+    background-position: bottom;}
+a.article:nth-of-type(4){background-image: url(../img/04.png);}
+a.article:nth-of-type(5){background-image: url(../img/05.png); background-position: center;}
+a.article:nth-of-type(6){background-image: url(../img/06.png); background-position: center;}
+a.article:nth-of-type(7){background-image: url(../img/07.png); background-position: bottom;}
+a.article:nth-of-type(8){background-image: url(../img/08.png);
+    background-position:center -50px;}
+
+
+a.article > span.text{ display: block; width: 100%; height: 100px; background: rgba(255,255,255,0.7); position: absolute; bottom:0;}
+
+#footer{ height: 115px; background: #ccc; clear: both; }
+
+/* m */
+@media screen and (max-width:479px){
+    #wrap{ min-width: 320px; max-width: 460px; }
+    #header{ padding-left: 0;}
+    /* #gnb{ height: 120px;} */
+    #gnb li{ width: 100%;}
+    .slide{ display: none;}
+    a.article{ width: 100%; height: 230px; margin: 0 0 10px;}
+}
+/* t */
+@media screen and (min-width:480px) and (max-width:960px) {
+    #wrap{ max-width: 768px; min-width: 480px;}
+    #header{ padding-left: 3.333%;}
+    .slide{ height: 400px;}
+    a.article{ width: 30%; height: 230px; margin: 10px 1.667%;}
+}

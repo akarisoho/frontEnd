@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용사함수_반환값return.html</title>
+    <script>
+        //덧셈 함수 생성(선언)
+        function add(a, b) {
+            var sum = a + b;
+            console.log("함수안의 sum : " + sum);
+            return sum;  //함수 내부에서 선언된 변수 sum의 값을 함수 {} 바깥쪽으로 전달
+        }
+    // 함수를 호출하면서 화면에 쓰기
+    // document.write(add(20,15)); //함수내부에 저장된 sum의 값을 화면에 쓰기
+
+        //덧셈 함수 호출
+        add(20,15);
+
+        //함수 실행 결과값 화면에 쓰기
+        document.write(sum); //return을 사용하더라도 sum이라는 변수 선언은 add()내부에 되어 있으므로 함수 바깥에서는 sum변수가 없음.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

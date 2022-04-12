@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동형변환.html</title>
+    <!-- 자동형 변환은 Number()나 String()를 사용하지 않고
+        자바스크립트에서 자동으로 형식을 변환해서 만들어주는 것 -->
+    <script>
+        var x = 10;
+        var y = "10";  // prompt()를 이용해 값을 받은 형태
+        console.log("x의 자료형 : " + typeof(x));   //number
+        console.log("y의 자료형 : " + typeof(y));   //string
+    
+        var add = x + y;  // 덧셈의 경우는 x값이 String형으로 자동형변환
+        document.write(add + '\t' + typeof(add) + "<br>");
+        
+        var minus = x - y; //y의 값이 Number형으로 자동 형변환
+        var minusWrite = minus + '\t' + typeof(minus) + "<br>"; 
+            // Number형인 minus변수가 문자열인 '\t'와 "<br>" 와 덧셈연산을 하면서
+             // minusWrite변수는 String타입으로 자동형변환
+        document.write(minus + '\t' + typeof(minus) + "<br>");
+        document.write(typeof(minusWrite) + "<br>");
+        
+        var divi = x / y; //y의 값이 Number형으로 자동 형변환
+        document.write(divi + '\t' + typeof(divi) + "<br>");
+
+        var multi = x * y;  // 곱셈의 경우는 y의 값이 Number형으로 자동형변환
+        document.write(multi + '\t' + typeof(multi) );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

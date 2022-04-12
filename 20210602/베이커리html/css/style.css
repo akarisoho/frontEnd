@@ -1,0 +1,59 @@
+/* reset */
+*{ margin: 0; padding: 0;}
+body{ font-family: '나눔바른고딕','맑은고딕',sans-serif; font-weight: 500;
+    color: #999;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+
+#wrap{ width: 960px; margin: 0 auto;}
+
+/* ㄱ */
+#header{ height: 150px; position: relative;}
+#header h1.logo{ position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
+#header #gnb{ position: absolute; right: 0; top: 50%; transform: translateY(-50%);}
+#header #gnb li{ float: left; font-size: 1.25em; margin-left: 30px;}
+#header #gnb li a{ color:#bb692d;}
+#header #gnb li a:hover{ color:#7b422e;}
+
+/* ㄴ */
+.main_image{ height: 400px; background-image: url(../img/images.jpg); position: relative;}
+.main_image h2{ background: rgba(0,0,0,0.5); padding: 30px; 
+    border-radius: 20px; color:#fff; text-align: center; line-height: 1.6em;
+    position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%); }
+
+/* ㄷ */
+.contents{ height: 500px;}
+.contents section{ height: 250px;}
+.contents section h2{ display: none;}
+    /* ㄷ-.s1 */
+.contents .s1 article h3{ text-align: center; padding: 15px 0 5px; color:#7b422e}
+.contents .s1 .notice{ width: 630px; float: left;}
+.contents .s1 .notice table{ border: solid #bb692d;
+                        border-width: 2px 0 ;
+     width: 100%; border-collapse: collapse;}
+/* .contents .s1 .notice table > tr {}
+ => 웹브라우저에서 table태그가 표현될때는 table 태그 아래에 tbody라는 태그가 생성 되고 tr태그가 위치하게 됨 => 자손 선택자를 사용하면 인식 X
+ => table태그에서 자식요소를 선택할 때는 후손선택를 사용합니다.  */
+/* .contents .s1 .notice table tr:nth-child(2n-1) {background-color: #7b422e; color: #fff; } */
+/* #7b422e #bb692d*/
+.contents .s1 .notice table tr{ border-bottom: 1px solid #bb692d; color:#bb692d}
+.contents .s1 .notice table tr > td{ padding:10px;}
+/* .contents .s1 .notice table tr > td:last-child{ color:#999;} */
+
+.contents .s1 .partner{width: 300px; float: right;}
+.contents .s1 .partner img{ border:1px solid #e1e1e1;}
+
+    /* ㄷ-.s2 */
+.contents .s2 ul.icon_menu{  width: 600px; margin: 0 auto;}
+.contents .s2 li.icon_list { float: left; margin: 0 10px;
+    text-align: center;}
+.contents .s2 li.icon_list img{ width: 180px;}
+.contents .s2 li.icon_list span{ background: #bb692d; padding: 10px; border-radius: 10px; color:#fff;}
+
+/* ㄹ */
+#footer{ height: 150px; background: #7b422e ;}
+#footer .footer_menu{  float: left; padding:20px 0 0 20px}
+#footer .footer_menu li{ float: left; margin-right: 20px;}
+#footer .footer_menu li a{ color:#fff;}
+#footer address{float: right; width: 300px;
+                padding-top:20px; font-style: normal; font-size: 12px; line-height: 1.5em; font-weight: 400;}

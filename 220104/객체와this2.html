@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체와this2.html</title>
+  <script>
+    //this는 유동성이 있는 변수 이름
+    function car(cr, ht, wt) {
+      this.cr01 = cr;
+      this.ht01 = ht;
+      this.wt01 = wt;
+      this.pt = print;   //함수를 파라미터 값으로 넣을 때는 괄호를 안씀 => 콜백
+    }
+    function print() {
+      document.write("차의 색은 ", this.cr01, "이고, <br>");
+      document.write("차의 길이는 ", this.ht01, "m 이고,<br>");
+      document.write("차의 무게는 ", this.wt01, "kg 입니다. <br>");
+    }
+
+    var myCar = new car('파랑색', 5, 1500);
+    myCar.pt();  //함수가 정의된 속성을 불러 올 땐, ()를 붙여서 가져옴
+
+    var yourCar = new car('빨강색', 3, 3000);
+    yourCar.pt();
+
+    // 엄마차는 노랑색이고 길이는 2미터이고 무게는 1000입니다.
+    var momCar = new car("노랑색", 2, 1000);
+    momCar.pt();
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

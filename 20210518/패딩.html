@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패딩.html</title>
+    <style>
+        div{ width: 200px; height: 200px; background: lightgray; margin: 30px;}
+
+        /* padding의 값의 개수 지정은 margin과 같음 */
+        #box1{ padding: 25px; width: 150px; height: 150px;}
+
+        /* padding 값 4개 => 상 우 하 좌 */
+        #box2{ padding: 25px 0 0 25px; width: 175px; height: 175px; }
+
+        /* padding을 이용해서 글자 위쪽에 30px 여백 주기,
+        단 박스의 크기는 200*200으로 보여지도록 해야합니다.  */
+        #box3{ padding-top:30px;  height: 170px; }
+             /* padding: 30px 0 0; padding: 30px 0 0 0; */
+
+        /* padding을 이용해서 글자 위쪽에 30px, 왼쪽에 50px 여백 주기
+         박스크기는 200*200으로 보여지도록 해야합니다. */
+        #box4{ /*padding-top:30px; padding-left: 50px; */
+                /* padding: 30px 0 0 50px;  width: 150px; */
+                padding: 30px 50px 0;
+            width: 100px; height: 170px; }
+    </style>
+</head>
+<!-- padding => 부모-자식관계 사이의 여백 지정 -->
+<body>
+    <!-- #box${$번째박스의TEXT}*4 -->
+    <div id="box1">1번째박스의TEXT</div>
+    <div id="box2">2번째박스의TEXT</div>
+    <div id="box3">3번째박스의TEXT</div>
+    <div id="box4">4번째박스의TEXT</div>
+</body>
+</html>

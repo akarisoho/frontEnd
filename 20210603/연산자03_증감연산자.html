@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자03_증감연산자.html</title>
+    <script>
+        // 선증가 연산 => 1씩 증가를 하는데 먼저 증가시키는 것
+        var x = 1;
+        document.write(x,"<br>");
+        document.write(++x,"<br>"); // x값을 도큐먼트에 쓰기전에 1을 증가 시킴
+        document.write(x,"<br>");
+        document.write(++x,"<br>");
+
+        document.write("<hr>");
+
+        // 후증가 연산 => 1씩증가를 하는데 나중에 증가시키는 것
+        var y = 5;
+        document.write(y,"<br>");
+        document.write(y++,"<br>");   //1이 증가되기 전에 y의 값을 출력하므로 
+                                      //화면에는 5가 출력되고
+                                      //이 줄이 끝나면 y의 값이 1이 증가되어 6이 됨
+        document.write(y,"<br>");   // 윗 줄이 끝나면서 y = 7이 됨
+        document.write(y++,"<br>"); // 7의 값을 가진 y를 먼저 출력하고 (6이 보임)
+                                    //출력이 끝나면 1을 증가시킴 => y = 7;
+        document.write(++y,"<br>"); // 7의 값을 가진 y를 1을 먼저 증가시키고
+                                    // 화면에 출력함 (8이 보임)
+
+        
+
+
+    </script>
+</head>
+<!-- 증감연산자 => 1씩 증가하거나, 1씩 감소함
+    1) 증가연산자 => ++
+    2) 감소연산자 => --
+
+    부호의 위치에 따라서
+    1) 선증감 => ++x(선증가) | --x(선감소)
+    2) 후증감 => x++(후증가) | x--(후감소)
+-->
+<body>
+    
+</body>
+</html>

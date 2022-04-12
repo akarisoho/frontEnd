@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭바</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul{ list-style:none}
+
+        h1{ padding: 30px 0; text-align: center;}
+        #tab{ width: 900px; margin: 0 auto;}
+        #tab li{ float: left; width: 33.333%; line-height: 2em; 
+        background: cornflowerblue; text-align: center; 
+        border: 1px solid darkblue; box-sizing: border-box;}
+
+        #tab li.tab_on{ background: darkblue; color: #fff;}
+
+        #tab .tab_con{ height: 200px; background: lavender;
+        border:1px solid purple; box-sizing: border-box;
+        display: none; font-size: 5em;
+        }
+        #tab .tab_con.on{display: block;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //클릭되지 않은 나머지 li에는 .tab_on 제거
+            //클래스를 추가할 때 사용하는 메서드는 addClass('클래스명');
+            //클래스를 제거할 때 사용하는 메서드는 removeClass('클래스명');
+
+            //클릭한 li에는 .tab_on을 추가
+            $("#tab li").click(function(){
+                var idx = $(this).index();
+                console.log(idx);
+
+                $(this).addClass("tab_on").siblings().removeClass("tab_on");
+        //클릭한 li에 .tab_on을 추가하고, 형제들을 찾아서 .tab_on을 제거
+
+        $(this).parent().siblings(".tab_con").eq(idx).addClass("on").siblings().removeClass("on");
+        //  $(this) => 클릭한 li 선택
+        // .parent() => 클릭한 li의 부모(ul)찾아가기
+        // .siblings(".tab_con") => ul의 형제 중 .tab_con 찾아가기
+        // .eq(idx) => 클릭한 li의 인덱스번호랑 같은 번호의 .tab_con 선택
+        // addClass("on") => "on"클래스를 추가
+        // siblings() => 형제들 선택
+        // removeClass("on") => "on"클래스 제거
+
+                
+            }); //li click() end
+        });
+    </script>
+</head>
+<body>
+    <h1>Tab List</h1>
+    <div id="tab">
+        <!-- ul>li{TabMenu0$}*3 -->
+        <ul>
+            <li>TabMenu01-index0</li>
+            <li>TabMenu02-index1</li>
+            <li class="tab_on">TabMenu03-index2</li>
+        </ul>
+        <!-- div.tab_con{Contents0$}*3 -->
+        <div class="tab_con">Contents01-index0</div>
+        <div class="tab_con">Contents02-index1</div>
+        <div class="tab_con on">Contents03-index2</div>
+    </div>
+</body>
+</html>

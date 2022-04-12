@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05반복문-while.html</title>
+    <script>
+        // while (조건문) {
+            // 조건문이 맞으면 실행문 실행
+        // }
+        // for (var i = 1; i <= 5; i++) {
+        //     document.write(i, '\t');
+        // }
+        var i = 1;
+        while ( i <= 5) {
+            if (i == 3) {
+                i++;   //건너뛰기 전에 i값을 증가시켜야 합니다. 그렇지 않으면 '무한루프'에 빠짐
+                continue;
+            }
+            document.write(i, '\t');
+            i++;  //값을 증가시키지 않으면 '무한루프'에 빠짐
+        }
+    </script>
+</head>
+<body>
+    <!-- while : (조건문)동안 -->
+</body>
+</html>

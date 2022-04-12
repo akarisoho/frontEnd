@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findElement</title>
+</head>
+
+<body>
+    <div id="jiyul">id="jiyul"</div>
+    <p>p[0]</p>
+    <p>p[1]</p>
+    <p>p[2]</p>
+    <ul>
+        <li class="frontend">class="frontend" [0]</li>
+        <li class="frontend">class="frontend" [1]</li>
+        <li class="frontend">class="frontend" [2]</li>
+        <li class="frontend">class="frontend" [3]</li>
+        <li class="frontend">class="frontend" [4]</li>
+    </ul>
+    <script>
+        let findID = document.getElementById("jiyul");
+        console.log(`findID : ${findID}`);
+        console.log(findID);
+
+        let findTAG = document.getElementsByTagName("p");
+        console.log(`findTAG : ${findTAG}`);
+        console.log(findTAG);
+        // findTAG.style.backgroundColor = '#669';
+
+        let findCLASS = document.getElementsByClassName("frontend");
+        console.log(`findCLASS : ${findCLASS}`);
+        console.log(findCLASS);
+
+        let findQuerySelector = document.querySelector(".frontend");
+        console.log(`findQuerySelector : ${findQuerySelector}`);
+        console.log(findQuerySelector);
+
+        let findQuerySelectorAll = document.querySelectorAll(".frontend");
+        console.log(`findQuerySelectorAll : ${findQuerySelectorAll}`);
+        console.log(findQuerySelectorAll);
+
+    </script>
+</body>
+
+</html>

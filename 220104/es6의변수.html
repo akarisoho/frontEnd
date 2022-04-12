@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>es6의변수.html</title>
+  <script>
+    'use strict'; //엄격모드
+    let globalName = 'Yejin,Jang';
+    {
+      //블록 스코프 시작
+      let letName = "예진";
+      var varName = "장";
+      console.log(`let letName : ${letName}`);
+      console.log(`var varName : ${varName}`);
+      console.log(`let globalName : ${globalName}`);
+      //블록 스코프 끝
+    }
+    // console.log(`let letName : ${letName}`);   //let은 블록 스코프 종속됨
+    console.log(`var varName : ${varName}`);  // var는 함수 스코프에서만 종속
+    console.log(`let globalName : ${globalName}`);
+
+    // 변하는 값은 let, var 선언함, 
+    // 변하지 않아야 하는 값 const 선언 함
+    let daysOfMonth = 31;
+    console.log(`daysOfMonth : ${daysOfMonth}`);
+    const daysOfWeek = 7;
+    console.log(`daysOfWeek : ${daysOfWeek}`);
+    
+    daysOfMonth = 28;
+    console.log(`daysOfMonth : ${daysOfMonth}`);
+    
+    // daysOfWeek = 5;   //상수값(const로 선언된 값)은 재할당할 수 없음.
+    console.log(`daysOfWeek : ${daysOfWeek}`);
+  </script>
+</head>
+
+<body>
+  <!-- 변수 var
+    var 변수명 = 초기값 ;  => 지역변수로 할당
+        변수명 = 초기값 ;  => 전역변수로 할당
+    ES5 '엄격 모드' 때문에 var없이 변수 할당할 수 없음
+    ES6 let, const 변수 선언 방식 추가 
+        전역변수 var, 지역변수 let, 상수(변하지 않는)값 할당 const-->
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백그라운드특성(background properties)</title>
+    <style>
+        /* +++++ backgroud properties +++++
+         + 요소의 배경색 => background-color : HEXcode #000 ;
+                                             : rgb(red, green, blue);
+                                             : rgba(red, green, blue, alpha);
+                                             : 키워드 pink brown 등
+
+         + 요소의 배경 이미지 => background-image : url(상대경로 또는 절대경로);
+         background-image : url(경로1), url(경로2); => 한 요소에 이미지 2개 겹침
+
+         + 요소의 배경이미지 반복 => background-repeat : repeat => 반복하겠다,default)
+                                                       : no-repeat => 반복X
+                                                       : repeat-x => x축으로 반복
+                                                       : repeat-y => y축으로 반복
+
+         + 요소의 배경이미지의 크기 => background-size : 100px => 이미지의 너비를 100px로
+                                                       : auto 100px => 이미지의 너비는 자동, 높이 100px로
+                                                ※ 사용가능 단위 : px, %, em 등 사용가능  
+                                                       : contain => 배경이미지가 요소 안에서 잘리지 않도록 비율에 맞춰 사이즈 조정
+                                                       : cover => 배경이미지가 잘리더라도 박스의 여백이 보이지 않도록 비율에 맞춰 사이즈 조정
+
+         + 요소의 배경이미지의 위치 => background-position : x축 y축; 
+                            => x축에 양수값이 들어가면 아래로 이동
+                            => x축에 음수값이 들어가면 위로 이동
+                            => y축에 양수값이 들어가면 오른쪽으로 이동
+                            => y축에 음수값이 들어가면 왼쪽으로 이동
+                            ※ 사용가능 단위 : px, %, em 등 사용가능  
+                               또한 방향키워드를 사용할 수도 있음
+                               (top, left, center, bottom, right)                             
+
+         + 요소의 배경이미지의 어떻게 부착할 것인가 => background-attachment : scroll => default
+                                                                             : fixed => 이미지가 고정
+
+         => background : value1 value2 value2; => 배경속성을 한번에 지정 가능하나
+            css3에서 새로 생긴 프로퍼티 값은 한번에 적용하면 오류
+         */
+
+        /* reset CSS*/
+        *{ margin:0;}
+
+        div{ height: 700px;}
+        #box01{ background-color: #f00;
+                background-image: url(bgimg/01.jpg);
+                background-size: 300px;
+                background-repeat: repeat-y;
+              }
+        #box02{ background-color: #0f0;
+                background-image: url(bgimg/02.jpg);
+                background-size: auto 50%;
+                background-repeat: no-repeat;
+                background-position: 500px 300px;
+        }
+        #box03{ background-color: #00f;
+                background-image: url(bgimg/03.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+        }
+        #box04{ background-color: #ff0;
+                background-image: url(bgimg/03-1.jpg); /* #box03특성와 다른점 */
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="box01"></div>
+    <div id="box02"></div>
+    <div id="box03"></div>
+    <div id="box04"></div>
+</body>
+</html>

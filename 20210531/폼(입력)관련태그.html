@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼(입력)관련태그</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        fieldset{ padding: 20px; margin-bottom: 30px;}
+        fieldset label{ width: 85px;  margin: 0 10px 10px 0; 
+                 display: inline-block; border-right: 3px dashed #333;}
+/* border-style: dashed(절취선) | solid(실선) | detted(점선) | double(이중선) */
+        textarea{ width: 300px; height: 150px;}
+    </style>
+</head>
+<!-- 폼 태그 : 사용자로부터 정보를 입력 받기위한 폼을 만들 때 사용
+<form></form> 태그 안에는 <input>, <button></button>, <textarea></textarea>, <select></select>, <option></option>, <fieldset></fieldset>,<legend></legend>, <label></label>를 사용한다.
+
+<input>태그는 type속성을 이용해 입력받는정보와 용도를 구분한다.
+ type="text" => 기본값, 한 줄 텍스트 필드를 정의
+ type="password" => 암호필드 정의
+ type="submit" => 제출버튼 정의하는데, 클릭하면 페이지가 새로고침되는 특성 있음
+ type="button" => 클릭 가능한 버튼을 정의 (버튼 안에 이미지를 넣을 수 없음)
+    cf. <button></button> 태그로 사용가능 (버튼 안에 이미지 삽입 가능)
+ type="checkbox" => 확인란(체크박스)를 정의, 다중선택 가능
+ type="radio" => 라디오버튼 정의, 보기 중 하나 선택
+-->
+
+<body>
+    <!-- <from>태그의 속성
+    action="url" => 입력받은 정보를 전송할 위치 지정
+                (onsubmit이라는 자바스크립트로도 대신 처리 가능)
+    method="get | post" => get은 주소에 입력정보를 실어서 전송하는 방식(짧은글)
+                           post는 별도의 경로를 통해 입력정보를 전송 방식(긴글)
+    target="_blank" => action에서 지정한 전송위치를 현재창이 아닌 다른 위치에서 열리도록 지정할 때 사용
+
+    <input>의 속성 => readonly, placehold, autofocus, required, value, type
+    readonly => 읽기 전용 필드 / readonly = true(읽기전용)  
+                                readonly = false(읽기쓰기 가능)
+    placeholder => 필드 안에 입력할 내용 힌트제공, 텍스트를 작성하면 사라짐
+    autofocus => 페이지가 로드 되자마자 이 속성이 있는 요소에 커서를 둠
+    -->
+    <form action="http://www.naver.com" target="_blank">
+        <input type="text" value="읽기전용" readonly>
+        <input type="text" placeholder="입력힌트">
+        <input type="text" placeholder="오토포커스" autofocus>
+        <input type="text" placeholder="필수입력" required>
+        <input type="submit" value="검색">
+    </form>
+    <h1>input태그의 type속성 종류</h1>
+    <form>
+        <fieldset>
+            <legend>항목 선택</legend>
+            <label for="check1">checkbox1</label><input type="checkbox" id="check1" value="val1"><br>
+            <label for="check2">checkbox2</label><input type="checkbox" id="check2" value="val2"><br>
+            <label for="rbt1">radio1</label><input type="radio" name="radio" id="rbt1" value="남"><br>
+            <label for="rbt2">radio2</label><input type="radio" name="radio" id="rbt2" value="여"><br>
+        </fieldset>
+        <fieldset>
+            <legend>그 외 입력</legend>
+            <label for="">date</label><input type="date"><br>
+            <label for="">email</label><input type="email" name="" id=""><br>
+            <label for="">file</label><input type="file" name="" id=""><br>
+            <label for="">image</label><input type="image" src="" alt=""><br>
+            <label for="">number</label><input type="number" name="" id=""><br>
+            <label for="">password</label><input type="password" name="" id=""><br>
+            <label for="textID">text</label><input type="text" id="textID"><br>
+            <label for="">tel</label><input type="tel" name="" id=""><br>
+            <label for="">search</label><input type="search" name="" id=""><br>
+            <label for="">submit</label><input type="submit" value="보내기"><br>
+            <label for="">button</label><input type="button" value="버튼"><br>
+            <label for="">reset</label><input type="reset" value="초기화">
+        </fieldset>
+    </form>
+    <form>
+        <textarea name="" id=""></textarea>
+        <!-- cols => 한 줄에 몇 글자 입력
+             rows => 몇 줄 글자입력
+            이 속성 대신 CSS에 width, height 필드 면적을 스타일링 할 수 있다.-->
+        <textarea name="" id="" cols="30" rows="10" disabled>사용금지</textarea>
+    </form>
+    <form>
+        <select name="" id="">
+            <option value="">옵션을 선택하세요</option>
+            <option value="1">옵션1</option>
+            <option value="2">옵션2</option>
+            <option value="3">옵션3</option>
+        </select>
+        <button>선택완료</button>
+    </form>
+</body>
+
+</html>

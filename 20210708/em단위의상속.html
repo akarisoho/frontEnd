@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em단위의 상속</title>
+    <style>
+        /* 기본적으로 font-size를 설정하지 않으면 대부분 16px로 랜더링 됨 
+        #mom{ font-size: 2em;} 32/16 = 2em
+        #son{ font-size: 0.75em;} 24/32 = 0.75em 
+        */
+        /* body를 10px로 지정했을 때,
+         #mom : 20px, #son : 30px로 보여지도록
+         font-size를 em단위 작성  */
+        body,html{ font-size: 10px;}
+        #mom{ font-size: 2rem;}
+        #son{ font-size: 3rem;}
+        /* em배수의 상속 : 부모가 가진 배수 X 자식요소의 배수 = 20px X3 => 60px이 됨
+        해결 => rem단위 사용. 최상위 요소인 html의 사이즈를 기준으로 배수 설정 */
+    </style>
+</head>
+<body>
+    body Text
+    <div id="mom">
+        mom Text
+        <div id="son">
+            son Text
+        </div>
+    </div>
+</body>
+</html>

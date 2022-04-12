@@ -1,0 +1,8 @@
+*{ margin: 0; padding: 0;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+
+#wrap{ width: 800px; margin: 0 auto; text-align: center;}
+#header{ padding: 20px 0;}
+ul li { float: left;}
+ul+div{ background-color: yellow;clear: both; padding-top: 30px;}

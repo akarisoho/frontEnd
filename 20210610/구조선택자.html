@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조선택자.html</title>
+    <style>
+        section div:nth-child(2){ }
+        section div:first-of-type{}
+
+        section div:last-child{ background-color: skyblue;}
+        section div:last-of-type{ color: blue;}
+        section .box5{ font-size: 32px;}
+
+        /* child로 article1 선택해서 배경색 pink */
+        /* section.s1 > article:nth-child(7){ background-color: pink;} */
+        section.s1 > article:nth-last-child(2){ background-color: pink;}
+                        /* ▲ 뒤에서부터 세기*/
+
+        /* of-type으로 article1 선택해서 글자색 red */
+        /* section.s1 > article:first-of-type{ color:red;} */
+        /* section.s1 > article:nth-of-type(1){ color:red;} */
+        section.s1 > article:nth-last-of-type(2){ color:red;}
+                    /* ▲ 뒤에서부터 세기*/
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //버튼을 클릭하면 실행해
+            $("button").click(function(){
+                //실행할 내용
+                $("section div:nth-child(2)").css({"font-size":"24px","background": "yellow"});
+                $("section div:first-of-type").css({"font-weight":"bold", "color": "orange"});
+            });
+            
+        });
+    </script>
+</head>
+<!-- 구조선택자 : 
+    * 일반구조 선택자 : 선택자의 부모를 기준으로 몇번째 자식인지를 따져서 선택
+        => 선택자:first-child, 선택자:last-child, 선택자:nth-child(n) 
+
+    * 형태구조 선택자 : 자손/후손 선택자를 사용했다는 전제 하에 
+                    선택자의 태그 형태를 구분해서 선택
+        => 선택자:first-of-type, 선택자:last-of-type, 선택자:nth-of-type(n)
+-->
+<body>
+    <button>클릭하면 스타일이 변합니다.</button>
+    <!-- (section.s$>h2{sectionTitle}+(div.box${box$})*5)*2 -->
+    <section class="s1">
+        <h2>section1 Title</h2>
+        <div class="box1">box1-1</div>
+        <div class="box2">box1-2</div>
+        <div class="box3">box1-3</div>
+        <div class="box4">box1-4</div>
+        <div class="box5">box1-5</div>
+        <article class="article">article1</article>
+        <article class="article">article2</article>
+    </section>
+    <section class="s2">
+        <h2>section2 Title</h2>
+        <div class="box1">box2-1</div>
+        <div class="box2">box2-2</div>
+        <div class="box3">box2-3</div>
+        <div class="box4">box2-4</div>
+        <div class="box5">box2-5</div>
+    </section>
+</body>
+</html>

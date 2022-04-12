@@ -1,0 +1,12 @@
+*{ margin: 0; padding:0}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+
+.center{ width: 360px; margin: 0 auto; background-color: rgba(0, 0, 0, 0.3);}
+
+#gnb a{ display: block; line-height: 44px; background-color: sandybrown; 
+    padding-left: 20px; box-sizing: border-box;}
+#gnb ul.main-menu>li>a{ border-bottom: 1px solid #999; position: relative;}
+#gnb ul.main-menu>li>a>span{ position: absolute; right: 20px;}
+#gnb ul.main-menu ul.sub-menu{ display: none;}
+#gnb ul.main-menu ul.sub-menu li:last-child a { border-bottom: 2px solid #999;}

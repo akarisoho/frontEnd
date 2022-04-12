@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간분할태그와기본선택자.html</title>
+    <style>
+        /* ==== 기본 선택자 ====
+         - 전체 선택자 : * { 프로퍼티 } 
+                        => html문서 전역에 영향을 끼침
+                        ex) 초기화 = reset할 때 사용
+
+         - 태그 선택자 : 태그이름 { 프로퍼티 } 
+                        => html의 선택자와 같은 모든태그에 영향을 끼침
+
+         - 아이디 선택자 : #아이디값 { 프로퍼티 }
+                        => html에서 특정 id값을 가진 요소를 선택을 함
+                          id값을 지정할 때는 하나의 html문서에서 중복되지 않게!!
+
+         - 클래스 선택자 : .클래스값 { 프로퍼티 }
+                        => html에서 class값을 가진 모든 요소를 선택 함
+                          class 속성값은 공백으로 구분해서 2개 이상 값 지정가능!
+         */
+        * { color : red;}
+        /* rgba(red,green,blue,alpha) => red, green, blue는 0 ~ 255
+                                      => alpha 는 0.0 ~ 1.0 */
+        div{ background-color: rgba(255,255,0,0.5);}
+        #box{ color:#060;}
+        .orange{ color: orange;}
+        .bg_gray{ background-color: gray;}
+        .font24{ font-size: 24px;}
+        /* 기본적으로 브라우저에 표현되는 글자 크기는 16px == 100% == 1em
+          24px == 150% == 1.5em / 32px == 200% == 2em  */
+
+        /* 가상선택자 : 특정한 상태를 나타내는 선택자 */
+        div:hover{ background-color: pink; color:gray !important;}
+        /* 같은 프로퍼티(color)가 동일한 요소(div)에 들어가있으면
+         태그선택자 형태보다 아이디선택자가 우선권을 가짐
+         (id속성에 적용된 녹색글자가 우선)
+         cf.  !important를 사용하면 선택자의 우선권과 상관없이 
+          !important가 들어간 프로퍼티가 우선시 됨  
+         
+         cf. 대부분은 스타일 시트에서 아래쪽에 작성된 프로퍼티가 우선시 됨
+           */
+
+        /* 짝수번째를 선택하는 선택자 => 가상 선택자의 한 종류로
+            짝수 또는 홀수를 선택할 때 형제관계 선택자를 사용
+            선택자:first-child => 형제 중 제일 첫번째 요소를 선택
+            선택자:last-child => 형제 중 제일 마지막 요소를 선택
+            선택자:nth-child(n) => 형제 중 n번째 요소를 선택  */
+            span:nth-child(2n-1){ font-size: 32px;}  
+ /* 자식 요소의 번째 수를 따져서 짝수 번째는 선택자:nth-child(2n)  
+                                 홀수 번째는 선택자:nth-child(2n-1)  
+ */
+        
+    </style>
+</head>
+<!-- 공간분할태그 => 
+        block 요소 : <div></div> , inline 요소 : <span></span> -->
+<body>
+    <!-- div{$번째박스}*5 -->
+    <div>1번째박스</div>
+    <div id="box">2번째박스</div>
+    <div>3번째박스</div>
+    <div>4번째박스</div>
+    <div>5번째박스</div>
+    <!-- span{$번째영역}*5 -->
+    <span>1번째영역</span>
+    <span class="orange" class="bg_gray">2번째영역</span>
+    <!-- <span class="orange" class="bg_gray">2번째영역</span> 
+        하나의 엘리먼트(태그,요소)에 동일한 속성블럭이 들어가면 에러-->
+    <span class="orange bg_gray font24">3번째영역</span>
+    <span class="orange bg_gray">4번째영역</span>
+    <span>5번째영역</span>
+
+</body>
+</html>

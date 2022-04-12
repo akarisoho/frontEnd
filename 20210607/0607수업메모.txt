@@ -1,0 +1,43 @@
+[ AND 연산자 ]
+    A    &&    B        Result
+  true         true	   true
+  false        true	   false
+  true         false       false  
+  false        false       false 
+
+[ OR 연산자 ]
+    A     ||    B           Result
+  true         true	   true
+  false        true	   true
+  true         false        true 
+  false        false       false 
+
+[ 논리 연산자 ]
+    A     ==    B           Result
+  true         true	   true
+  false        true	   false
+  true         false        false 
+  false        false        true 
+
+    A     !=    B           Result
+  true         true	   false
+  false        true	   true
+  true         false        true 
+  false        false        false 
+
+
+[ 함수 ]
+* 종류 
+1. 일반 분류
+  1) 내장함수 : 미리 자바스크립트에 정의되어있는 함수르 호출만 해서 사용
+	alert(), prompt(), Number(), String(), typeof()
+
+  2) 사용자 정의함수 : 필요한 기능을 개발자가 정의(생성)하고,
+		 호출해서 사용을 함.
+
+2. 사용법에 따라서
+  1) 일반함수 - 내장함수나 사용자 정의 함수중에 단순한 구조로 된 것 
+  2) 중첩함수 - 함수안에 함수가 있는 경우
+  3) 콜백함수 - 매개변수로 넘어온 함수를 콜백함수 라고 한다
+
+

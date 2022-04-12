@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while문02.html</title>
+    <!-- 15부터 25사의 값을 모두 더하는 식과 최종 결과값 화면에 쓰기 -->
+    <script>
+        var start = 15;
+        var end = 25;
+        var total = 0;   //문자열이 들어가는 변수를 미리 선언할 때는 total = "";
+
+        while (start <= end) {
+            total += start;  // total = total + start;
+            console.log(total);
+            document.write(start);
+            if (start != end) {
+                document.write(" + ");
+            }
+            start++;  // ( start += 1; )  == ( start = start + 1; )
+        }
+        document.write(" = ",total);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

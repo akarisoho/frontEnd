@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리필터선택자02.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+            // selector:animated => 현재 애니메이션된 모든 요소
+            // selector:header => 모든 제목태그(h1~h6) 선택
+            $(":header").css("color","#99f");
+
+            // selector:contains(문자열) => 지정된 문자열을 포함하고 있는 요소 선택
+            $("div:contains('HTML')").css("background-color","yellow");
+            $("div:contains('기능사')").css("font-size","1.25em");
+
+            // selector:has(TagName) => TagName을 가지고있는 요소를 선택 
+            $("li:has(span)").css("color","red");
+
+        });
+    </script>
+</head>
+<body>
+    <h1>신촌이젠아카데미</h1>
+    <h2>웹디자인기능사A</h2>
+    <div>
+        <h3>장예진</h3>
+        <p>HTML,CSS,javaScript,jQuery</p>
+    </div>
+    <div>
+        <h3>자격증</h3>
+        <p>한국인력산업공단 웹디자인 기능사 자격증</p>
+    </div>
+    <ul>
+        <li>list01</li>
+        <li>list<span>02</span></li>
+        <li>list03</li>
+        <li>list04</li>
+    </ul>
+</body>
+</html>

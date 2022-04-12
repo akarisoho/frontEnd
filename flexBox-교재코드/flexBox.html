@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex box</title>
+    <style>
+        #wrap {
+            width: 90%;
+            background-color: rgba(255, 241, 0, 0.3);
+            margin: 0 auto;
+        }
+
+        div {
+            border: 3px dashed #99f;
+            min-height: 200px;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        /* flex Container 설정하기*/
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        /* flex Items 설정하기*/
+        .container>div {
+            flex-basis: 200px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        .container>.first {
+            flex-grow: 3;
+        }
+
+        /*-ms-flex: 1;  IE 10 */
+        /* flex-shrink프로퍼티는 .container의 flex-wrap속성을 삭제하고 사용합니다. */
+        .container>.fourth {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section class="container">
+            <div class="first">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div class="fourth">4</div>
+            <div>5</div>
+        </section>
+    </div>
+</body>
+
+</html>

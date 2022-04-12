@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:root-var(),calc()_flexbox</title>
+    <link rel="stylesheet" href="css/root_flexbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script/fullDownMenu.js"></script>
+</head>
+
+<body>
+    <!-- #wrap>header#header+main#slide+section.c+footer#footer -->
+    <div id="wrap">
+        <!-- A -->
+        <header id="header">
+            <!-- (h1>a>img)+(nav#gnb>ul.main-menu>(li>a{main-menu$})*4) -->
+            <h1>
+                <a href=""><img src="http://placehold.it/200x40" alt="logo"></a>
+                로고
+            </h1>
+            <nav id="gnb">
+                <ul class="main-menu">
+                    <li><a href="">main-menu1</a></li>
+                    <li><a href="">main-menu2</a></li>
+                    <li><a href="">main-menu3</a></li>
+                    <li><a href="">main-menu4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //A -->
+        <!-- A:#gnb submenu overlap-->
+        <!-- nav.lnb>(ul.sub-menu>(li>a{sub-menu$})*4)*4 -->
+        <nav class="lnb">
+            <ul class="sub-menu">
+                <li><a href="">sub-menu1</a></li>
+                <li><a href="">sub-menu2</a></li>
+                <li><a href="">sub-menu3</a></li>
+                <li><a href="">sub-menu4</a></li>
+            </ul>
+            <ul class="sub-menu">
+                <li><a href="">sub-menu1</a></li>
+                <li><a href="">sub-menu2</a></li>
+                <li><a href="">sub-menu3</a></li>
+                <li><a href="">sub-menu4</a></li>
+            </ul>
+            <ul class="sub-menu">
+                <li><a href="">sub-menu1</a></li>
+                <li><a href="">sub-menu2</a></li>
+                <li><a href="">sub-menu3</a></li>
+                <li><a href="">sub-menu4</a></li>
+            </ul>
+            <ul class="sub-menu">
+                <li><a href="">sub-menu1</a></li>
+                <li><a href="">sub-menu2</a></li>
+                <li><a href="">sub-menu3</a></li>
+                <li><a href="">sub-menu4</a></li>
+            </ul>
+        </nav>
+        <!--// A:#gnb submenu -->
+        <main id="slide">
+            <img src="http://placehold.it/1200x300" alt="">
+        </main>
+
+        <section class="c">
+            <h2>hiddenTitle</h2>
+            <!-- (article>h3{articleTitle$})*3 -->
+            <article class="notice">
+                <h3>공지사항</h3>
+                <!-- table>(tr>td{ThisissampleText})*5 -->
+                <table>
+                    <tr>
+                        <td>This is sample Text</td>
+                    </tr>
+                    <tr>
+                        <td>This is sample Text</td>
+                    </tr>
+                    <tr>
+                        <td>This is sample Text</td>
+                    </tr>
+                    <tr>
+                        <td>This is sample Text</td>
+                    </tr>
+                    <tr>
+                        <td>This is sample Text</td>
+                    </tr>
+                </table>
+            </article>
+            <article class="gallery">
+                <h3>갤러리</h3>
+                <!-- ul.gallery-list>(li>a>img)*3 -->
+                <ul class="gallery-list">
+                    <li><a href=""><img src="http://placehold.it/150x150" alt="galleryThumb01"></a></li>
+                    <li><a href=""><img src="http://placehold.it/150x150" alt="galleryThumb02"></a></li>
+                    <li><a href=""><img src="http://placehold.it/150x150" alt="galleryThumb03"></a></li>
+                </ul>
+            </article>
+            <article class="shortcut">
+                <h3>바로가기</h3>
+                <!-- (a>img+span{icon$})*4 -->
+                <div class="shortcut-icons">
+                    <a href=""><img src="http://placehold.it/100x100" alt=""><span>icon1</span></a>
+                    <a href=""><img src="http://placehold.it/100x100" alt=""><span>icon2</span></a>
+                    <a href=""><img src="http://placehold.it/100x100" alt=""><span>icon3</span></a>
+                    <a href=""><img src="http://placehold.it/100x100" alt=""><span>icon4</span></a>
+                </div>
+            </article>
+        </section>
+        <footer id="footer">
+            <!-- (.main-footer>(ul.footer-menu>(li>a{FMenu$})*3)+address{copyright})+.family-site -->
+            <div class="main-footer">
+                <ul class="footer-menu">
+                    <li><a href="">FMenu1</a></li>
+                    <li><a href="">FMenu2</a></li>
+                    <li><a href="">FMenu3</a></li>
+                </ul>
+                <address>copyright</address>
+            </div>
+            <div class="family-site">
+                <!-- form>select>opt*3 -->
+                <form>
+                    <select name="familySite" id="fs">
+                        <option value="">패밀리사이트</option>
+                        <option value="1">사이트1</option>
+                        <option value="2">사이트2</option>
+                        <option value="3">사이트3</option>
+                    </select>
+                </form>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

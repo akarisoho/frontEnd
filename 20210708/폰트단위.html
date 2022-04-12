@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length Units</title>
+    <!-- 절대값의 단위 : cm, mm, in, px, pt -->
+    <!-- 상대값의 단위 : em, rem, vw, vh, vmin, vmax -->
+    <style>
+        /* 절대 값 : px */
+        #px{ font-size: 24px;}
+        #px > div{ font-size: 20px;}
+
+        /* 상대 값 : em => 부모가 가진 px 크기에 자식요소의 배수로 계산 됨 */
+        /* 자식요소(px) ÷ 부모요소(px) = 자식요소(em) */
+        #em{ font-size: 1.5em;} /* 24/16 */
+        #em > div{ font-size: 0.833em;} /* 20/24 */
+
+        /* 상대값 : rem => 부모의 폰트크기와 상관없이 최상위 요소인 html크기를 기준으로 배수계산 
+        배수로 바꿀 요소(px) ÷ 최상위 요소(px) = (em)*/
+        #rem{ font-size: 1.5rem;} /* 24px/16 */
+        #rem > div{ font-size: 1.25rem ;} /* 20/16 */
+
+        /* 반응형 가변폰트 : vw ( 1vw = 1% )
+         vw 단위로 나타낼 요소의 px X 100 ÷ 뷰포트 너비 */
+        #vw{ font-size: 5vw;} 
+        #vw > div{ font-size: 3.8vw;}
+    </style>
+</head>
+<body>
+    <h1>일반적인 폰트 사이즈 지정 : px</h1>
+    <div id="px">
+        부모폰트
+        <div>자식폰트</div>
+    </div>
+
+    <h1>부모 요소 폰트 사이즈의 배수로 폰트사이즈를 지정 : em</h1>
+    <div id="em">부모폰트
+        <div>자식폰트</div>
+    </div>
+
+    <h1>최상위 요소의 폰트사이즈의 배수로 폰트 사이즈 지정:rem</h1>
+    <div id="rem">부모폰트
+        <div>자식폰트</div>
+    </div>
+
+    <h1>viewport의 너비의 비율 : vw</h1>
+    <div id="vw">부모폰트
+        <div>자식폰트</div>
+    </div>
+</body>
+</html>

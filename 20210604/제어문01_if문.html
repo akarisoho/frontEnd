@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문01_if문.html</title>
+    <script>
+        // if문 기본형식
+        // if (true|false조건문) {
+        //     // 조건문이 true일 경우 이 블럭을 실행
+        // }
+
+        // if (true|false조건문) {
+        //     //조건문이 true일 경우 이 블럭을 실행
+        // } else {
+        //     // if의 조건문이 true가 아닐 때 이 블럭 실행
+        // }
+
+        // var gender = prompt("성별을 입력하세요.","");
+
+        // if (gender == "남자") {
+        //     document.write("멋지군요!<br>");
+        // }else{
+        //     document.write("아름다우시군요!<br>");
+        // }
+
+        var gender = prompt("성별을 입력하세요.", "");
+
+        if (gender == "남자") {
+            document.write("멋지군요!<br>");
+        } else if(gender == "여자") {
+            document.write("아름다우시군요!<br>");
+        } else {
+            document.write("'남자' 또는 '여자'로 입력해 주세요.");
+        }
+
+    </script>
+</head>
+<!-- 제어문
+     1) 조건문 : 특정한 조건을 만족하는지를 계산해서 
+                조건을 만족하면 {}(중괄호)구문(=코드블럭)을 실행
+            종류:  if문 if else문, else if문, switch문
+     2) 반복문 : 동일한 코드블럭을 반복적으로 실행할 때
+            종류 : for문, for in문, while문, do while문 -->
+
+<body>
+
+</body>
+
+</html>

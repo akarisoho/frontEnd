@@ -1,0 +1,85 @@
+:root{
+    --main-color:#ff5050;
+    --sub-color-1:#ffc000;
+    --sub-color-2:#5b9bd5;
+    --background-color:#f2f2f2;
+    --basic-font-color:#333;
+
+    --margin-padding:4px;
+
+    --large-font-size:22px;
+    --medium-font-size:18px;
+    --small-font-size:14px;
+}
+
+/* reset */
+*{ margin: 0; padding:0;}
+body{ font-family: '나눔 바른고딕',sans-serif; background-color: var(--background-color);}
+h1,h2,h3,h4,h5,h6{ font-family: '나눔명조',serif;}
+ul{ list-style: none;}
+a{ text-decoration: none; color:var(--basic-font-color);}
+
+#wrap{ width: 1200px; margin: 0 auto;}
+
+#header{ height: 100px; 
+    display: flex; /* flex-direction을 선언하지 않으면 기본적으로 row 방향으로 정렬*/
+    justify-content: space-between;  /* 주축에서 flex-item을 어떻게 정렬할 것인가? */
+    align-items: center; /* 교차축에서 flex-item을 어떻게 정렬할 것인가 */
+}
+/* h1안에 img 속성에 alt를 채워주면 오류 없어지지만!
+ 그렇지 않을 경우 h1에 텍스트가 없으면 오류 뜸, */
+#header h1{ text-indent: -99999px; position: relative;}
+#header h1 img{ position:absolute; top:0; left: 0;}
+
+#header #gnb{ 
+    align-self: flex-end; /* 현재 선택된 flex-item만 교차축에서 이동: 맨 아래로 정렬됨 */
+     background: cornsilk; text-align: center;}
+#header #gnb ul.main-menu{ 
+    display: flex; /* li를 flex-item으로 만들어 수평정렬하기 위해 */
+}
+/* #header #gnb ul.main-menu li{ margin: 0 calc( var(--margin-padding) * 3 );} */
+/* #header #gnb ul.main-menu li{width: 180px; line-height: 44px;} */
+#header #gnb ul.main-menu li a{ background: skyblue; 
+    display: block; width:180px; line-height: 44px;
+}
+#header #gnb ul.main-menu li a:hover{ background-color: var(--main-color);}
+
+.lnb{ background-color: var(--sub-color-2);
+    display: flex; justify-content: flex-end; text-align: center;
+    position: absolute; width: inherit ;}
+.lnb ul.sub-menu a{ display: block; width: 180px; line-height: 36px; }
+.lnb ul.sub-menu a:hover{ background-color: var(--sub-color-1);}
+
+#slide{ height: 300px; background-color: var(--sub-color-1);}
+
+.c{ height: 200px; display: flex; justify-content: space-between;}
+.c h2{ display: none;}
+.c article{ width: 380px;}
+.c article h3{  
+    padding:calc(var(--margin-padding)*2) 0;
+    border-bottom: 3px solid;
+    margin-bottom: calc(var(--margin-padding)*3);
+}
+.c article.notice h3{ border-color:var(--main-color);}
+
+.c article.gallery h3{ border-color:var(--sub-color-1);}
+.c article.gallery ul.gallery-list{ display: flex;}
+.c article.gallery ul.gallery-list li{ width: 33.333%;}
+.c article.gallery ul.gallery-list li img{ width: 80%;}
+
+.c article.shortcut h3{ border-color:var(--sub-color-2);}
+.c article.shortcut .shortcut-icons{ display: flex; justify-content: space-between;}
+.c article.shortcut a{ display: flex; flex-direction: column; width: 80px;}
+
+
+#footer{ height: 100px; background-color: var(--sub-color-1);
+ display: flex; justify-content: space-between; align-items: center;
+ padding: calc(var(--margin-padding)*6); box-sizing: border-box;}
+
+ #footer .main-footer ul.footer-menu{ display: flex; }
+ /* #footer .main-footer ul.footer-menu li{ margin: 0 calc(var(--margin-padding)*5);} */
+ #footer .main-footer ul.footer-menu li::after{ 
+     content: "|"; margin: 0 calc(var(--margin-padding)*5);}
+#footer .main-footer ul.footer-menu li:last-child::after { content: "";}
+
+#footer .family-site{ align-self: baseline;}

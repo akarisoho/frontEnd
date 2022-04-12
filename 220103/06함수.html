@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06함수.html</title>
+    <script>
+        /*
+                // 내장함수 confirm()
+                var qna = confirm('네이버로 이동하시겠습니까? \n 취소하면 구글로 이동합니다.');  
+                // 확인을 누르면 True, 취소를 누르면 false
+        
+                if (qna) {
+                    // 확인을 누르면 네이버로 이동
+                    location.href = "http://www.naver.com";
+                }else{
+                    // 취소하면 구글로 이동
+                    location.href = "http://www.google.com";
+                }
+        */
+        // 시리얼먹기 함수
+        // function 시리얼먹기(우유, 시리얼, 그릇, 숟가락) {
+        //     그릇에 시리얼을 담는다;
+        //     우유를 붓는다;
+        //     숟가락으로 떠먹는다;
+        // }
+
+        // 사용자 정의 함수
+        /* 익명함수 : 이름이 없는 함수, 리터럴로 쓸 때, 호출하지 않아도 될 때 사용
+        function (){
+            //함수 실행구문
+        }
+        */
+        // 함수의 선언
+        function send() {
+            // confirm('업로드를 하시겠습니까?');
+            document.write("send함수 실행 완료!");
+        }
+
+        // 호출
+        send();
+
+    </script>
+</head>
+
+<body>
+    <!-- 함수는 주로 반복적으로 사용되는 구문을 미리 작성해 두고 필요할 때 호출해서 사용
+      => 반복작업을 줄여줌
+    일반적인 종류 : 
+            * 사용자 정의 함수 => 개발자가 만드는 동작 
+            * 내장함수
+            alert() => 경고창, 
+            prompt() => 경고창에 데이터 입력 받을 수 있음
+            confirm() => 확인/취소 선택할 수 있는 경고창
+            parseInt() => 문자열을 정수형데이터로 변환(숫자형으로 변환이 안된다면 NaN을 반환)
+            isNaN() => 숫자의 유효성 검사
+
+    사용법에 따라 : 일반함수 / 중첩함수 / 콜백함수 / 클로저함수 / 멤버함수(메서드) 
+-->
+</body>
+
+</html>

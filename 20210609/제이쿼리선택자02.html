@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리선택자02.html</title>
+    <!-- 형제요소 선택자 : 
+        1) 인접 선택자 => 선택자A + 선택자B => A에 바로 밑에 동생B 하나를 선택
+        2) 일반형제(틸드)선택자 => 선택자A ~ 선택자B => A의 B동생들 모두를 선택 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 인접선택자
+            $("#list-item02 + li").css("color","violet");
+
+            // 틸드선택자
+            $("#list-item02 ~ li").css("background-color","yellow");
+        });
+    </script>
+</head>
+<body>
+    <!-- ul>li#list-item0${list-item0$}*5 -->
+    <ul>
+        <li id="list-item01">list-item01</li>
+        <li id="list-item02">list-item02</li>
+        <li id="list-item03">list-item03</li>
+        <h3>sample</h3>
+        <li id="list-item04">list-item04</li>
+        <li id="list-item05">list-item05</li>
+    </ul>
+</body>
+</html>

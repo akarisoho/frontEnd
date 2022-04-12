@@ -1,0 +1,7 @@
+#gmom{ width: 800px; height: 600px; background: #ccc; position: relative;}
+    #one{ width: 200px; height: 200px; background: #f00; border-radius: 20px; position: absolute; top:0; left: 200px;}
+    #one #one_01{ width: 40px; height: 40px; background: #000; border-radius: 20px; position: absolute; top:80px; left: 80px;}
+
+    #two{width:200px; height:200px; background-color:#fff; border-radius:20px; position:absolute; top:200px;}
+    #two #two_01{width:40px; height:40px; background-color:#000; border-radius:20px; position:absolute; top:20px; left:20px;}
+    #two #two_02{width:40px; height:40px; background-color:#000; border-radius:20px; position:absolute; bottom:20px; right:20px;}

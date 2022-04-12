@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date()+switch</title>
+    <script>
+        var date = new Date();
+        // Date()객체에 담긴 고유한 값을 보존하기 위해서 인스턴스화 해서 사용
+
+        console.log(`${date}`);
+        console.log(`${date.getDate()}일`);
+        console.log(`${date.getMonth() + 1}월`);
+        console.log(`${date.getMonth() + 1}월 ${date.getDate()}일`);
+        console.log(`${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`);
+
+        document.write(`${date.getDay()}(요일) 입니다.`);
+     
+        let today = date.getDay();  //5라는 값을 today에 넣겠다.
+        console.log(today);
+   /*
+        switch (today) {
+            case 0:
+                today = "일요일";
+                break;
+
+            case 1:
+                today = "월요일";
+                break;
+
+            case 2:
+                today = "화요일";
+                break;
+
+            case 3:
+                today = "수요일";
+                break;
+
+            case 4:
+                today = "목요일";
+                break;
+
+            // key값의 데이터 형이 Number인지 String인지에 따라서 값을 비교를 함
+            case '5':
+            case 5:
+                today = "금요일";
+                break;
+
+            case 6:
+                today = "토요일";
+                break;
+
+            // default 구문은 작성안해도 됨!
+            // default:
+            //     document.write("case없음");
+            //     break;
+        }
+        document.write(`${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일 ${today} 입니다.`);
+        */
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

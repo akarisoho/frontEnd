@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-day</title>
+<script>
+    let today = new Date();
+    let dDay = new Date("Dec 25, 2022");
+    console.log(`today : ${today}, dDay : ${dDay}`);
+
+    let dDayTime = dDay.getTime();
+    console.log(`dDayTime : ${dDayTime}`);
+
+    let todayTime = today.getTime();
+    console.log(`todayTime : ${todayTime}`);
+    
+    let remainingDays = Math.ceil((dDayTime-todayTime)/24/60/60/1000);
+
+    document.write(`2022년의 크리스마스는 앞으로 ${remainingDays}일 남았어요.`);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

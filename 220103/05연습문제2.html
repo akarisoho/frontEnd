@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05연습문제2.html</title>
+    <script>
+        // 25부터 시작해서 1씩 감소하면서 15까지의 합을 구하세요
+        // 화면에 15~25사이 의 총 누계(total)만 보여지면 됩니다.
+        // total = 25 + 24 + 23 + 22 + 21 + 20 + 19 + 18 + 17 + 16 + 15 = 220;
+
+        var start = 25;
+        var end = 15;
+        var total = 0;
+
+        // for (var i = start; i >= end; i--) {
+        for (start; start >= end; start--) {
+            total += start;
+        }
+        document.write(total);
+        // while (start >= end) {
+        //     total += start;
+        //     start--;
+        // }
+        // document.write(total);
+
+        // while (start >= end) {
+        //     total += start;
+        //     document.write(start);
+        //     if (start != end) {
+        //         document.write(` + `);
+        //     }
+        //     start--;
+        // }
+        // document.write(` = ${total}`);
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

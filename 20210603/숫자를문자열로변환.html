@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자를문자열로변환.html</title>
+    <script>
+        var a = true;  // 불린형의 자료형이 a에 대입
+        var b = 123;   // 숫자형의 자료형이 b에 대입
+
+        document.write("a의 자료형은 " + typeof(a) + "<br>");
+        document.write("b의 자료형은 " + typeof(b) + "<br>");
+
+        var sum = b + 30;  // 자료형이 숫자인 b의 값 123 + 30 을 하고 sum변수 대입
+        document.write("b와 30을 더하면 " + sum + "<br>");
+
+        a = String(a);  // 불린형을 문자형으로 변환
+        document.write("a를 문자형으로 변환하면 " + typeof(a) + "형 이고<br>");
+
+        b = String(b);  // 숫자형을 문자형으로 변환
+        document.write("b를 문자형으로 변환하면 " + typeof(b) + "형 입니다.<br>");
+
+
+        sum = b + 30;  // 문자형인 b "123"과 숫자 30을 더해서 sum에 대입
+        document.write("b를 문자형으로 변환후 sum은 " + sum + "입니다.<br>");
+        document.write("sum의 자료형은 " + typeof(sum) + "입니다.");
+        // 문자형 더하기 숫자형은 결과 값이 문자형이 된다!!
+        
+    </script>
+</head>
+<!-- string() 함수를 이용해서 문자형의 자료형으로 변환할 수 있음 -->
+<body>
+    
+</body>
+</html>

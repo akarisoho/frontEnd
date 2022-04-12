@@ -1,0 +1,12 @@
+box01{ width:940px; height:125px;}
+box01_01{ width:640px; height:80px;}
+
+box02{ width:940px; height:40px;}
+box02_01{ width:100px; height:30px;}
+
+box03{ width:940px; height:1200px;}
+box03_01{ width:280px; height:1180px;}
+box03_02{ width:630px; height:630px;}
+box03_03{ width:630px; height:540px;}
+
+box04{ width:940px; height:100px}

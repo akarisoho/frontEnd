@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>수직내비게이션_아코디언</title>
+    <link rel="stylesheet" href="css/vert_nav1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--    <script src="js/vert_nav1.js"></script>-->
+    <script src="js/vert_nav2.js"></script>
+</head>
+<!-- 코딩순서
+    1. body에 구조 작성
+    2. css로 레이아웃
+    3. css 스타일링
+    4. js 동적구현 = DOM Control = jQuery 작성
+-->
+
+<body>
+    <!--    #wrap>nav#gnb>ul.mainMenu>(li.mainList>a{MENU$})*4 -->
+    <div id="wrap">
+        <nav id="gnb">
+            <ul class="mainMenu">
+                <li class="mainList">
+                    <a href="#">MENU1</a>
+                    <!-- ul.subMenu>(li.subList>a{sub-menu$})*3-->
+                    <ul class="subMenu">
+                        <li class="subList"><a href="#">sub-menu1</a></li>
+                        <li class="subList"><a href="#">sub-menu2</a></li>
+                        <li class="subList"><a href="#">sub-menu3</a></li>
+                    </ul>
+                </li>
+                <li class="mainList">
+                    <a href="#">MENU2</a>
+                    <ul class="subMenu">
+                        <li class="subList"><a href="#">sub-menu1</a></li>
+                        <li class="subList"><a href="#">sub-menu2</a></li>
+                        <li class="subList"><a href="#">sub-menu3</a></li>
+                    </ul>
+                </li>
+                <li class="mainList">
+                    <a href="#">MENU3</a>
+                    <ul class="subMenu">
+                        <li class="subList"><a href="#">sub-menu1</a></li>
+                        <li class="subList"><a href="#">sub-menu2</a></li>
+                        <li class="subList"><a href="#">sub-menu3</a></li>
+                    </ul>
+                </li>
+                <li class="mainList">
+                    <a href="#">MENU4</a>
+                    <ul class="subMenu">
+                        <li class="subList"><a href="#">sub-menu1</a></li>
+                        <li class="subList"><a href="#">sub-menu2</a></li>
+                        <li class="subList"><a href="#">sub-menu3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+
+</html>

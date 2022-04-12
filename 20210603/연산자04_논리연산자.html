@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자04_논리연산자.html</title>
+    <script>
+        var x = 30;
+        var y = 50;
+
+        document.write( x >= y, "<br>");
+        document.write( x <= y, "<br>");
+        document.write( x == y, "<br>");
+        document.write( x != y, "<br>");
+
+        document.write("<hr>");
+
+        var a = 10 > 9 ;  //true(참)
+        var b = 3 > 5 ;  //false(거짓)
+
+        document.write(a && b, "<br>");
+        // document.write(10>9 && 3>5, "<br>");
+        // document.write(ture && false, "<br>");
+
+        document.write( a || b, "<br>");
+        // document.write(10>9 || 3>5, "<br>");
+        // document.write(ture || false, "<br>");
+
+        document.write( !a, "<br>"); // true를 부정하므로 false
+    </script>
+</head>
+<!-- 논리연산자 종류
+     >  (크다), 
+     <  (작다), 
+     >= (크거나 같다),
+     <= (작거나 같다),
+     == (같다), 
+     != (다르다), 
+     && (ADN연산 - 앞,뒤 조건이 모두 true일때만 true를 반환하
+                    둘 중하나가 false면 false), 
+     || (OR 연산 - 앞,뒤 조건중 하나라도 true면 true를 반환하고
+                    둘 다 false일때만 false를 반환),
+     ! (Not 연산 - 부정: true일 경우엔 false, false인 경우 true를 반환) -->
+<body>
+    
+</body>
+</html>

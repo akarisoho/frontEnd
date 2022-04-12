@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거내비_서랍(Drawer)메뉴</title>
+    <link rel="stylesheet" href="css/햄버거내비.css">
+    <link rel="stylesheet" href="css/수직개별내비.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/햄버거내비.js"></script>
+    <script src="js/개별내비_클릭.js"></script>
+</head>
+<body>
+    <!-- #wrap>header#header+#container+footer#footer -->
+    <div id="wrap">
+        <div id="drawer-menu">
+            <button class="close">X</button>
+            <nav id="gnb">
+                <!-- ul.main-menu>(li.main-list0$>a{mainList0$}+ul.sub-menu>(li.sub-list0$>a{subList0$})*3)*5 -->
+                <ul class="main-menu">
+                    <li class="main-list01">
+                        <a href="#">mainList01 <span>▼</span></a>
+                        <ul class="sub-menu">
+                            <li class="sub-list01"><a href="#">123subList01</a></li>
+                            <li class="sub-list02"><a href="#">subList02</a></li>
+                            <li class="sub-list03"><a href="#">12subList03</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list02">
+                        <a href="#">mainList02 <span>▼</span></a>
+                        <ul class="sub-menu">
+                            <li class="sub-list01"><a href="#">12345subList01</a></li>
+                            <li class="sub-list02"><a href="#">12subList02</a></li>
+                            <li class="sub-list03"><a href="#">123subList03</a></li>
+                            <li class="sub-list04"><a href="#">1234subList04</a></li>
+                            <li class="sub-list05"><a href="#">subList05</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list03">
+                        <a href="#">mainList03 <span>▼</span></a>
+                        <ul class="sub-menu">
+                            <li class="sub-list01"><a href="#">subList01</a></li>
+                            <li class="sub-list02"><a href="#">subList02</a></li>
+                            <li class="sub-list03"><a href="#">subList03</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list04">
+                        <a href="#">mainList04 <span>▼</span></a>
+                        <ul class="sub-menu">
+                            <li class="sub-list01"><a href="#">subList01</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list05">
+                        <a href="#">mainList05</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <header id="header">
+            <h1>mainTitle</h1>
+            <div id="hamberger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </header>
+        <div id="container"></div>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

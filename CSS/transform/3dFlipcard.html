@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flip3D {
+            width: 240px;
+            height: 200px;
+            margin: 10px;
+            float: left;
+        }
+
+        .flip3D>.front {
+            width: 240px;
+            height: 200px;
+            background: #FC0;
+            border-radius: 7px;
+            position: absolute;
+            transform: perspective(600px) rotateY(0deg);
+            background: #fc0;
+            /*perspective 속성은 3D 위치 요소에 약간의 관점을 제공하는 데 사용됩니다.
+            Perspective 속성은 개체가 사용자로부터 얼마나 멀리 떨어져 있는지 정의합니다. 
+            따라서 값이 낮을수록 높은 값보다 더 집중적 인 3D 효과가 나타납니다.*/
+            backface-visibility: hidden;
+            /* backface-visibility 요소의 뒷면이 사용자를 향할 때 표시되어야하는지 여부를 정의 */
+            transition: transform .5s ease-in-out;
+        }
+
+        .flip3D>.back {
+            width: 240px;
+            height: 200px;
+            background: #80BFFF;
+            border-radius: 7px;
+            position: absolute;
+            transform: perspective(600px) rotateY(180deg);
+            backface-visibility: hidden;
+            transition: transform .5s ease-in-out;
+        }
+
+        /* .flip3D:hover>.front {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+
+        .flip3D:hover>.back {
+            transform: perspective(600px) rotateY(0deg);
+        } */
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <div class="flip3D">
+        <div class="back">Box 1 - Back</div>
+        <div class="front">Box 1 - Front</div>
+    </div>
+    <div class="flip3D">
+        <div class="back">Box 2 - Back</div>
+        <div class="front">Box 2 - Front</div>
+    </div>
+    <div class="flip3D">
+        <div class="back">Box 3 - Back</div>
+        <div class="front">Box 3 - Front</div>
+    </div>
+    <script>
+
+        $(".flip3D>.front").click(function () {
+            $(this).css({ 'transform': ' perspective(600px) rotateY(-180deg)' });
+            $(this).siblings('.back').css({ 'transform': ' perspective(600px) rotateY(0deg)' });
+        });
+        $(".flip3D>.back").click(function () {
+            $(this).css({ 'transform': ' perspective(600px) rotateY(-180deg)' });
+            $(this).siblings('.front').css({ 'transform': ' perspective(600px) rotateY(0deg)' });
+            
+        });
+
+    </script>
+
+</body>
+
+</html>

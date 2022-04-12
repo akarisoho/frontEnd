@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자함수_매개변수와인자값.html</title>
+    <script>
+        // // parameter = 매개변수
+        // function name(매개변수1,매개변수2) {
+            
+        // }
+        // //인자값은 실제로 함수에서 실행될 값
+        // name(인자값1,인자값2);
+
+        // 두 개의 값을 받아서 덧셈하는 함수 생성
+        function add(param1,param2,param3) {
+            var sum = param1 + param2 + param3;
+            document.write(sum + "<br>");
+        }
+
+        // 덧셈 함수 호출
+        add(20,15); // 매개변수의 개수와 인자값의 개수를 맞춰야 한다. => NaN출력
+                    // 해결 => add(20,15,0); 
+        add(100,20,5);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

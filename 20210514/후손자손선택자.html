@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손(하위)/자손(직하위)선택자.html</title>
+    <style>
+        #header h1{ color:hotpink;}
+        #header > h1{ background-color: yellow;}
+        #nav > h1{ background-color:skyblue;}
+
+    /* 문제1.후손선택자를 사용해 '오늘의 숙제','후손,자손선택자'의 글자 색을 빨간색으로 변경 */
+
+    /* 문제2. 자손선택자를 이용해 '후손,자손선택자'의 배경색을 회색으로 변경 */
+
+    /* 문제3. 후손 또는 자손 선택자를 이용해 '선택자를 복습합니다.' 글자색을 자유롭게 변경하세요. */
+    </style>
+</head>
+<!-- 후손선택자 형태 : 조상요소 후손요소
+     자손선택자 형태 : 부모요소 > 자손요소  -->
+<body>
+    <div id="header">
+        <h1 class="title">웹디자인기능사</h1>
+        <div id="nav">
+            <h1>선택자</h1>
+        </div>
+    </div>
+
+    <div id="section">
+        <h2>오늘의 숙제</h2>
+        <div class="article">
+            <h2>후손,자손선택자</h2>
+            <p>선택자를 복습합니다.</p>
+        </div>
+    </div>
+</body>
+</html>

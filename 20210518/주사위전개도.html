@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위전개도</title>
+    <style>
+        *{ margin: 0;}
+
+        #gmom{ width: 800px; height: 600px; background-color: gray; 
+            position: relative;}
+        #gmom>div{ width: 200px; height: 200px; background-color: #fff; border-radius: 20px; position: absolute;}
+        #gmom>div>div{ width: 40px; height: 40px; background: #000; border-radius: 40px; position: absolute;}
+
+        /* mom1요소 포지셔닝 */
+        #mom1{ top:0; left: 200px;}
+        #mom1 #m1_s01{ top: 80px; left: 80px;}
+
+        /* mom2요소 포지셔닝 */
+        #mom2{ top:200px; left: 0;}
+        #mom2 #m2_s01{ top: 20px; left: 20px;}
+        #mom2 #m2_s02{ right: 20px; bottom:20px;}
+
+        /* mom3요소 포지셔닝 */
+        #mom3{ top:200px; left: 200px;}
+        #mom3 #m3_s01{ top: 20px; left: 20px;}
+        #mom3 #m3_s02{ top:80px; left: 80px;}
+        #mom3 #m3_s03{ right: 20px; bottom:20px; }
+
+        /* mom5요소 포지셔닝 */
+        #mom5{ top:200px; left: 400px;}
+        #mom5 #m5_s01{ top:20px; left: 20px;}
+        #mom5 #m5_s02{ top:20px; right: 20px;}
+        #mom5 #m5_s03{ top:80px; left: 80px;}
+        #mom5 #m5_s04{ bottom:20px; left: 20px;}
+        #mom5 #m5_s05{ bottom:20px; right: 20px;}
+
+        /* mom4요소 포지셔닝 */
+        #mom4{ top:200px; left: 600px;}
+        #mom4 #m4_s01{ top:20px; left: 20px;}
+        #mom4 #m4_s02{ top:20px; right: 20px;}
+        #mom4 #m4_s03{ bottom:20px; left: 20px;}
+        #mom4 #m4_s04{ bottom:20px; right: 20px;}
+
+        /* mom6요소 포지셔닝 */
+        #mom6{ top:400px; left: 400px;}
+        #mom6 #m6_s01{ top:20px; left: 20px;}
+        #mom6 #m6_s02{ top:20px; right: 20px;}
+        #mom6 #m6_s03{ top:80px; left: 20px;}
+        #mom6 #m6_s04{ top:80px; right: 20px;}
+        #mom6 #m6_s05{ bottom:20px; left: 20px;}
+        #mom6 #m6_s06{ bottom:20px; right: 20px;}
+    </style>
+</head>
+<body>
+    <div id="gmom">
+        <div id="mom1">
+            <div id="m1_s01"></div>
+        </div>
+        <div id="mom2">
+            <div id="m2_s01"></div>
+            <div id="m2_s02"></div>
+        </div>
+        <div id="mom3">
+            <div id="m3_s01"></div>
+            <div id="m3_s02"></div>
+            <div id="m3_s03"></div>
+        </div>
+        <div id="mom5">
+            <div id="m5_s01"></div>
+            <div id="m5_s02"></div>
+            <div id="m5_s03"></div>
+            <div id="m5_s04"></div>
+            <div id="m5_s05"></div>
+        </div>
+        <div id="mom4">
+            <div id="m4_s01"></div>
+            <div id="m4_s02"></div>
+            <div id="m4_s03"></div>
+            <div id="m4_s04"></div>
+        </div>
+        <div id="mom6">
+            <div id="m6_s01"></div>
+            <div id="m6_s02"></div>
+            <div id="m6_s03"></div>
+            <div id="m6_s04"></div>
+            <div id="m6_s05"></div>
+            <div id="m6_s06"></div>
+        </div>
+    </div>
+</body>
+</html>

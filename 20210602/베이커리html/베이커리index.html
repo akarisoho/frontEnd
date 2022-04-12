@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베이커리html>베이커리index.html</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- 1. body에 웹표준(시맨틱태그)로 구조 설계
+     2. css에 width, height, background-color 를 넣어서 요소 확인
+        float 또는 position을 이용해 공간 배치
+        (와이어프레임에서 보여지는 큰 영역 배치)
+     3. 세부 콘텐츠(이미지, 글자) 삽입 후 세부 css 작성
+        3-1. 폰트 설정
+        3-2. 와이어프레임에 나누어진 부분 세부적으로 꾸미기 -->
+
+<body>
+    <!-- #wrap>header#header+.main_image+(.contents>section.s$*2)+footer#footer -->
+    <div id="wrap">
+        <!-- ㄱ -->
+        <header id="header">
+            <!-- 웹표준에서 반드시 하나의 html에 h1태그(제목)가 있어야 함 -->
+            <h1 class="logo"> 
+                <!-- a태그는 href속성을 작성 해야 함 -->
+                <a href="#">
+                    <!-- img태그는 alt속성이 반드시 있어야 함★ -->
+                    <img src="http://placehold.it/200x50" alt="베이커리">
+                </a>
+            </h1>
+            <!-- nav#gnb>ul>(li>a{menu$})*3 -->
+            <nav id="gnb">
+                <!-- li태그는 반드시 ul, ol 태그의 자식요소로 구성 -->
+                <ul>
+                    <li><a href="#">DD소개</a></li>
+                    <li><a href="#">빵만들기</a></li>
+                    <li><a href="#">해외여행지</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //ㄱ -->
+
+        <!-- ㄴ -->
+        <div class="main_image">
+            <h2>베이커리 카페<br>세상에 하나뿐인 베이커리</h2>
+        </div>
+        <!-- <main></main> html문서에서 단 한번만 사용이 가능하고 -->
+        <!-- //ㄴ -->
+
+        <!-- ㄷ -->
+        <div class="contents">
+            <section class="s1">
+                <!-- section태그의 첫번째 자식요소는 h2~h6태그가 와야 함 -->
+                <h2>hiddenTitle</h2>
+            <!-- (article.notice>h3{공지사항})+(article.partner>h3{Partner}) -->
+                <article class="notice">
+                    <!-- article태그의 첫번째 자식요소는 h2~h6태그가 와야함 -->
+                    <h3>공지사항</h3>
+                    <!-- table 태그 사용 -->
+                </article>
+                <article class="partner">
+                    <h3>Partner</h3>
+                    <a href="#"><img src="http://placehold.it/300x100" alt="banner1"></a>
+                    <a href="#"><img src="http://placehold.it/300x100" alt="banner2"></a>
+                </article>
+            </section>
+            <section class="s2">
+                <h2>hiddenTitle</h2>
+                <!-- ul.icon_menu>(li.icon_list>a>img+span{text})*3 -->
+                <ul class="icon_menu">
+                    <li class="icon_list">
+                        <a href="">
+                            <img src="" alt=""><span>text</span>
+                        </a>
+                    </li>
+                    <li class="icon_list"><a href=""><img src="" alt=""><span>text</span></a></li>
+                    <li class="icon_list"><a href=""><img src="" alt=""><span>text</span></a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- //ㄷ -->
+
+        <!-- ㄹ -->
+        <footer id="footer">
+            <!-- ul.footer_menu>(li>a{menutext$})*3 -->
+            <ul class="footer_menu">
+                <li><a href="#">법적고지</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+            <address>
+                사업자번호<br>
+                상호명..
+            </address>
+        </footer>
+        <!-- //ㄹ -->
+    </div>
+</body>
+
+</html>

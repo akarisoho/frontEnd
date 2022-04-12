@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout01.html</title>
+    <style>
+        /* reset CSS */
+        *{ margin: 0; padding:0;}
+
+        #mom{ width: 960px; height: 920px; background-color: #ccc; 
+            padding:10px;}
+
+        #son01{ width: 960px; height: 100px; background: #f00;
+            margin-bottom: 10px;}
+        #son02{ width: 290px; height: 700px; background: #0f0; float: left;
+            margin-bottom: 10px;}
+        #son03{ width: 660px; height: 700px; background: #00f; float: right;}
+        #son04{ width: 960px; height: 100px; background: #0ff;
+         /* clear: both; */ float: left;
+         }
+    </style>
+</head>
+<body>
+    <!-- #mom>#son0$*4 -->
+    <div id="mom">
+        <div id="son01"></div>
+        <div id="son02"></div>
+        <div id="son03"></div>
+        <div id="son04"></div>
+    </div>
+</body>
+</html>

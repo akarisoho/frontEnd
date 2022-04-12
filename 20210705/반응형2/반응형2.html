@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- width=device-width => 기기의 너비를 뷰포트로 잡는다.
+        initial-scale=1.0 => 뷰포트의 초기 배율
+        user-scalable=yes|no  => 생략하면 yes
+        minimum-scale=양수 => 생략하면 기본값은 0.25
+        maximum-scale=양수 => 생략하면 기본값은 5.0
+    -->
+    <title>반응형2</title>
+    <link rel="stylesheet" href="css/responsive2.css">
+    <!-- 반응형1의 all_style.css처럼 미디어 쿼리를 구현하세요.
+        미디어 쿼리 조건은 mobile:320px, tablet:500px, pc:860px => ~ 1:20까지 -->
+</head>
+<body>
+    <!-- 1. body구조설계 : 3장의 레이아웃에 공통으로 적용할 태그 구조설계 -->
+    <!-- #wrap>(header>h1{ye-jin}+(nav>ul>li{btn0$}*5))+section+(article>img+h4{title0$}+p{discript})*8+footer -->
+    <div id="wrap">
+        <header>
+            <h1>ye-jin</h1>
+            <nav>
+                <ul>
+                    <li>btn01</li>
+                    <li>btn02</li>
+                    <li>btn03</li>
+                    <li>btn04</li>
+                    <li>btn05</li>
+                </ul>
+            </nav>
+        </header>
+        <section></section>
+        <article>
+            <img src="http://placehold.it/220x150" alt="">
+            <h4>title01</h4>
+            <p>discript</p>
+        </article>
+        <article>
+            <img src="http://placehold.it/220x150" alt="">
+            <h4>title02</h4>
+            <p>discript</p>
+        </article>
+        <article>
+            <img src="http://placehold.it/220x150" alt="">
+            <h4>title03</h4>
+            <p>discript</p>
+        </article>
+        <article>
+            <img src="http://placehold.it/220x150" alt="">
+            <h4>title04</h4>
+            <p>discript</p>
+        </article>
+        <article>
+            <img src="http://placehold.it/220x150" alt="">
+            <h4>title05</h4>
+            <p>discript</p>
+        </article>
+        <article>
+            <img src="http://placehold.it/220x150" alt="">
+            <h4>title06</h4>
+            <p>discript</p>
+        </article>
+        <article>
+            <img src="http://placehold.it/220x150" alt="">
+            <h4>title07</h4>
+            <p>discript</p>
+        </article>
+        <article>
+            <img src="http://placehold.it/220x150" alt="">
+            <h4>title08</h4>
+            <p>discript</p>
+        </article>
+        <footer></footer>
+    </div>
+</body>
+</html>

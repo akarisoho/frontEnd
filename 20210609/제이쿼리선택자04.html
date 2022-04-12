@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리선택자04.html</title>
+    <style>
+        /*속성 선택자
+        li[class=bigfont]{ font-size: 1.25em; color: darkorange;}
+        li[class]{ background: skyblue;}*/
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             //속성 선택자 
+            $("li[class]").css("background-color","skyblue");
+            $("li[class='bigfont']").css({"font-size":"1.25em","color":"darkorange"});
+        });
+    </script>
+</head>
+<body>
+    <!-- ul>li{sampleText0$}*4 -->
+    <ul>
+        <li class="bigfont">ul-List01</li>
+        <li id="point">ul-List02</li>
+        <li class="any">ul-List03</li>
+        <li>ul-List04</li>
+    </ul>
+    <!-- ol>li{ol-List0$}*3 -->
+    <ol>
+        <li class="bigfont">ol-List01</li>
+        <li class="any">ol-List02</li>
+        <li>ol-List03</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문02_if_esle문.html</title>
+    <script>
+        // var number = prompt('숫자를 입력하세요','');
+
+        // 짝수 홀수를 구분할 때에는 
+        // 2로 나누었을때 나머지값이 1이라면 홀수
+        //                           0이라면 짝수
+        // if (number % 2 == 0) {  // number변수의 값을 2로 나눴을때 0과 같으냐?
+        //     document.write(number + "는(은) 짝수 입니다.");
+        // } else {
+        //     document.write(number + "는(은) 홀수 입니다.");
+        // }
+        // var number = 0;
+        // if (number == 0) {  // number변수의 0과 조건문의 0이 같으냐? => true
+        //     document.write("0을 제외한 자연수를 입력해 주세요."); // => 실행 
+        //     // 나머지 else if문 2개와 else문 실행 안됨!
+        // } else if(number % 2 == 1) {
+        //     document.write(number + "는(은) 홀수 입니다.");
+        // } else if(number % 2 == 0){
+        //     document.write(number + "는(은) 짝수 입니다.");
+        // }else{
+        //     document.write("정수를 입력하세요.");
+        // }
+
+        // var number = 2.4;
+        // if (number == 0) {  // number변수의 2.4과 조건문의 0이 같으냐? => false
+        //     document.write("0을 제외한 자연수를 입력해 주세요."); // => 실행 X
+        //     // 다음 else if문의 조건을 계산
+        // // ▼ number변수의 2.4를 2로 나누었을 때 나머지 값이 1과 같냐? 
+        // // 2.4를 2로 나눈 나머지 값인 0.4와 1이 같냐? => false
+        // } else if(number % 2 == 1) { // 조건문이 false이므로 실행X
+        //     document.write(number + "는(은) 홀수 입니다."); 
+        //     // 다음 else if문의 조건을 계산
+        // // ▼ number변수의 2.4를 2로 나누었을 때 나머지 값이 0과 같냐?
+        // // 2.4를 2로 나눈 나머지 값인 0.4와 0이 같냐? => false    
+        // } else if(number % 2 == 0){// 조건문이 false이므로 실행X
+        //     document.write(number + "는(은) 짝수 입니다.");
+        // }else{// 위 조건문이 모두 실행되지 않았으므로 else구문이 실행
+        //     document.write("정수를 입력하세요.");
+        // }
+
+        var number = prompt("숫자를 입력하세요.","");
+
+        if (number == 0) {
+            document.write("0이 아닌 자연수를 입력하세요.");
+        } else if (number % 2 == 1) {
+            document.write(number + "는(은) 홀수입니다.");
+        } else if (number % 2 == 0) {
+            document.write(number + "는(은) 짝수입니다.");
+        } else{
+            document.write("정수를 입력하세요.");
+        }
+
+    </script>
+</head>
+<!-- 입력받은 수를 홀수인지 짝수인지를 구분해서 결과 출력  -->
+<body>
+    
+</body>
+</html>

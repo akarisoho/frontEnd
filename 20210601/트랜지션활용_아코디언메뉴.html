@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션활용_아코디언메뉴.html</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul{ list-style: none;}
+        a{ text-decoration: none;}
+
+        /*수평정렬로 메뉴를 나열 할 때에는 'main-list갯수 * main-list의 너비'로 gnb의 width값을 설정해 줘야 합니다. 수평정렬에서는 높이도 지정 */
+        #gnb{ width: 200px; line-height: 36px; border:1px solid #1d1d1d; border-radius: 3px; }
+        #gnb a{ display: block; background: #555; text-align: center; color:#ccc}
+        /* 수평정렬 메뉴로 사용시 - 높이 설정금지, body구조에 따라서.. main-list안에 submenu가 있으므로..  -
+        #gnb > .main-menu > .main-list{ float: left; width: 200px;}*/
+        #gnb > .main-menu > .main-list > a{ background: #353535; color:#ccc;
+                     }
+        
+        #gnb > .main-menu > .main-list > .sub-menu a{ height: 0; opacity: 0;
+        transition: all 0.3s ease-out;}
+        
+        #gnb > .main-menu > .main-list > a:hover + .sub-menu a{ height: 36px; opacity: 1;}
+    </style>
+</head>
+<body>
+    <nav id="gnb">
+        <!-- ul.main-menu>(li.main-list>a{mainList$})*2 -->
+        <ul class="main-menu">
+            <li class="main-list">
+                <a href="">mainList1</a>
+                <!-- ul.sub-menu>(li.sub-list>a{subList$})*3 -->
+                <ul class="sub-menu">
+                    <li class="sub-list"><a href="">subList1</a></li>
+                    <li class="sub-list"><a href="">subList2</a></li>
+                    <li class="sub-list"><a href="">subList3</a></li>
+                </ul>
+            </li>
+            <li class="main-list">
+                <a href="">mainList2</a>
+                <ul class="sub-menu">
+                    <li class="sub-list"><a href="">subList1</a></li>
+                    <li class="sub-list"><a href="">subList2</a></li>
+                    <li class="sub-list"><a href="">subList3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

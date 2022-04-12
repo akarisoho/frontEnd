@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문05_switch문2.html</title>
+    <script>
+        var day = "수요일";
+
+        switch (day) {
+            case "월요일":
+            case "수요일": 
+            case "금요일":
+                document.write("월,수,금에는 공부를 합니다.");
+               break; //이 구문이 없으면 아래 case를 계속 비교하고 실행
+        
+            case "화요일":
+            case "목요일":
+                document.write("화,목에는 운동을 합니다.");
+                break;
+
+            default:
+                document.write("주말은 쉽니다.");
+                break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

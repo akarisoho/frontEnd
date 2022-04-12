@@ -1,0 +1,28 @@
+*{ margin: 0; padding: 0;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+
+.center{ width: 1000px; margin: 0 auto; background-color: rgba(0,0,0,0.3);}
+
+#header{ height: 160px; background-color: olive;}
+#header .center{height: inherit; position: relative;}
+#gnb{ background-color: palegoldenrod; 
+    width: 100%; position: absolute; right: 0; top:100px;}
+/*#gnb ul.main-menu{ list-style: url(../img/favicon.png) inside;} => 구둣점을 이미지로 + 박스안쪽 정렬 */
+/* ul{ list-style-image: url(../img/favicon.png);} => 구둣점을 이미지로 변경 */
+/* ul{ list-style-position: inside;} => 구둣점을 박스안쪽으로 정렬 */
+
+#gnb ul.main-menu a{ line-height: 44px; width: 100%; display:inline-block; background-color: lavender; text-align: center;}
+/* #gnb ul.main-menu a::before{content: "★ ";}
+#gnb ul.main-menu a::after{ content: " ▼";} */
+
+#gnb ul.main-menu > li{ float: left; width: 20%;}
+#gnb ul.main-menu > li > a{/* position: relative;*/ padding:7px 20px; box-sizing: border-box;}
+#gnb ul.main-menu > li > a > span{ position: relative; left: 20px;  }
+
+#gnb ul.main-menu ul.sub-menu{ display: none;}
+/* #gnb ul.main-menu:hover ul.sub-menu{ display: block;} => jQuery로 구현 */
+#gnb ul.main-menu ul.sub-menu a{ text-align: left; text-indent: 50px; background-color: red; }
+
+
+#header+.center{ background-color: yellow; }

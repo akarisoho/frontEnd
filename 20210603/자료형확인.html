@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료형확인.html</title>
+    <script>
+        var x1 = 99;
+        var x2 = prompt("나이를 입력하세요.","");
+        var x3 = true;
+        var x4 ;
+
+        document.write("x1의 값은 : " + x1 + "<br>");
+        document.write("x2의 값은 : " + x2 + "<br>");
+        document.write("x3의 값은 : " + x3 + "<br>");
+        document.write("x4의 값은 : " + x4 + "<br>");
+
+        // 자료형 확인하기 => typeof() 함수를 사용. number형인지, String형인지, 자료형의 종류를 확인할 수 있음.
+
+        console.log(typeof(x1));
+        console.log(typeof(x2));
+        console.log(typeof(x3));
+        console.log(typeof(x4));
+        document.write("<br><br>");
+
+        var a = 3;
+        var b = 2;
+        var c = a + b;   //  a의 값인 3과 b의 값인 2를 더해서 c에 대입해!
+        document.write(c);
+        console.log("c의 자료형 : " + typeof(c));
+        
+        document.write("<br><br>");
+
+        // x2 = Number(x2);
+        var sum = x1 + x2;
+        document.write(sum);
+        console.log("sum의 자료형 : " + typeof(sum));
+
+
+    </script>
+</head>
+<!-- 자료형의 종류 => Number(숫자), String(문자), Boolean(true|false),
+                     undefined(정의X), Null(값없음), 
+                     Object(객체), Array(배열) -->
+<!-- prompt(); => 내장함수, 사용자로부터 값을 입력 받을 때 사용 -->
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본주사위_숏.html</title>
+    <style>
+        /* reset CSS */
+        *{ margin: 0; }
+
+        body>div{ width: 300px; height: 300px; border:2px dashed red;
+                border-radius: 30px; position: relative;}
+        body>div>div{ width: 80px; height: 80px; border-radius: 40px; background: #000; position: absolute; }
+
+        #mom1_son01{ top: 110px; left: 110px;}
+
+        #mom2_son01{ top: 15px; left: 15px;}
+        #mom2_son02{ right: 15px; bottom: 15px;}
+
+        #mom3_son01{ top: 15px; left: 15px;}
+        #mom3_son02{top:110px; left: 110px;}
+        #mom3_son03{ right: 15px; bottom: 15px;}
+            
+
+    </style>
+</head>
+<!-- 1. body에 구조설계 + id, class 지정 => 3depth구조 정도로 설계
+     2. CSS 작성 : width, height, bgcolor
+     3. css 포지셔닝(1) : position속성과 방향(top,left,right,bottom)속성 
+        css 포지셔닝(2) : float속성 
+    -->
+<body>
+    <!-- #mom$*6 -->
+    <div id="mom1">
+        <div id="mom1_son01"></div>
+    </div>
+    <div id="mom2">
+        <div id="mom2_son01"></div>
+        <div id="mom2_son02"></div>
+    </div>
+    <div id="mom3">
+        <div id="mom3_son01"></div>
+        <div id="mom3_son02"></div>
+        <div id="mom3_son03"></div>
+    </div>
+    <div id="mom4">
+        <div id="mom4_son01"></div>
+        <div id="mom4_son02"></div>
+        <div id="mom4_son03"></div>
+        <div id="mom4_son04"></div>
+    </div>
+    <div id="mom5">
+        <div id="mom5_son01"></div>
+        <div id="mom5_son02"></div>
+        <div id="mom5_son03"></div>
+        <div id="mom5_son04"></div>
+        <div id="mom5_son05"></div>
+    </div>
+    <div id="mom6">
+        <div id="mom6_son01"></div>
+        <div id="mom6_son02"></div>
+        <div id="mom6_son03"></div>
+        <div id="mom6_son04"></div>
+        <div id="mom6_son05"></div>
+        <div id="mom6_son06"></div>
+    </div>
+</body>
+</html>

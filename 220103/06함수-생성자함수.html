@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06함수-생성자함수.html</title>
+    <script>
+        var num1 = 10;
+        var num2 = 25;
+
+        // 함수 선언
+        function add(a, b) { //a와 b는 parameter라고 함
+            var sum = a + b;
+            document.write(sum, '<br>');
+        }
+
+        // 호출
+        add(5,7);  //함수를 호출할 때 5과 7을 인자값으로 보냄
+        // document.write("福福福福福福福福福福");
+        // document.write("<br>");
+        lucky();
+
+        add(10, 30);
+        // document.write("福福福福福福福福福福");
+        // document.write("<br>");
+        lucky();
+
+        // add(3, 6, 9); // 인자값을 입력할 때는 add함수의 parameter개수와 맞춰서 작성해야 함
+        add(num1,num2);
+
+        // for문을 이용해서 함수
+        function lucky() {
+            for (var i = 0; i < 10; i++) {
+                document.write("福")
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

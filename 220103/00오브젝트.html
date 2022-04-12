@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00오브젝트(객체).html</title>
+    <script>
+        // 나이, 성별, 생년월일
+        var age1 = 20;
+        var gender1 = '여';
+        var birth1 = '2002.10.01';
+
+        // 여러 정보를 하나의 꾸러미로 담는 것이 객체(Object)
+        var userInfo = {
+            age : 20,
+            gender : '여',
+            birth : '2002.10.01'
+        }
+        document.write(userInfo.age);   //객체의 age속성을 가져와서 쓰기
+        document.write(userInfo.gender);
+
+        // var userInfo2 = new userInfo; new를 이용해 원본을 복제해서 사본으로 담아서 
+
+        // Date()라는 내장객체를 이용함(p.270-288)
+        var date = new Date();
+        document.write(date.getFullYear());
+    </script>
+</head>
+<body>
+    <!-- 변수는 변하는 값을 담는 그릇 => 한종류 값만 담음 
+    오브젝트(객체)Object 여러 종류의 값을 담을 수 있음.
+    -->
+</body>
+</html>

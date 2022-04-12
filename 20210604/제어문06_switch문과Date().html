@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문06_switch문과Date().html</title>
+    <script>
+        var today = new Date().getDay();  // today변수 선언하면서
+                                        // Date()인스턴스를 가지고 오는데
+                                        //여러 정보들 중 요일 정보만 담음
+        console.log(today);  // 오늘의 요일인 5가 콘솔창에 로그로 남음
+
+        switch (today) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                today = "오늘은 평일입니다.";
+                break;
+        
+            case 0:
+            case 6:
+                today = "오늘은 주말입니다.";
+            default:
+                break;
+        } //switch문 끝
+        document.write(today);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

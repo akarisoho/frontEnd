@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습</title>
+    <style>
+        /* block => 너비와 높이를 프로퍼티로 지정할 수 있다. 
+                    너비와 높이가 지정이 안된다면,
+                    너비는 부모의 너비만큼이 됨
+                    높이는 콘텐츠가 차지하는 높이만큼이 됨 */
+        div{ background: yellow; border:3px solid #333;
+            width: 300px; height: 200px;
+            display: inline-block; /* 너비,높이를 가지면서 수평정렬 */
+        }
+        /* inline => 콘텐츠가 있는 만큼만 공간이 된다. 옆으로 나열됨.
+                    프로퍼티로 너비나 높이를 지정할 수 없음. */
+        span{ background: #0f0; border:violet solid 3px;
+            width: 300px; height: 200px;
+            display: none; 
+            /*  display: block;인라인 태그를 사용하면서 너비와 높이 지정할 때 */
+        }
+
+        #hidden{ display: none; background: pink;}
+        
+   /* 첫번째 자식요소인 div에 :hover했을 때, (+ 선택자)바로 아래 동생요소인 #hidden선택 */
+        div:first-child:hover + #hidden{display: inline-block;}
+
+    /* div에 :hover했을 때 (~선택자)동생들 중 span을 선택 */
+        div:hover ~ span.show{ display: block;}
+
+    </style>
+</head>
+<body>
+    <div>1박스</div>
+    <div id="hidden">2박스</div>
+    <div>3박스</div>
+    <div>4박스</div>
+    <div>5박스</div>
+    <span>1영역</span>
+    <span class="show">2영역</span>
+    <span class="show">3영역</span>
+    <span>4영역</span>
+    <span class="show">5영역</span>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* reset CSS */
+*{ margin: 0; padding:0;}
+body{ font-family: '나눔바른 고딕','나눔스퀘어',sans-serif;}
+h1,h2,h3,h4,h5,h6{ font-family: '나눔손글씨 펜',cursive;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+
+#box01{ width:940px; height:102px; background-color: pink; padding-top: 23px;
+        margin: 0 auto;}
+.box01_01{ width:640px; height:80px; background: red; margin-left: 150px; }
+
+#box02{ width:930px; height:35px; background: #f0f; padding: 5px 0 0 10px;
+        margin: 0 auto;}
+.box02_01{ width:100px; height:30px; background: #0ff; float: left;             
+            margin-right: 10px;}
+
+#box03{ width:940px; height:1200px; background: orange; margin: 0 auto;
+        padding:10px; box-sizing: border-box;}
+.box03_01{ width:280px; height:1180px; background: yellow; float: right;}
+.box03_02{ width:630px; height:630px; background: yellowgreen; float: left;
+            margin-bottom: 10px;}
+.box03_03{ width:630px; height:540px; background: yellow; float: left;}
+
+#box04{ width:940px; height:100px; background-color: purple; margin: 0 auto;}

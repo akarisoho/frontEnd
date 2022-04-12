@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://swiperjs.com/demos/280-autoplay/core.html -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Swiper demo</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="./Swiper demo_files/swiper-bundle.min.css">
+
+  <!-- Demo styles : 보류
+  <style>
+    html,body {position: relative;height: 100%;}
+body {background: #eee;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;color: #000;margin: 0;padding: 0;}
+.swiper-container {width: 100%;height: 100%;}
+.swiper-slide {text-align: center;font-size: 18px;background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;      -webkit-box-align: center;
+      -ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.swiper-slide img {display: block;width: 100%;height: 100%;object-fit: cover;}
+  </style>-->
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container mySwiper swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+    <div class="swiper-wrapper" id="swiper-wrapper-09211bbec3952817" aria-live="off"
+      style="transition-duration: 0ms; transform: translate3d(-1566px, 0px, 0px);">
+      <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 9"
+        style="width: 1536px; margin-right: 30px;">
+        <img src="img/slide_show01.png" alt="">
+      </div>
+      <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 9"
+        style="width: 1536px; margin-right: 30px;">
+        <img src="img/slide_show02.png" alt="">
+      </div>
+      <div class="swiper-slide swiper-slide-next" role="group" aria-label="3 / 9"
+        style="width: 1536px; margin-right: 30px;">
+        <img src="img/slide_show03.png" alt="">
+      </div>
+      <!-- <div class="swiper-slide" role="group" aria-label="4 / 9" style="width: 1536px; margin-right: 30px;">Slide 4</div>
+      <div class="swiper-slide" role="group" aria-label="5 / 9" style="width: 1536px; margin-right: 30px;">Slide 5</div>
+      <div class="swiper-slide" role="group" aria-label="6 / 9" style="width: 1536px; margin-right: 30px;">Slide 6</div>
+      <div class="swiper-slide" role="group" aria-label="7 / 9" style="width: 1536px; margin-right: 30px;">Slide 7</div>
+      <div class="swiper-slide" role="group" aria-label="8 / 9" style="width: 1536px; margin-right: 30px;">Slide 8</div>
+      <div class="swiper-slide" role="group" aria-label="9 / 9" style="width: 1536px; margin-right: 30px;">Slide 9</div> -->
+    </div>
+    <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+      aria-controls="swiper-wrapper-09211bbec3952817" aria-disabled="false"></div>
+    <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+      aria-controls="swiper-wrapper-09211bbec3952817" aria-disabled="false"></div>
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
+        class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span
+        class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+        aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
+        aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
+        aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
+        aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
+        aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
+        aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
+        aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
+        aria-label="Go to slide 9"></span></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="./Swiper demo_files/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+
+</body>
+
+</html>

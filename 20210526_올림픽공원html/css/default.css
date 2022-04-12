@@ -1,0 +1,48 @@
+/* reset CSS */
+*{ margin: 0; padding:0;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+
+.center{ width: 1100px; height: inherit; margin: 0 auto; background: rgba(0,0,0,0.5);}
+
+/* header */
+#header{ height: 145px; background: #ccc; }
+#header #top_header{ height: 40px; background: red; line-height: 40px; }
+#header #top_header h2{ float: left;}
+#header #top_header .top_menu{ float: right;}
+#header #top_header .top_menu a{ margin-left: 20px;}
+
+#header #main_header{ height: 105px; background: orange; box-sizing: border-box; position: relative;}
+#header #main_header h1{padding-top: 20px; }
+#header #main_header .search{ 
+    position: absolute; top:50%; left:50%; transform: translate(-50%,-50%);}
+
+/* navi#gnb */
+#gnb{ height: 48px; background-color:#fdb813  ;}
+#gnb li{ width:157px; float: left; text-align: center; line-height: 48px;}
+#gnb li a{ color:#fff; font-weight: bold; display: block;}
+#gnb li a:hover{ background:#0066b3 ;}
+
+/* footer */
+#footer{ height: 260px; background-color: #3a373e ;}
+#footer #sns_list{ height: 85px; border-top: 1px solid #d6d6d6; background-color: #eaeced; color:#777;}
+#footer #sns_list a{ color: #777;}
+#footer #sns_list h3, #footer #sns_list .sns_icon, #footer #sns_list .ect_btn{ float: left;}
+#footer #sns_list h3{ margin-right: 10px; line-height:85px; background: lightcyan;}
+#footer #sns_list .sns_icon li.sns_list{ float: left; text-align: center; background-color: orange; margin-left:50px;}
+#footer #sns_list .sns_icon li.sns_list span{ display: block; font-size: 11px;}
+#footer #sns_list .ect_btn { float: right; background: lightcoral; width: 400px; padding-top:25px}
+#footer #sns_list .ect_btn li.ect_list{ float: left; width: 33.333%;}
+
+
+#footer #main_footer{ position: relative;}
+#footer #main_footer a{ color:#fff;}
+#footer #main_footer .f_logo1{ position: absolute; left:0; top:40px; }
+#footer #main_footer .f_logo2{ position: absolute; left:0; top:95px; }
+
+#footer #main_footer .footer_text{ background-color: rgba(255,255,0,0.7); padding: 40px 0 0 200px}
+#footer #main_footer .footer_text .footer_menu li{float: left; }
+#footer #main_footer .footer_text address{ clear: both; padding-top:20px; background: lightblue;}
+
+#footer #main_footer .jump_group{ position: absolute; top:40px; right: 0;}
+#footer #main_footer .certification{ position: absolute; top:80px; right: 0;}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>콘텐츠 및 속성 조작.html</title>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            // .text()를 이용한 .textVar요소의 텍스트 변경
+            $(".textBtn").click(function(){
+//                $("p.textVar").text("<h1>텍스트 변경 완료!!</h1>");
+                $("p.textVar").html("<h1>텍스트 변경 완료!!</h1>");
+            });
+            // .text()는 <>부호 안의 문자를 html언어로 해석(파싱)하지 않습니다.
+            // html언어로 파싱하려면 .html()로 작성해야 합니다.
+            
+            // Form요소의 flield값을 설정하고 변경
+            $(".valBtn").click(function(){
+                alert("input의 입력값은 : " + $("#userID").val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <p class="textVar">변경 전 텍스트</p>
+    <button class="textBtn">텍스트 변경 실행</button>
+    
+    <form>
+        <input type="text" value="아이디" id="userID">
+        <input type="password">
+        <button class="valBtn">입력값확인</button>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록태그-내비게이션구성.html</title>
+</head>
+<body>
+    <!-- 목록태그는 자식요소로 <li></li>를 사용해 목록을 구성합니다. -->
+    <!-- 순서가 없는 목록 => <ul></ul> -->
+    <ul>
+        <li>
+            <a href="#">달
+                <strong>:보름달</strong>
+            </a>
+        </li>
+        <li>별</li>
+        <li>구름</li>
+    </ul>
+    <!-- ul>li{list-items0$}*5 -->
+    <ul type="square"> <!-- type의 속성값 : circle, disk(default), square -->
+        <li>list-items01</li>
+        <li>list-items02</li>
+        <li>list-items03</li>
+        <li>list-items04</li>
+        <li>list-items05</li>
+    </ul>
+    <!-- 순서가 있는 목록 => <ol></ol> -->
+    <ol> <!-- type 속성갑 : 1(default), a, A, i, I -->
+        <li>ol_list-items</li>
+        <li>ol_list-items</li>
+        <li>ol_list-items</li>
+        <li>ol_list-items</li>
+        <li>ol_list-items</li>
+    </ol>
+</body>
+</html>

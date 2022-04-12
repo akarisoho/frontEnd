@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본주사위_숏.html</title>
+    <style>
+        /* reset CSS */
+        *{ margin: 0; }
+
+        body>div{ width: 300px; height: 300px; border:2px dashed red;
+                border-radius: 30px; position: relative;}
+        body>div>div{ width: 80px; height: 80px; border-radius: 40px; background: #000; position: absolute; }
+
+        .num1{ top: 15px; left: 15px;}            
+        .num2{ top: 15px; right: 15px;}            
+        .num3{ top: 110px; left: 15px;}            
+        .num4{ top: 110px; left: 110px;}            
+        .num5{ top: 110px; right:15px}            
+        .num6{ bottom:15px; left: 15px;}            
+        .num7{ bottom: 15px; right:15px;}            
+
+    </style>
+</head>
+<!-- 1. body에 구조설계 + id, class 지정 => 3depth구조 정도로 설계
+     2. CSS 작성 : width, height, bgcolor
+     3. css 포지셔닝(1) : position속성과 방향(top,left,right,bottom)속성 
+        css 포지셔닝(2) : float속성 
+    -->
+<body>
+    <!-- #mom$*6 -->
+    <div>
+        <div class="num4"></div>
+    </div>
+    <div>
+        <div class="num1"></div>
+        <div class="num7"></div>
+    </div>
+    <div>
+        <div class="num1"></div>
+        <div class="num4"></div>
+        <div class="num7"></div>
+    </div>
+    <div>
+        <div class="num1"></div>
+        <div class="num2"></div>
+        <div class="num6"></div>
+        <div class="num7"></div>
+    </div>
+    <div>
+        <div class="num1"></div>
+        <div class="num2"></div>
+        <div class="num4"></div>
+        <div class="num6"></div>
+        <div class="num7"></div>
+    </div>
+    <div>
+        <div class="num1"></div>
+        <div class="num2"></div>
+        <div class="num3"></div>
+        <div class="num5"></div>
+        <div class="num6"></div>
+        <div class="num7"></div>
+    </div>
+    <div>
+        <div class="num1"></div>
+        <div class="num2"></div>
+        <div class="num3"></div>
+        <div class="num4"></div>
+        <div class="num5"></div>
+        <div class="num6"></div>
+        <div class="num7"></div>
+    </div>
+
+</body>
+</html>

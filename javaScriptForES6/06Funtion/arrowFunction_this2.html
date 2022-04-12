@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrowFunction & this2</title>
+    <style>
+        .changing{ background-color: #99f;}
+    </style>
+</head>
+
+<body>
+    <div class="box open">
+        박스입니다.
+    </div>
+
+    <script>
+        'use strict';
+        const box = document.querySelector(".box");
+
+        box.addEventListener("click", function(){
+
+            this.classList.toggle("changing");
+
+            setTimeout(()=>{
+                this.classList.toggle("changing");
+            },500);
+        });
+    </script>
+</body>
+
+</html>

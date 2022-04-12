@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문_continue.html</title>
+    <script>
+        for(i = 1; i <= 5; i++){
+            if (i == 3) {
+                continue; // i의 값이 3이 되었을 때, 
+                        // for문의 반복실행(도큐먼트 쓰기) 하지 않고
+                        // i의 값을 증가시키면서 다음 for문의 반복을 실행을 합니다.
+            }
+            document.write("i의 값은 : " + i + "<br>");
+        }
+
+        document.write("<hr>");
+
+        for(j = 1; j <= 5; j++){
+            if (j == 3) {
+                break; // j의 값이 3이 되었을 때 for문의 반복을 종료
+            }
+            document.write("j의 값은 : " + j + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

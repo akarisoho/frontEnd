@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>예술의 전당 - SAC</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        #gnb li > a { background-color: #000; color:#fff;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/slideShow.js"></script>
+</head>
+
+<body>
+    <!-- #wrap>(header#header>h1{Name})+(nav#gnb>ul>(li>a{btn$})*4)+section.slide+(a.article>span.text>strong{articleTitle$}+{descript})*8+footer#footer -->
+    <div id="wrap">
+        <header id="header">
+            <h1><a href="#"><img src="img/logo.png" alt="예술의전당 로고"></a></h1>
+        </header>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#">공연</a></li>
+                <li><a href="#">전시</a></li>
+                <li><a href="#">PLAY+Zine</a></li>
+                <li><a href="#">이용안내</a></li>
+            </ul>
+        </nav>
+        <section class="slide">
+            <ul>
+                <li class="list01"><a href="#"><img src="img/slide01.png" alt="indexNum00"></a></li>
+                <li class="list02"><a href="#"><img src="img/slide02.png" alt="indexNum01"></a></li>
+                <li class="list03"><a href="#"><img src="img/slide03.png" alt="indexNum02"></a></li>
+                <li class="list04"><a href="#"><img src="img/slide04.png" alt="indexNum03"></a></li>
+                <li class="list05"><a href="#"><img src="img/slide05.png" alt="indexNum04"></a></li>
+            </ul>
+        </section>
+        <a href="#" class="article">
+            <span class="text">
+                <strong>국립발레단 호이 랑</strong>오페라극장
+            </span>
+        </a>
+        <a href="#" class="article">
+            <span class="text">
+                <strong>한국인이 사랑하는 러시아 작곡가 시리즈II</strong>차이코프스키
+            </span>
+        </a>
+        <a href="#" class="article">
+            <span class="text">
+                <strong>아베끄 스트링 콰르텟 </strong>제6회 정기연주회
+            </span>
+        </a>
+        <a href="#" class="article">
+            <span class="text">
+                <strong>퓰리처상 사진展</strong>안야 니드링하우스 특별전
+            </span>
+        </a>
+        <a href="#" class="article">
+            <span class="text">
+                <strong>툴루즈 로트렉 展</strong>파리의 밤을 빛낸 작은 거장
+            </span>
+        </a>
+        <a href="#" class="article">
+            <span class="text"><strong>모네에서 세잔까지</strong>예루살렘 이스라엘 박물관 인상파와 후기 인상파 걸작展
+            </span>
+        </a>
+        <a href="#" class="article">
+            <span class="text">
+                <strong>힘내라 대한민국!</strong>한국가곡과 아리아의 밤
+            </span>
+        </a>
+        <a href="#" class="article">
+            <span class="text">
+                <strong>예술의 전당 오시는 길</strong>이용안내
+            </span>
+        </a>
+        <footer id="footer">
+            <div class="main_footer">
+                <address>
+                    (우) 06757,서울시 서초구 남부순환로 2406 예술의전당<span>|</span>대표자 유인택<span>|</span>사업자 등록번호 214-82-00264<span>|</span>통신판매업신고 서초 제 0706호
+                </address>
+                <p>예술의전당 고객센터 : 02-580-1300 (AM 09:00 - PM 08:00) <span>|</span>webmaster@sac.or.kr</p>
+                <p>copyrightⓒ2017 Seoul Arts Center All rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

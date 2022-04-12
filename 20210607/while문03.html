@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while문03.html</title>
+    <script>
+        var start = 25;
+        var end = 15;
+        var total = 0;
+
+        // while (start >= end) {
+        //     total += start;
+        //     console.log(total);
+        //     document.write(start);
+        //     if (start != end) {
+        //         document.write(" + ");                
+        //     }
+        //     start--;
+        // }
+        do {
+            total += start;
+            document.write(start);
+            if (start != end) {
+                document.write(" + ");
+            }
+            start--;
+        } while (start >= end);
+
+        document.write(" = ",total);
+
+        document.write("<hr>");
+        
+        var s = 25;
+        var e = 15;
+        var result = 0;
+        for(s; s >= e; s--){
+            result += s;
+            document.write(s);
+            if (s != e) {
+                document.write(" + ");
+            }
+        }
+        document.write(" = " + result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

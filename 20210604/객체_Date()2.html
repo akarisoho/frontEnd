@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체_Date()2.html</title>
+    <script>
+        var dateObj = new Date();  //모든 날짜정보 객체를 dateObj변수에 담음
+        var today = dateObj.getDay();
+
+        document.write(typeof(today),"<br>");
+        
+        switch (today) {
+            // case '5':
+            //     today = "금";
+            //     break
+        /* case '5' => 문자형인 0 임. 자료형이 다르면 case와 맞지 않는다.
+        숫자형으로 가져온 요일의 5과 문자형의 5을 비교할 수 없어서
+        today에 변수값이 재정의 되지 않음*/
+            case 0:
+                today = "일";
+                break;
+            case 1:
+                today = "월";
+                break;
+            case 2:
+                today = "화";
+                break;
+            case 3:
+                today = "수";
+                break;
+            case 4:
+                today = "목";
+                break;
+            case 5:
+                today = "금";
+                break;
+            case 6:
+                today = "토";
+                break;
+            default:
+                document.write("비교할 수 없습니다.<br>");
+                break;
+        }
+        
+        document.write("<br>오늘은 " + today + "요일 입니다.");
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

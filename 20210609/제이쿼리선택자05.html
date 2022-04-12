@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리선택자05.html</title>
+    <!-- 구조선택자 => XXX-child => 특정 부모의 자식요소들 중 선택 -->
+    <!-- 부모와 관계 없이 첫번째 | 마지막번째 | 짝수번째 | 홀수번째 선택 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // selector:frist => html에서 가장 처음으로 작성된 selector를 선택
+            $("li:first").css("background","yellow");
+            $("li:first-child").css("color","red");
+
+
+            // selector:last => html에서 가장 마지막으로 작성된 selector를 선택
+            $("li:last").css("background","skyblue");
+            $("li:last-child").css("color","blue");
+
+
+            // selector:odd => indexNum 홀수번째 선택
+            $("li:odd").css("font-size","1.5em");  
+            // 부모와 상관없이 모든 html li에 indexNum를 따져서 홀수번째를 선택
+            
+            $("li:nth-child(2n-1)").css("font-weight","bolder");
+            // 부모안에 있는 자식 요소들 중 홀수번째를 선택
+            
+
+            // selector:even => indexNum 짝수번째 선택
+            $("li:even").css("background-color","pink");
+            // 부모와 상관없이 모든 html li에 indexNum를 따져서 짝수번째를 선택
+           
+            $("li:nth-child(2n)").css("color","green");
+            // 부모안에 있는 자식 요소들 중 짝수번째를 선택
+
+        }); //.ready() end
+    </script>
+</head>
+<body>
+     <!-- (ul>li{list-item0$}*5)*2 -->
+     <ul>
+         <li>list-item01</li>
+         <li>list-item02</li>
+         <li>list-item03</li>
+         <li>list-item04</li>
+         <li>list-item05</li>
+     </ul>
+     <ul>
+         <li>list-item01</li>
+         <li>list-item02</li>
+         <li>list-item03</li>
+         <li>list-item04</li>
+     </ul>
+</body>
+</html>

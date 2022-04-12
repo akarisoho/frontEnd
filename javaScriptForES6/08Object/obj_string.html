@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object_String</title>
+    <script>
+        //문자열길이 반환
+        console.log(`
+-- 문자열 길이 반환 property--`);
+        let message = "고맙습니다. (Thankyou)";
+        console.log(message.length);
+        // 공백까지 포함하여 17개 길이를 반환
+
+        // 문자열 위치 반환
+        console.log(`
+-- 문자열 위치 반환 method--`);
+        console.log("JAVA SCRIPT".indexOf("A"));
+        console.log("JAVA SCRIPT".lastIndexOf("A"));
+        console.log("JAVA SCRIPT".charAt(5));
+
+
+        // 문자열 반환
+        console.log(`
+-- 문자열 반환 method--`);
+        console.log("JAVA SCRIPT".substring(5, 7));
+        console.log("JAVA SCRIPT".substring(1, 3));
+        console.log("JAVA SCRIPT".slice(5, 7));
+        // 음수 값은 뒤에서부터 카운트
+        console.log("JAVA SCRIPT".slice(5, -1));
+        console.log("JAVA SCRIPT".substr(5, 3));
+
+
+        // 영문 대소문자로 전환
+        console.log(`
+-- 영문 대소문자 전환 method--`);
+        console.log("Happy Together".toUpperCase());
+        console.log("Happy Together".toLowerCase());
+
+
+        //문자열 연결과 분리
+        console.log(`
+-- 문자열 연결과 분리 method--`);
+        console.log("널 ".concat("위해서"));
+        console.log("so pure/ so pretty/ so Beautiful".split("/"));
+        console.log("so pure so pretty so Beautiful".split(" "));
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

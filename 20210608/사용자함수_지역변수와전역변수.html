@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자함수_지역변수와전역변수.html</title>
+    <script>
+        // function add1(a, b) {
+        //     var localSum = a + b;
+        //     console.log(localSum);
+        //     return localSum;
+        //    //함수 내부의 변수를 선언하면 함수 종료와 함께 사라짐
+        // }
+        // add1(20,15);
+
+        // document.write(localSum);  // 새로운 localSum을 선언한것이나 마찬가지
+
+        globalSum = 0;
+        function add2(x,y) {
+            globalSum = x + y;
+            return globalSum;
+        }
+        add2(10,5);
+        document.write(globalSum);
+
+        // ES5에서는 변수 선언을 할때 var로 함 => {}(스코프)의 안쪽이냐 바깥쪽이냐에 따라 지역(로컬)변수, 전역(글로벌)변수가 될 수 있음 
+        // ES6에서는 var로만 선언하지 않고 let을 함께 사용한다.
+        // let을 지역변수의 역할만 함.
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+  <script>
+    // baby의 나이, 성별, 생년월일
+    // var baby = { 나이 : 값, 성별:값, 생년:값 }
+    var baby = {};  //초기세팅 : Object형으로 값을 넣을 것
+    baby.age = "2살";
+    baby.gender = "남자";
+    baby.birth = " 1월 2일";
+    // baby변수의 속성을 지정해서 값을 추가할 수 있음
+
+    // 변수 선언과 동시에 속성과 값을 할당
+    var baby1 = {
+      age : "1살",
+      gender : "여자",
+      birth : "1월 4일"
+    }
+    document.write(baby1.age, "<br>");
+    document.write(baby.age, "<br>");
+    document.write(baby1.gender, "<br>");
+    document.write(baby.gender, "<br>");
+    document.write(baby1.birth, "<br>");
+    document.write(baby.birth, "<br>");
+  </script>
+</head>
+<body> 
+  <!-- 객체(Object)
+    내장객체                 new ~~~()    => 리터럴 값으로 지정해야 한다.
+    String 객체 => var str = new String(); => var str = "abc";
+    Number 객체 => var num = new Number(); => var num = 123;
+    Boolean 객체 => var bool = new Boolean(); => var bool = true;
+    Array 객체 => var arr = new Array(); => var arr = [val1,val2,val3,..];
+    Object 객체 => var obj = new Object(); => var obj = { pro1 : va1, pro2 : val2,..};
+    등등...
+  -->
+</body>
+</html>
