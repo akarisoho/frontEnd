@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드쇼_fadeIn()_fadeOut()</title>
+    <style>
+        /* 초기화태그 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #slider {
+            width: 800px;
+            height: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #slider li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 800px; height: 500px; line-height: 500px; font-size: 5em;
+        }
+
+        #slide {
+            width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #slide img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#slider ul li:gt(0)").hide();
+
+            setInterval(function () {
+                $("#slider ul li:first").fadeOut(1000).next().fadeIn(1000).end();
+                $("#slider ul li:first").appendTo("#slider ul");
+            }, 2000);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>fadeIn fadeOut Effect Loop</h1>
+    <div id="slider">
+        <!-- ul>(li>img[src='../img/B_thumb0$.png'])*5 -->
+        <ul>
+            <li>SampleText Number1</li>
+            <li>SampleText Number2</li>
+            <li>SampleText Number3</li>
+            <li>SampleText Number4</li>
+            <li>SampleText Number5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

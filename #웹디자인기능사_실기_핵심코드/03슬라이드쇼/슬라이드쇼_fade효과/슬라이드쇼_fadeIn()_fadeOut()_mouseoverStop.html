@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드쇼_fadeIn()_fadeOut()_마우스오버시정지</title>
+    <style>
+        /* 초기화태그 */
+        *{ margin: 0; padding:0;}
+        ul{ list-style: none;}
+
+        h1{ text-align: center;}
+        #slider{ width: 800px; margin: 0 auto; position: relative;}
+        #slider li{ position: absolute; top: 0; left: 0;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/sliderStop.js"></script>
+</head>
+<body>
+    <h1>fadeIn fadeOut Effect Loop _ mouseover Stop</h1>
+    <div id="slider">
+        <!-- ul>(li>img[src='../img/B_thumb0$.png'])*5 -->
+        <ul>
+            <li><img src="../img/B_thumb01.png" alt="image"></li>
+            <li><img src="../img/B_thumb02.png" alt="image"></li>
+            <li><img src="../img/B_thumb03.png" alt="image"></li>
+            <li><img src="../img/B_thumb04.png" alt="image"></li>
+            <li><img src="../img/B_thumb05.png" alt="image"></li>
+        </ul>
+    </div>
+</body>
+</html>
