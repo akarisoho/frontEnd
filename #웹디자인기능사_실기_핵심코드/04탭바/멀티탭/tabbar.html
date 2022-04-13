@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티탭바</title>
+    <link rel="stylesheet" href="css/tabStyle.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/tabbar.js"></script>
+</head>
+<body>
+    <div id="tab">
+        <h1>TAB list</h1>
+        <!-- ul>(li>a{tabBTN0$})*3 => 탭 메뉴 구성 -->
+        <ul>
+            <li class="on"><a href="#">tabBTN01</a></li>
+            <li><a href="#">tabBTN02</a></li>
+            <li><a href="#">tabBTN03</a></li>
+        </ul>
+        <!-- 탭 콘텐츠 -->
+        <div class="tab_con on">contents1</div>
+        <div class="tab_con">contents2</div>
+        <div class="tab_con">contents3</div>
+    </div>
+</body>
+</html>

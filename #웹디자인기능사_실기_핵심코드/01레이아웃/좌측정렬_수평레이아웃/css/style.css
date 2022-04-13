@@ -1,0 +1,31 @@
+*{ margin: 0; padding:0;}
+ul{ list-style: none;}
+a{ text-decoration: none; color: #222328;}
+
+#wrap{ width: 1000px;}
+
+/* 좌측레이아웃, A */
+#header{ width: 250px; height: 650px; background: yellow; float: left; padding:25px; box-sizing: border-box;}
+#header h1{ margin-bottom: 30px;}
+#header #gnb .mainMenu a{ display: block; width: 100%; padding:5px; box-sizing: border-box; background: lightblue; line-height: 35px;}
+
+/* 우측레이아웃 */
+#contents{ width: 750px; background:thistle; float: right;}
+
+/* B */
+#contents .main-slide{ height: 350px; background: tomato;}
+
+/* C */
+#contents .section{ height: 200px; background: skyblue;}
+#contents .section h2{ display: none;} 
+
+#contents .section article{ width: 300px; height: 200px;float: left; padding: 10px; box-sizing: border-box;}
+
+#contents .section article.notice table{ border-collapse: collapse; }
+
+#contents .section article.gallery{ background-color: #eee;}
+
+#contents .section article.shortcut{ width: 150px;}
+
+/* D */
+#contents #footer{ height: 100px; background:green;}
