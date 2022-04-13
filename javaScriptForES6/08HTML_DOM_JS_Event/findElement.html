@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>findElement</title>
 </head>
 
@@ -24,24 +22,29 @@
         let findID = document.getElementById("jiyul");
         console.log(`findID : ${findID}`);
         console.log(findID);
+        console.log("--------------------------------------------");
 
         let findTAG = document.getElementsByTagName("p");
         console.log(`findTAG : ${findTAG}`);
         console.log(findTAG);
-        // findTAG.style.backgroundColor = '#669';
-
+        findTAG[1].style.backgroundColor = '#99f';
+        console.log("--------------------------------------------");
+        
         let findCLASS = document.getElementsByClassName("frontend");
+        findTAG[1].style.backgroundColor = '#99f';
         console.log(`findCLASS : ${findCLASS}`);
         console.log(findCLASS);
-
+        console.log("--------------------------------------------");
+        
         let findQuerySelector = document.querySelector(".frontend");
         console.log(`findQuerySelector : ${findQuerySelector}`);
         console.log(findQuerySelector);
-
+        console.log("--------------------------------------------");
+        
         let findQuerySelectorAll = document.querySelectorAll(".frontend");
         console.log(`findQuerySelectorAll : ${findQuerySelectorAll}`);
         console.log(findQuerySelectorAll);
-
+        
     </script>
 </body>
 

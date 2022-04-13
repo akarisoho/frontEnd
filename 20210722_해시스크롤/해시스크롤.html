@@ -10,31 +10,44 @@
             margin: 0;
             padding: 0;
         }
+
         /* custom scroll start */
         /* width */
-    ::-webkit-scrollbar {
-    width: 30px;
-    }
+        ::-webkit-scrollbar {
+            width: 30px;
+        }
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-    /* box-shadow: 0 0 5px grey inset;  */
-    background-color:pink;
-    /* border-radius: 10px; */
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-    background: #99f; 
-    border-radius: 20px;
-    }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            /* box-shadow: 0 0 5px grey inset;  */
+            background-color: pink;
+            /* border-radius: 10px; */
+        }
 
-    /* Handle on hover */
-    ::scrollbar-thumb:hover {
-    background: rgba(200, 200, 0, 0.8); 
-    }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #99f;
+            border-radius: 20px;
+        }
+
+        /* Handle on hover */
+        ::scrollbar-thumb:hover {
+            background: rgba(200, 200, 0, 0.8);
+        }
+
         /* custom scroll end */
-        #top_btn{ position: fixed; right: 30px; bottom:30px; background-color: red; padding: 10px; border-radius: 50px; width: 24px; height: 24px; text-align: center;}
+        #top_btn {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background-color: red;
+            padding: 10px;
+            border-radius: 50px;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+        }
+
         #header {
             position: fixed;
             top: 0;
@@ -44,6 +57,13 @@
             background-color: rgba(255, 255, 255, 0.6);
         }
 
+        #gnb {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+#gnb li { float: left; margin: 0 20px;}
         section {
             height: 1000px;
             padding-top: 50px
@@ -68,7 +88,7 @@
                 if (this.hash !== "") {
                     event.preventDefault();
                     //a태그가 기본적으로 가진 이벤트(페이지 이동) 삭제
-                    
+
                     var hash = this.hash;
                     //클릭한 hash를 변수 hash에 담기
                     console.log(hash);
@@ -76,16 +96,16 @@
                     // $('html,body').animate({},초,콜백함수);
                     $('html,body').animate({
                         scrollTop: $(hash).offset().top
-                    },1000,function(){
+                    }, 1000, function () {
                         window.location.hash = hash;
                     });
                 }
             }); // #header click event end 
             //탑버튼 이벤트
-            $("#top_btn").click(function(){
+            $("#top_btn").click(function () {
                 $("html,body").animate({
                     scrollTop: $("html,body").offset().top
-                },500);
+                }, 500);
             });
         });
     </script>

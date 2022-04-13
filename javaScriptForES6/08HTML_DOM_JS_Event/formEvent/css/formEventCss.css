@@ -1,0 +1,22 @@
+ * { padding: 0; margin: 0; box-sizing: content-box; }
+
+body { background-color: #f5f6f7; color: #333; font-family: 'Nanum Gothic', sans-serif; }
+
+form { width: 500px; margin: 20px auto; }
+
+div.div_JoinInfo { padding: 6px; margin: 0px 6px; }
+
+div.div_JoinInfo>h4 { font-size: 15px; padding:5px 0; }
+
+div.div_JoinInfo>p { padding: 10px; border: 1px solid #ccc; background-color: #fff; }
+
+div.div_JoinInfo>p:focus-within { border-color: #99f; }
+
+div.div_JoinInfo>p>input { width: 100%; padding: 8px 0; border: none; outline: 0; }
+
+div.div_JoinInfo>p>input[type=text]{ width: 75%; }
+
+div.div_JoinInfo>p>span { color: #8e8e8e; padding-left: 10px; }
+
+form span#resultID,
+form span#resultPW { color: #f00; font-size: 13px; }
