@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃1</title>
+    <style>
+        /* 초기화 태그 => 임의의 공백 제거 */
+        *{ margin: 0; padding:0;}
+        
+        #mom{ width: 960px; height: 920px; background-color: #ccc; padding:10px;}
+        #son01{ width: 960px; height: 100px; background-color: red; margin-bottom:10px;}
+        #son02{ width: 290px; height: 700px; background-color: yellow; float: left; margin-bottom:10px;}
+        #son03{ width: 660px; height: 700px; background-color: skyblue; float: right;}
+        #son04{ width: 960px; height: 100px; background-color: pink; clear: both;}
+    </style>
+</head>
+<body>
+    <!-- div#mom>div#son0$*4 -->
+    <div id="mom">
+        <div id="son01"></div>
+        <div id="son02"></div>
+        <div id="son03"></div>
+        <div id="son04"></div>
+    </div>
+</body>
+</html>

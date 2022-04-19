@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트_click()_if문</title>
+</head>
+
+<body>
+    <!-- a태그는 기본적으로 href속성으로 이동하는 이벤트가 내장되어있습니다. -->
+    <a href="img/B_thumb01.png">여기를 클릭하면 변경됩니다.</a>
+    <div><img src="img/B_thumb02.png" alt="photo2"></div>
+
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        var toggle = 0;
+        $("a").click(function () {
+            if (toggle == 0) {
+                $("img").attr("src", "img/B_thumb01.png").attr("alt", "photo1");
+                toggle = 1;
+            } else{
+                $("img").attr("src", "img/B_thumb02.png").attr("alt", "photo2");
+                toggle = 0;
+            }
+            // ↓ a태그의 기본 이벤트속성을 실행하지 않게 합니다.
+            return false;
+        });
+    </script>
+</body>
+
+</html>

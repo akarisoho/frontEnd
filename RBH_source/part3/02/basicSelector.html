@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>공간분할태그와 기본선택자</title>
+    <style>
+        /* 전체선택자 : 대체로 임의의 공간을 초기화를 할 때 사용합니다. */
+        * {
+            color: red;
+        }
+
+        /* 태그 선택자  : 현재 문서내부의 모든 해당요소를 선택합니다.1*/
+        div {
+            color: skyblue;
+        }
+
+        span {
+            color: green;
+        }
+
+        /* 아이디 선택자 : 현재문서에서 요소에 단 한번만 사용합니다. */
+        #bluebox {
+            color: blue;
+        }
+
+        #orangebox {
+            color: orange;
+        }
+
+        /* 클래스 선택자 : 하나의 선택자구문으로 여러개의 태그에 적용이 가능합니다.*/
+        .font24 {
+            font-size: 24px;
+        }
+
+        .purple {
+            background: purple;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div>첫번째 박스</div>
+    <div>두번째 박스</div>
+    <div id="bluebox">세번째 박스</div>
+    <div id="orangebox">네번째 박스</div>
+    <div>다섯번째 박스</div>
+
+    <span class="font24">첫번째 영역</span>
+    <span class="font24 purple">두번째 영역</span>
+    <!-- 클래스 속성은 클래스명을 공백으로 구분해서 하나의 요소의 여러클래스를 적용 할 수 있습니다. -->
+    <span>세번째 영역</span>
+    <span>네번째 영역</span>
+    <span>다섯번째 영역</span>
+</body>
+
+</html>

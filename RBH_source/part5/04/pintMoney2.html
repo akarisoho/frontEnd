@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>prompt() 입력값의 연산</title>
+	<script>
+		// 변수 선언과 값 입력받기
+		var yesterday = prompt('어제 용돈을 입력해 주세요','숫자만');
+		var today = prompt('오늘 용돈을 입력해 주세요','숫자만');
+
+		//Number()로 숫자형으로 변환하기
+		yesterdayNum = Number(yesterday);
+		todayNum = Number(today);
+
+		// 변환한 값 데이터유형 확인하기
+		console.log(typeof(yesterdayNum));
+		console.log(typeof(todayNum));
+
+		var sum = yesterdayNum + todayNum;
+		document.write("어제, 오늘 용돈의 합은 " + sum + "입니다.<br>");
+	</script>
+
+</head>
+<body>
+    
+</body>
+</html>

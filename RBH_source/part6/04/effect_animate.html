@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>effect_animate()</title>
+    <style>
+        #box { width: 100px; height: 100px; background-color: rgba(255, 241, 0, 0.3); }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">Animate width</button>
+    <button id="btn2">Reset width</button>
+
+    <div id="box"></div>
+
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $("#btn1").click(function () {
+            $("#box").animate({ width: "300px" });
+        });
+        $("#btn2").click(function () {
+            $("#box").animate({ width: "100px" });
+        });
+    </script>
+</body>
+
+</html>

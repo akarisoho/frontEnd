@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Selector 04</title>
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // indexNumber기준으로 숫자 작성
+            // selector:lt(index) 
+            $("li:lt(2)").css("color", "#9999ff");
+            // selector:eq(index)
+            $("li:eq(2)").css("color", "red");
+            // selector:gt(index)
+            $("li:gt(2)").css("background-color", "rgba(255,241,0,0.3)");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- ul>li{sampleText}*4 -->
+    <ul>
+        <li>indexNumber : 0</li>
+        <li>indexNumber : 1</li>
+        <li>indexNumber : 2</li>
+        <li>indexNumber : 3</li>
+        <li>indexNumber : 4</li>
+        <li>indexNumber : 5</li>
+        <li>indexNumber : 6</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>clear_both</title>
+	<style>
+		div{ width: 200px; height: 200px; text-align: center; line-height: 200px; }
+		.box01{ border: 5px dashed rgba(255,0,0,0.5); float: left; }
+		.box02{ background-color: rgba(0,0,255,0.5); float: right; }
+		.box03{ background-color: rgba(255,255,0,0.5); float: left; }
+
+		/* clear속성을 가진 클래스를 생성해 div요소에 적용합니다 */
+		.clear{ border: 5px dashed rgba(0,255,0,0.5); clear: both; }
+	</style>
+</head>
+
+<body>
+	<div class="box01">1번박스</div>
+	<div class="box02">2번박스</div>
+	<div class="box02">3번박스</div>
+	<div class="box02">4번박스</div>
+	<div class="box03 clear">5번박스</div>
+	<div class="box03">6번박스</div>
+	<div class="box03">7번박스</div>
+</body>
+</html>

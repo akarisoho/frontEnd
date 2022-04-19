@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트_mouseenter()/mouseleave()</title>
+</head>
+
+<body>
+    <p>이미지에 마우스를 올려보세요.</p>
+    <div><img src="img/B_thumb01.png" alt="thumb01"></div>
+
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 마우스를 이미지에 올렸을 때
+            $("img").mouseenter(function () {
+                $(this).attr("src", "img/B_thumb02.png").attr("alt", "thumb02");
+            });
+
+            // 마우스가 이미지에서 벗어났을 때
+            $("img").mouseleave(function () {
+                $(this).attr("src", "img/B_thumb01.png").attr("alt", "thumb01");
+            });
+        });
+    </script>
+</body>
+
+</html>

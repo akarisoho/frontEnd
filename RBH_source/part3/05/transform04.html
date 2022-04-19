@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transform04</title>
+	<style>
+		div{ width: 200px; height: 200px; box-sizing:border-box; margin: 0 50px;}
+		.box{ border:3px solid #999; position: absolute; z-index: -999;}
+
+		#box04{ background-color: rgba(255,255,0,0.5); 
+			transform:rotate(0deg); transition:transform 1s ease;}
+		#box04:hover{ transform:rotate(225deg);}
+	</style>
+</head>
+
+<body>
+	<h1>rotate(Angle)</h1>
+	<div class="box"></div>
+	<div id="box04"></div>
+</body>
+</html>

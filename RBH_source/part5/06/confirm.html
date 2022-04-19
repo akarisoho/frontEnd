@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>confirm()</title>
+    <script>
+        qna = confirm("javaScript는 인터넷익스플로러에서 동작하는 언어다.");
+        // 확인을 누르면 true를 반환하여 if문에 있는 "예,맞습니다." 실행구문이 출력
+        // 취소를 누르면 false를 반환하여 else문에 있는 "틀렸습니다." 실행구문이 출력
+
+        if (qna) {  // 조건문을 만족했을 때(true 일때) 다음의 실행문을 실행한다.
+            document.write("예, 맞습니다.");
+        } else {   // if의 조건문을 만족하지 않았을 때(false일 때) 다음의 실행문을 실행한다.
+            document.write("틀렸습니다.");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

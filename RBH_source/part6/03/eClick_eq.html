@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트02_click()_:eq()</title>
+</head>
+<body>
+    <!-- ul>(li>a{thumb0$})*4 -->
+    <ul>
+        <li><a href="img/B_thumb01.png">thumb01</a></li>
+        <li><a href="img/B_thumb02.png">thumb02</a></li>
+        <li><a href="img/B_thumb03.png">thumb03</a></li>
+    </ul>
+    <p>
+        <img src="img/B_thumb04.png" alt="thumb04">
+    </p>
+
+    <!-- jQuery Libraries -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+            // 첫번째 a태그를 클릭했을 때
+            $("a:eq(0)").click(function(){
+                $("img").attr("src","img/B_thumb01.png").attr("alt","thumb01");
+                return false;
+            });
+            // 두번째 a태그를 클릭했을 때
+            $("a:eq(1)").click(function(){
+                $("img").attr("src","img/B_thumb02.png").attr("alt","thumb02");
+                return false;
+            });
+            // 세번째 a태그를 클릭했을 때
+            $("a:eq(2)").click(function(){
+                $("img").attr("src","img/B_thumb03.png").attr("alt","thumb03");
+                return false;
+            });
+    </script>
+
+</body>
+</html>
