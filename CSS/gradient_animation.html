@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        /* layout style */
+        #wrap {
+            display: flex;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #wrap>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        /* gradient style */
+        .circle,
+        .square {
+            width: 300px;
+            height: 300px;
+            margin: 30px;
+        }
+
+        .circle {
+            border-radius: 150px;
+        }
+
+        .radial-position2 .circle,
+        .radial-position2 .square {
+            background: radial-gradient(farthest-side at 65% 35%, white, gold, rgb(186, 117, 6), rgb(127, 123, 151) 110%);
+            transition: transform;
+            animation: move1 4s linear infinite;
+        }
+
+        @keyframes move1 {
+            0% {
+                transform: rotate(0deg) scale(1) translateY(0);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(0.6) translateY(10%);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1) translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="radial-position2">
+            <h1>Radial-gradient + animation</h1>
+            <div class="circle"></div>
+            <div class="square"></div>
+        </div>
+    </div>
+</body>
+
+</html>
