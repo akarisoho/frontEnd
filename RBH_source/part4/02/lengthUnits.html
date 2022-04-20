@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>length단위_px,em,rem,vw</title>
+    <style>
+                    /* 절대 값 : px */
+        #px{ font-size: 24px;}
+        #px>div{ font-size: 20px;}
+
+                   /* 부모가 가진 px크기에 따라 자식요소 배수 계산
+                        : 자식요소(px)÷ 부모요소(px) = em */
+        #em{ font-size: 1.5em;  } /* 24px로 표현하기 : 24/16 = 1.5 */
+        #em>div{ font-size: 0.833em;} /* 20/24  */
+
+                   /* 부모 크기와 상관없이 body에 지정된 크기를 기준으로 배수 계산
+                      : 자식요소(px)÷ 최상위요소(px) = em */
+        #rem{ font-size: 1.5rem;} /* 24px로 표현하기 : 24/16 = 1.5 */
+        #rem>div{ font-size: 1.25rem;} /* 20/16  */
+
+                    /* 뷰포트(웹의 경우 브라우저)를 기준으로 상대 값 : vw */
+        #vw { font-size: 3vw;}
+        #vw>div{ font-size: 2.8vw;}
+    </style>
+</head>
+
+<body>
+    <h1>일반적인 폰트사이즈 지정 : px</h1>
+    <div id="px">부모폰트
+        <div>자식폰트</div>
+    </div>
+
+    <h1>부모 요소 폰트 사이즈의 배수로 폰트사이즈 지정 : em</h1>
+    <div id="em">부모폰트
+        <div>자식폰트</div>
+    </div>
+
+    <h1>최상위 요소의 폰트사이즈의 배수로 폰트사이즈 지정 : rem</h1>
+    <div id="rem">부모폰트
+        <div>자식폰트</div>
+    </div>
+
+    <h1>viewport의 너비의 비율 : vw</h1>
+    <div id="vw">부모폰트
+        <div>자식폰트</div>
+    </div>
+</body>
+
+</html>

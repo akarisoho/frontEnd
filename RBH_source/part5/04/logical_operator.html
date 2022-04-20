@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>논리 연산자</title>
+	<script>
+		var a = 10 > 9;     // true(참)
+		var b = 3 > 5;      // false(거짓)
+
+		// AND연산자(&&), 둘다 참이어야지 참(true)을 반환하고 
+		// 둘중 하나라도 거짓이거나 둘다 거짓이라면 거짓(false)을 반환한다.
+		document.write(a && b, "<br>");
+		// document.write( 10 > 9 && 3 > 5, "<br>");
+
+		// OR연산자(||), 둘 중 하나라도 참이면 참(true)을 반환하고
+		// 둘다 거짓일 때만 거짓(false)을 반환
+		document.write(a || b, "<br>");
+
+		// Not 연산자
+		document.write( !a, "<br>");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

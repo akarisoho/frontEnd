@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>지역변수와 전역변수</title>
+    <script>
+        function fnLV(a, b) {
+            var localSum = a + b;
+            return localSum;
+        }
+
+        var fnVLResualt = fnLV(15, 35);
+
+        document.write("localSum = " + fnVLResualt + "<br>");
+
+
+        function fnGV() {
+            var fnGVSum = fnVLResualt + 2;
+            return fnGVSum;
+        }
+
+        document.write("fnGVSum = " + fnGV());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

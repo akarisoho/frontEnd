@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Selector 01</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //태그(요소) 선택자로 글자색상을 #efcd00로 변경
+            $("li").css("color", "#efcd00");
+
+            //아이디선택자로 글자색상을 #9999ff로 변경
+            $("#point").css("color", "#9999ff");
+
+            // 클래스 선택자로 글자크기를 24px로 변경
+            $(".bigfont").css("font-size", "24px");
+
+            //후손 선택자로 배경색을 rgba(255,241,0,0.3)로 변경
+            $("ol li").css("background-color", "rgba(255,241,0,0.3)");
+
+            //자손 선택자로 글자색상을 #333으로 변경
+            $("ol > li").css("color", "#333");     
+
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li class="bigfont">지율출판사</li>
+        <li id="point">알법한 시리즈</li>
+        <li class="bigfont">별이구르미</li>
+        <li>sampleText</li>
+    </ul>
+    <ol>
+        <li>알법한 포토샵+일러스트</li>
+        <li>알법한 웹퍼블리셔</li>
+        <li>알법한 인디자인</li>
+    </ol>
+</body>
+
+</html>

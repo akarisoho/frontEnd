@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트_Scroll()</title>
+    <style>
+        div {
+            border: 1px solid#9999ff;
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <p>아래 박스에서 스크롤을 해보세요</p>
+
+    <div>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind
+        ever since.
+        <br><br>
+        'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't
+        had the advantages that you've had.'
+    </div>
+
+    <p>Scrolled <span>0</span> times.</p>
+
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        var scrollTime = 0;
+            $("div").scroll(function () {
+                $("span").text(scrollTime += 1);
+            });
+    </script>
+</body>
+
+</html>

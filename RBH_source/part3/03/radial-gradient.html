@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gradient</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border-radius: 100px;
+      float: left;
+      text-align: center;
+      line-height: 200px;
+      font-size: 1.5em;
+      color: #666;
+    }
+
+    .circle1 {
+      background: radial-gradient(white, #fff100, #99f);
+    }
+
+    .circle2 {
+      background: radial-gradient(white, #fff100 30%, #99f 80%);
+    }
+
+    .circle3 {
+      background: radial-gradient(farthest-corner at 65% 35%, white, #fff100, #99f);
+    }
+
+    .circle4 {
+      background: radial-gradient(farthest-side at 65% 35%, white, #fff100, #99f);
+    }
+
+    .circle5 {
+      background: radial-gradient(closest-corner at 65% 35%, white, #fff100, #99f);
+    }
+
+    .circle6 {
+      background: radial-gradient(closest-side at 65% 35%, white, #fff100, #99f);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle1">Circle1</div>
+  <div class="circle2">Circle2</div>
+  <div class="circle3">Circle3</div>
+  <div class="circle4">Circle4</div>
+  <div class="circle5">Circle5</div>
+  <div class="circle6">Circle6</div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Selector 05</title>
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("[class]").css("color","#9999ff");
+            $("[class='list']").css("background-color","rgba(255,241,0,0.3)");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- (ul>li{list0$}*4)*2 -->
+    <ul>
+        <li class="list">list-items 01</li>
+        <li id="second">list-items 02</li>
+        <li class="list2">list-items 03</li>
+        <li>list-items 04</li>
+    </ul>
+    <ul>
+        <li class="list2">list-items 01</li>
+        <li class="list">list-items 02</li>
+    </ul>
+</body>
+
+</html>

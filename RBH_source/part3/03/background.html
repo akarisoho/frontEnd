@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>background property</title>
+	<style>
+	/* 초기화 태그 */
+	*{ margin:0; padding:0;}
+
+	/* 페이지 요소 공통 프로퍼티 지정하기 */
+	div{ width: 100%; height: 900px;}
+	
+	#box01{ background-color: rgb(255, 241, 0);
+ 		background-image: url(bgimg/01.jpg);
+		background-repeat: repeat-x;
+		background-size: auto 300px;
+		background-position:200px 100px; }
+
+	#box02{ background-image: url(bgimg/02.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom center;
+		background-attachment: fixed; }
+
+	#box03{ background-image: url(bgimg/03.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right top; }
+	</style>
+</head>
+
+<body>
+	<div id="box01"></div>
+	<div id="box02"></div>
+	<div id="box03"></div>
+</body>
+</html>

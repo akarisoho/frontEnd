@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transform02</title>
+	<style>
+		div{ width: 200px; height: 200px; box-sizing:border-box; margin: 0 50px;}
+		.box{ border:3px solid #999; position: absolute; z-index: -999;}
+
+		/* skew(x-Angle) */
+		#box02-1{ background-color: rgba(0,0,255,0.5);
+			transform: skewX(0deg); transition: transform 0.5s ease-in;}
+		#box02-1:hover{ transform: skewX(-15deg);}
+
+		/* skew(y-Angle) */
+		#box02-2{ background-color: rgba(0,0,255,0.5);
+			transform: skewX(0deg); transition: transform 0.5s ease-in;}
+		#box02-2:hover{ transform: skewY(25deg);}
+	</style>
+</head>
+
+<body>
+	<h1>skewX(x-Angle)</h1>
+	<div class="box"></div>
+	<div id="box02-1"></div>
+
+	<h1>skewY(y-Angle)</h1>
+	<div class="box"></div>
+	<div id="box02-2"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>effect_slideUp()_slideDown()_slideToggle()</title>
+</head>
+
+<body>
+    <button class="btn1">Slide up</button>
+    <button class="btn2">Slide down</button>
+    <button class="btn3">Slide Toggle</button>
+
+    <p><img src="http://placehold.it/200x100" alt="sampleImage"></p>
+
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(".btn1").click(function () {
+            $("p").slideUp();
+        });
+        $(".btn2").click(function () {
+            $("p").slideDown();
+        });
+        $(".btn3").click(function () {
+            $("p").slideToggle();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GetSet_attr()</title>
+</head>
+
+<body>
+    <p><a href="http://jiyulpub.com" id="jiyul">지율출판사</a></p>
+    <button>이동 주소 보기</button>
+
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $("button").click(function () {
+            alert($("#jiyul").attr("href"));
+        });
+    </script>
+</body>
+
+</html>

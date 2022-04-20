@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AddRemove_before()</title>
+</head>
+
+<body>
+    <!-- p#first 요소의 외부 앞 -->
+    <p id="first">
+        <!-- p#first 요소의 내부 앞 -->
+        p 요소의 기존 콘텐츠
+        <!-- p#first 요소의 내부 뒤 -->
+    </p>
+    <!-- p#first 요소의 외부 뒤 -->
+
+    <button>쿼리실행</button>
+
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $("button").click(function () {
+            $("p#first").before("<h1>p 요소 외부 삽입</h1>");
+        });
+    </script>
+</body>
+
+</html>
