@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>details+summary</title>
+  <style>
+    .summary-box {
+      float: left;
+      width: 47%;
+      margin: 1.5%;
+      box-sizing: border-box;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+    }
+    summary{
+      border-bottom:1px solid #ddd;
+      padding:5px 0;
+    }
+    details{
+      margin-bottom: 15px;
+    }
+    .summary-box:nth-child(2) summary::marker {
+      color:green;
+    }
+    .summary-box:last-child summary::marker {
+      content: '→ ';
+      color: #99f
+    }
+  </style>
+</head>
+
+<body>
+  <div class="summary-box">
+    <details>
+      <summary>더 보기</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+    <details>
+      <summary>title</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+    <details>
+      <summary>title</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+  </div>
+  <div class="summary-box">
+    <details>
+      <summary>title</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+    <details>
+      <summary>title</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+    <details>
+      <summary>title</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+  </div>
+  <div class="summary-box">
+    <details>
+      <summary>title</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+    <details>
+      <summary>title</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+    <details>
+      <summary>title</summary>
+      paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh paragragh
+      paragragh paragragh paragragh
+    </details>
+  </div>
+</body>
+
+</html>
