@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>typingTxt.html</title>
+  <style>
+    .typing-txt {
+      display: none;
+    }
+
+    .typing {
+      color: red;
+      font-weight: bold;
+      animation: cursor 0.3s infinite;
+      display: inline-block;
+    }
+
+    @keyframes cursor {
+      0%{ border-right:2px solid #fff;}
+      50%{ border-right:2px solid red;}
+      100%{ border-right:2px solid #fff;}
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <p class="typing-txt">안녕하세요</p><!-- 타이핑 효과를 주고 싶은 문자열 박스 -->
+  <p class="typing"></p><!-- 타이핑 효과가 적용될 박스 -->
+
+  <script>
+    let typingTxt = $('.typing-txt').text();
+    console.log(`자르기 전 typingTxt ${typingTxt}`); //콘솔 탭에서 디버깅하는 용도, 구현되면 지워도 됨
+    
+    typingTxt = typingTxt.split("");  //배열이 됨
+    console.log(`자른 후 typingTxt ${typingTxt}`);//콘솔 탭에서 디버깅하는 용도, 구현되면 지워도 됨
+    console.log(typingTxt);//콘솔 탭에서 디버깅하는 용도, 구현되면 지워도 됨
+    // [0] "안"
+    // [1] "녕"
+    // [2] "하"
+    // [3] "세"
+    // [4] "요"
+    
+    setInterval(function(){typing()}, 200);
+    // setInterval(typing, 500);
+    // 함수를 매개변수로 사용할 때는 ()를 사용안함
+    
+    let typingIdx = 0;
+    // 타이핑 함수정의
+    function typing() {
+      if (typingIdx < typingTxt.length) {  // 현재 인덱스번호 < 5
+        $('.typing').append(typingTxt[typingIdx]);
+        typingIdx++;
+      } else {
+        setTimeout(function () { 
+          typingIdx = 0; //반복하기 위해 idx를 0으로 만듦
+          $('.typing').text("");
+         },200);
+      }
+    }
+    // 1회전 : typingIdx 0이고, typingIdx[0] "안" 이므로 .typing박스에 "안"이 append된다.
+    // 2회전 : typingIdx 1이고, typingIdx[1] "녕" 이므로 .typing박스에 "녕"이 append된다.
+    // 3회전 : typingIdx 2이고, typingIdx[2] "하" 이므로 .typing박스에 "하"가 append된다.
+    // 4회전 : typingIdx 3이고, typingIdx[3] "세" 이므로 .typing박스에 "세"가 append된다.
+    // 5회전 : typingIdx 4이고, typingIdx[4] "요" 이므로 .typing박스에 "요"가 append된다.
+  </script>
+</body>
+
+</html>
