@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'font serif';
+  src: url();
+}
+
+@font-face {
+  font-family: "font2";
+  src: url();
+}
+
+/* reset CSS : 에릭마이어 reset.css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 15px;
+  font-family: 'font serif', serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: "font2", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 이미지의 원래 사이즈보다 더 커지진 않지만,
+부모박스가 줄어들었을 때 가변으로 사이즈 조정 */
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* 영상이 들어가는 박스를 먼저 사이즈 설정하고 하위에 iframe넣기 */
+button, input {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+
+/* form에 관련된 태그는 초기화 필요 */
+.btn {
+  padding: 20px 30px;
+  background-color: #99f;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s;
+  font-size: 1.5em;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 0, 0.2);
+  color: #333;
+}
+
+/* header, footer css */
+#wrap {
+  width: 100%;
+}
+
+.center {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#topBtn{
+  position: fixed;
+  left: 50%; 
+  margin-left: 610px;
+  bottom:20px;
+  background-color: yellow;
+  width: 50px; height: 50px;
+  border-radius: 50px;
+  z-index: 999;
+  text-align: center;
+  line-height: 50px;
+  font-size: 2em;
+}
+.indigator {
+  /* background-color: red; */
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.indigator li {
+  margin: 20px 0;
+}
+
+.indigator a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: pink;
+  transition: height 0.3s;
+}
+
+.indigator a.active {
+  height: 75px;
+  background-color: green;
+}
+
+#header {
+  padding: 15px 0;
+  background: rgba(255, 255, 0, 0.3);
+  position: fixed;
+  top:0; left: 0; width: 100%; z-index: 999;
+}
+#header .center{
+  display: flex;
+  justify-content: space-between;
+}
+#gnb a {
+  font-weight: bold;
+  margin-left: 20px;
+  line-height: 2.5em;
+}
+
+section {
+  text-align: center;
+  min-height: 500px;
+  padding: 80px 0;
+  background-color: lightblue;
+  position: relative;
+}
+
+section:nth-child(2n-1) {
+  background-color: lightsalmon;
+}
+
+
+#footer {
+  padding: 20px;
+  background-color: #ccc;
+  text-align: center;
+}

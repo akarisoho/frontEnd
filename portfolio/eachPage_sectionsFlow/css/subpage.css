@@ -1,0 +1,22 @@
+.subPageList{
+ padding-top:80px;
+}
+.subPageList ul{
+  padding:10px 0;
+  border: solid #222;
+  border-width: 1px 0;
+ display: flex;
+ justify-content: space-around;
+ text-align: center;
+}
+.focusHere{
+  color:red;
+  font-weight: bold;
+}
+.container {
+  text-align: center;
+}
+
+.container h3 {
+  padding: 40px 0 20px;
+}
