@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>global Variable</title>
+    <script>
+        var sum = 0;
+        //함수 선언
+        function add(num1, num2) {// 함수 스코프 시작
+            
+            sum = num1 + num2;
+            // global변수로 선언된 sum을 함수 스코프에서 사용
+            
+        }// 함수 스코프 끝
+
+        //함수호출
+        add(20, 15);
+        console.log(sum); 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

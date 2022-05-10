@@ -1,0 +1,16 @@
+*{ margin: 0; padding:0;}
+ul{ list-style: none;}
+a{ text-decoration: none; color: #222328;}
+
+
+#footer{ height: 100px; background:#7fbf41; position: relative; font-size: 12px;}
+#footer .copyright{ line-height: 100px; text-indent: 20px;}
+#footer .snsList{ position: absolute; right: 10px; top: 10px; background-color: rgba(255, 242, 0, 0.5); }
+#footer .snsList a{ margin: 0 8px;}
+/* #footer .snsList span{ margin: 0 8px;} */
+/* #footer .snsList a::after{content: " | ";} */
+/* 마지막 a요소만 제외하고 a요소 뒤에 문자열 |을 추가 */
+#footer .snsList a:not(:last-child)::after{ content: " | "; position: relative; left: 8px; }
+/* #footer .snsList a:not(:first-child)::before{ content: " | ";} */
+/* position:relative는 요소의 본래 위치를 기준으로 top, left, right, bottom값으로 위치를 이동시킬 수 있음 */
+#footer .family{ position: absolute; right: 10px; bottom:50px;}

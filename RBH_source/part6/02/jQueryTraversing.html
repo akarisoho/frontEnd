@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+        .descendants * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ul").find('*').css({ "background-color": "rgba(255, 242, 0, 0.2)"});
+            $("ul").children().css({ "color": "#9695c9", "border": "2px solid #9695c9" });
+            $("li").parent().css({ "color": "red", "border": "2px solid red" });
+            $("ul").siblings().css({ "color": "#7fbf41", "border": "2px solid #7fbf41" });
+            $("li").eq(1).css({ "text-decoration": "underline" });
+        });
+    </script>
+</head>
+
+<body class="descendants">body (great-grandparent)
+    <div class="grandparent">div (grandparent)
+        <ul>ul (direct parent)
+            <li>li (child)
+                <span>span (grandchild)</span>
+            </li>
+            <li>li (child)
+                <span>span (grandchild)</span>
+            </li>
+            <li>li (child)
+                <span>span (grandchild)</span>
+            </li>
+        </ul>
+        <div>ul's siblings</div>
+        <div>ul's siblings</div>
+    </div>
+</body>
+
+</html>

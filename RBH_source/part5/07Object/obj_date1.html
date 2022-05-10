@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>date</title>
+<script>
+    let today = new Date();
+    document.write(today, "<br>");
+    document.write(`오늘은 ${today.getFullYear()}년 ${today.getMonth() + 1}월 ${today.getDate()}일 입니다.`);
+    document.write(`<hr>`);
+    document.write(`toString()를 사용했을 경우 : ${today.toString()} "<br>`);
+    document.write(`toLocaleString()를 사용했을 경우 : ${today.toLocaleString()} "<br>`);
+    document.write(`toGMTString()를 사용했을 경우 : ${today.toGMTString()}`);
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

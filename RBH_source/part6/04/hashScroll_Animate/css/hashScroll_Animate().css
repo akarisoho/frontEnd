@@ -1,0 +1,12 @@
+* { margin: 0; padding: 0;}
+a{ text-decoration: none; color:#333;}
+
+#top_btn { position: fixed; right: 30px; bottom: 30px; background-color: #99f; padding: 10px; border-radius: 50px; padding:15px; text-align: center;}
+#wrap{ width: 1200px; margin: 0 auto;}
+#header { position: fixed; top: 0; left: 0; width: 100%; height: 50px; background-color: rgba(255, 255, 255, 0.6);}
+#gnb { position: absolute; right: 30px; top: 50%; transform: translateY(-50%);}
+#gnb li { float: left; margin: 0 20px;}
+section { height: 1000px; padding-top: 50px}
+#section1 { background-color: pink;}
+#section2 { background-color: rgba(255, 242, 0, 0.329);}
+#section3 { background-color: #7fbf41;}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>객체에 파라미터 전달</title>
+    <script>
+        let myBirth = new Date(1980, 03, 30, 04, 50, 11, 41);
+
+        document.write(`내가 태어난 날짜와 시간은<br>`);
+        document.write(`${myBirth.getFullYear()}년 ${myBirth.getMonth()}월 ${myBirth.getDate()}일 <br>`);
+        document.write(`${myBirth.getHours()}시 ${myBirth.getMinutes()}분 ${myBirth.getSeconds()}초 ${myBirth.getMilliseconds()}입니다.<br>`);
+
+
+        function userBirthPrint(userName, userBirth) {
+            document.write(`${userName}의 태어난 날짜와 시간은 `);
+            document.write(`${userBirth.getFullYear()}년 ${userBirth.getMonth()}월 ${userBirth.getDate()}일 `);
+            document.write(`${userBirth.getHours()}시 ${userBirth.getMinutes()}분 ${userBirth.getSeconds()}초 ${userBirth.getMilliseconds()}입니다.<br>`);
+        }
+
+        let yourName = '구르미';
+        let yourBirth = new Date(1999, 9, 10, 11, 12, 13, 14, 15);
+        userBirthPrint(yourName, yourBirth);
+
+        let myName = '별이';
+        userBirthPrint(myName, myBirth);    
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

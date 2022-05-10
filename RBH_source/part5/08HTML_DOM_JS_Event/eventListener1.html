@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>eventListener1</title>
+</head>
+
+<body>
+    <h1>두 개의 클릭이벤트 추가하기</h1>
+    <p>화면을 클릭해보세요!</p>
+    <div id="here"></div>
+
+    <script>
+        document.addEventListener("click", myFunction1);
+        document.addEventListener("click", myFunction2);
+
+        function myFunction1() {
+            document.getElementById("here").innerHTML += "첫 번째 함수 실행!"
+        }
+
+        function myFunction2() {
+            document.getElementById("here").innerHTML += "두 번째 함수 실행!"
+        }
+    </script>
+</body>
+
+</html>

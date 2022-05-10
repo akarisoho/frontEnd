@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout</title>
+    <script>
+        function start_clock() {
+            now = new Date();
+            hours = now.getHours();
+            minutes = now.getMinutes();
+
+            if (minutes < 10)
+                minutes = "0" + minutes;
+
+            if (hours < 12)
+                minutes = minutes + " A.M ";
+            else if (hours >= 12)
+                minutes = minutes + " P.M ";
+
+            if (hours == 0)
+                hours = hours + 12;
+
+            else if (hours > 12)
+                hours = hours - 12;
+
+            time = hours + ":" + minutes;
+
+            document.time_form.clock.value = time;
+            setTimeout("start_clock()", 1000);
+        }
+    </script>
+</head>
+
+<body onLoad="start_clock()">
+
+    <form name="time_form">
+        <input type="text" name="clock" size="12" value="   TIME  ">
+    </form>
+
+</body>
+
+</html>

@@ -6,8 +6,8 @@
     <title>prompt() 입력값의 연산</title>
     <script>
         // 변수 선언과 값 입력받기
-        var yesterday = prompt('어제 용돈을 입력해 주세요', '숫자만');
-        var today = prompt('오늘 용돈을 입력해 주세요', '숫자만');
+        let yesterday = prompt('어제 용돈을 입력해 주세요', '숫자만');
+        let today = prompt('오늘 용돈을 입력해 주세요', '숫자만');
 
         //Number()로 숫자형으로 변환하기
         yesterdayNum = Number(yesterday);
@@ -18,7 +18,7 @@
         console.log(typeof (todayNum));
 
         // 변환한 값의 합을 담는 변수 선언하기
-        var sum = yesterdayNum + todayNum;
+        let sum = yesterdayNum + todayNum;
 
         // 더한값 출력하기
         document.write("어제, 오늘 용돈의 합은 " + sum + "입니다.<br>");

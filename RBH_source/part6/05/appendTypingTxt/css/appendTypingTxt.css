@@ -1,0 +1,16 @@
+.typing-txt {
+    display: none;
+  }
+
+  .typing {
+    color: #99f;
+    font-weight: bold;
+    animation: cursor 0.3s infinite;
+    display: inline-block;
+  }
+
+  @keyframes cursor {
+    0%{ border-right:2px solid #fff;}
+    50%{ border-right:2px solid #fff100;}
+    100%{ border-right:2px solid #fff;}
+  }

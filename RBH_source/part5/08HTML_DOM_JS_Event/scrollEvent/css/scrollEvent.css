@@ -1,0 +1,15 @@
+* { margin: 0; padding:0;}
+
+.top-container { background-color: #f1f1f1; padding: 30px; text-align: center; }
+
+.header { padding: 30px; background: #99f; color: #f1f1f1; }
+
+.content { width: 70%; margin: 0 auto; padding: 16px;}
+
+section { padding: 30px 0; border-bottom: 1px solid #eee;}
+
+p { line-height: 2em; }
+
+.sticky { position: fixed; top: 0; width: 100%;}
+
+.sticky+.content { padding-top: 102px; }
