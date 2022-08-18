@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        section{ min-height: 400px; border-bottom: 5px solid #ccc; overflow: hidden;}
+        .s1{ position: relative; /*height: 400px;*/}
+        .s1 video{ width: 100%; /*transform: translate(0,-25%);*/}
+        .s1 .text-box{ position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff;}
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>PageTitle</h1>
+        <nav id="gnb"><a href="">menu1</a><a href="">menu2</a><a href="">menu3</a></nav>
+    </header>
+    <div class="container">
+        <section class="s1">
+            <h2>subTitle1</h2>
+            <video muted autoplay loop>
+                <source src="1739836_16x9.mp4" type="video/mp4">
+            </video>
+            <div class="text-box">
+                <h3>video Sample Text</h3>
+                <p>description paragragh description paragragh description paragragh description paragragh description paragragh description paragragh </p>
+            </div>
+        </section>
+        <section class="s2">
+            <h2>subTitle2</h2>
+        </section>
+        <section class="s3">
+            <h2>subTitle3</h2>
+        </section>
+    </div>
+    <footer id="footer">copyright.webDesignA</footer>
+</body>
+</html>

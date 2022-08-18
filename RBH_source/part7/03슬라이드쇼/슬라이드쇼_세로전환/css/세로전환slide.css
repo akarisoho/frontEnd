@@ -1,8 +1,0 @@
-/* 초기화 css */
-*{ margin: 0; padding:0;}
-
-#slide{ width: 800px; height: 500px; margin: 0 auto; background-color: rebeccapurple; position: relative; 
-    overflow: hidden; /* 주석처리 했다가 최종적으로 주석 빼주기 */
- }
-#slide img{ position: absolute; top:0; left: 0; }
-/* li에 있는 이미지든 img로만 작성된 이미지든 슬라이드쇼를 할 때에는 반드시 한 부분에 모든 이미지가 겹치도록 CSS를 작성해야 합니다. */
