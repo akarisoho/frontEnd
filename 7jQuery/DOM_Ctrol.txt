@@ -1,0 +1,35 @@
+DOM Controls - 돔 제어 (HTML / CSS Method)
+
+제어 가능 항목
+- element(요소/태그)의 속성 값 변경 => attr()
+- CSS 제어 => css()
+- 텍스트 변경
+- HTML 변경
+- 요소 삽입 연결 / 이동 연결 
+- 요소를 변경/ 제거
+- class속성을 추가하거나 제거
+
+[ 복습 ] Event 
+.click() => mobile환경에서 '탭'이벤트와 동일하게 사용
+.mouseenter() => 마우스가 올려졌을 때
+	       cf) .mouseover()
+.mouseleave() => 마우스가 벗어났을 때
+                    cf) .mouseout()
+.hover() => 마우스 올렸을 때와 벗어 났을 때를 한번에 지정하는 메서드
+    $("selector").hover(function(){ 
+        //마우스 올렸을 때;
+     },function(){
+        //마우스 벗어났을 때;
+     });
+
+
+
+[ 슬라이드쇼 ]
+요소가 순환하는 동작을 슬라이드쇼 라고 합니다. 
+HTML 이미지나 콘텐츠를 작성하고 CSS,JavaScript, jQuery로 요소를 이동
+
+swiperjs.com/demos  => 스와이퍼슬라이드쇼 오픈소스
+
+
+[삼항연산자]
+연산식 ? ture실행구문 : false실행구문
